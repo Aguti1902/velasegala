@@ -1,11 +1,35 @@
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { ChevronLeft, ChevronRight, Menu, X } from 'lucide-react'
+import { useState } from 'react'
 
 function Navigation({ currentStep, totalSteps, onNext, onPrev, onGoTo, steps }) {
   const progress = ((currentStep + 1) / totalSteps) * 100
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  const handleNavClick = (index) => {
+    onGoTo(index)
+    setMobileMenuOpen(false) // Cerrar menú al navegar
+  }
 
   return (
     <>
-        <aside className="sidebar">
+      {/* Botón hamburguesa móvil */}
+      <button 
+        className="mobile-menu-toggle" 
+        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        aria-label="Toggle menu"
+      >
+        {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+      </button>
+
+      {/* Overlay para cerrar menú en móvil */}
+      {mobileMenuOpen && (
+        <div 
+          className="mobile-overlay" 
+          onClick={() => setMobileMenuOpen(false)}
+        />
+      )}
+
+      <aside className={`sidebar ${mobileMenuOpen ? 'mobile-open' : ''}`}>
           <div className="sidebar-header">
             <div className="sidebar-logo">
               <img src="/logos/Isotipo blanco.png" alt="Vela Segalà" />
@@ -34,7 +58,7 @@ function Navigation({ currentStep, totalSteps, onNext, onPrev, onGoTo, steps }) 
               <button
                 key={index}
                 className={`nav-item ${step.level === 1 ? 'sub-item' : ''} ${index === currentStep ? 'active' : ''} ${index < currentStep ? 'completed' : ''}`}
-                onClick={() => onGoTo(index)}
+                onClick={() => handleNavClick(index)}
               >
                 {step.level === 0 ? (
                   <span className="item-number">{steps.filter((s, i) => i <= index && s.level === 0).length}</span>

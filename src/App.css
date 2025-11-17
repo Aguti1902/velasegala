@@ -1620,34 +1620,102 @@
   }
 }
 
-@media (max-width: 480px) {
+/* Mobile Menu Toggle Button */
+.mobile-menu-toggle {
+  display: none;
+  position: fixed;
+  top: var(--spacing-lg);
+  right: var(--spacing-lg);
+  z-index: 1001;
+  background: var(--black);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius-lg);
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-lg);
+  transition: all 0.3s;
+}
+
+.mobile-menu-toggle:hover {
+  background: var(--gray-800);
+  transform: scale(1.05);
+}
+
+.mobile-menu-toggle:active {
+  transform: scale(0.95);
+}
+
+/* Mobile Overlay */
+.mobile-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  backdrop-filter: blur(4px);
+}
+
+@media (max-width: 768px) {
+  /* Mostrar botón hamburguesa */
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  /* Ocultar sidebar por defecto en móvil */
   .sidebar {
-    width: 70px;
+    position: fixed;
+    left: -280px;
+    top: 0;
+    bottom: 0;
+    width: 280px;
+    z-index: 1000;
+    transition: left 0.3s ease-in-out;
+    box-shadow: var(--shadow-lg);
   }
 
-  .sidebar-subtitle,
-  .progress-label,
-  .progress-text,
-  .nav-title,
-  .item-title,
-  .sidebar-footer p:first-child {
-    display: none;
+  /* Mostrar sidebar cuando está abierto */
+  .sidebar.mobile-open {
+    left: 0;
   }
 
-  .sidebar-brand {
-    font-size: 1.1rem;
+  /* Mostrar overlay cuando el menú está abierto */
+  .sidebar.mobile-open ~ .mobile-overlay,
+  .mobile-overlay {
+    display: block;
   }
 
-  .sidebar-header {
-    padding: var(--spacing-md) var(--spacing-sm);
-  }
-
+  /* Ajustar contenido para ocupar todo el ancho */
   .page-container {
-    margin-left: 70px;
+    margin-left: 0;
+    width: 100%;
   }
 
+  /* Ajustar controles inferiores */
   .bottom-controls {
-    left: 70px;
+    left: 0;
+    width: 100%;
+    padding-right: 80px; /* Espacio para botón hamburguesa */
+  }
+}
+
+@media (max-width: 480px) {
+  .mobile-menu-toggle {
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    width: 44px;
+    height: 44px;
+  }
+
+  .sidebar {
+    width: 260px;
+    left: -260px;
   }
 
   .welcome-meta {
@@ -2618,9 +2686,10 @@
     max-width: 280px;
   }
 
-  .sidebar-logo {
-    width: 40px;
-    height: 40px;
+  /* Sidebar logo cuando está abierto */
+  .sidebar.mobile-open .sidebar-logo {
+    width: 50px;
+    height: 50px;
   }
 
   /* Reviews system mobile */
@@ -2710,10 +2779,11 @@
     max-width: 200px;
   }
 
-  .sidebar-logo {
-    width: 30px;
-    height: 30px;
-    margin-bottom: 0.3rem;
+  /* Sidebar logo cuando está abierto en móvil pequeño */
+  .sidebar.mobile-open .sidebar-logo {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 0.5rem;
   }
 
   /* Titles */
