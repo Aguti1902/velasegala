@@ -217,7 +217,17 @@ src/
 
 ## 🔄 Cambios Recientes
 
-### Versión 3.4 (Actual)
+### Versión 3.5 (Actual)
+- ✅ **Menú Hamburguesa Móvil**: UX mejorada para dispositivos móviles
+  - Botón hamburguesa arriba a la derecha en móvil (<768px)
+  - Sidebar oculto por defecto, aparece como overlay
+  - Animación suave de apertura/cierre (0.3s)
+  - Overlay con blur para cerrar menú
+  - Cierre automático al navegar
+  - Touch-friendly: 48px en tablet, 44px en móvil
+  - Contenido ocupa 100% del ancho en móvil
+
+### Versión 3.4
 - ✅ **Branding NexGent Integrado**: Logo y datos de contacto de la agencia
   - Logo NexGent en página de bienvenida (footer)
   - Logo NexGent en página final (footer)
