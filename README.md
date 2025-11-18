@@ -137,11 +137,15 @@ Cada servicio (excepto Mantenimiento y Desarrollo Web) incluye:
 - Respuestas 24/7
 - Integración CRM
 
-### 6. CRM Vela Segalà - 22.000€ + 599€/mes
-- **Desarrollo 100% desde cero**
+### 6. CRM Vela Segalà (OPCIONAL) - 53.000€ + 599€/mes
+- **Actualmente usan GESDEN G5** (líder con 14.000 clínicas)
+- Opción A: Integración con GESDEN G5 vía API
+- Opción B: Desarrollo 100% desde cero
+- Análisis comparativo exhaustivo incluido
 - Personalizado para 2 clínicas
-- Propiedad total del código
+- Propiedad total del código (si CRM propio)
 - Escalable sin límites
+- **Sección de análisis estratégico** con ventajas/desventajas y ROI
 
 ## 🚀 Tecnologías Utilizadas
 
@@ -217,7 +221,20 @@ src/
 
 ## 🔄 Cambios Recientes
 
-### Versión 3.5 (Actual)
+### Versión 3.6 (Actual)
+- ✅ **CRM Actualizado - Análisis GESDEN G5**: Precio 53.000€ + análisis estratégico completo
+  - Precio actualizado: 22.000€ → 53.000€
+  - CRM ahora es **OPCIONAL**
+  - Información sobre GESDEN G5 (líder con 14.000 clínicas)
+  - **Comparativa exhaustiva**: GESDEN G5 + API vs CRM propio
+  - Ventajas y desventajas de ambas opciones (9 pros/8 contras cada una)
+  - Análisis de costes a 5 años con ROI
+  - Recomendación según disponibilidad de API
+  - Próximos pasos para toma de decisión
+  - +300 líneas de contenido estratégico
+  - Diseño premium con cards comparativas
+
+### Versión 3.5
 - ✅ **Menú Hamburguesa Móvil**: UX mejorada para dispositivos móviles
   - Botón hamburguesa arriba a la derecha en móvil (<768px)
   - Sidebar oculto por defecto, aparece como overlay
