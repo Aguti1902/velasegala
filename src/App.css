@@ -2011,10 +2011,6 @@
     font-size: 0.85rem;
   }
 
-  .nav-button span {
-    display: none;
-  }
-
   .cta-buttons {
     flex-direction: column;
   }
@@ -2106,12 +2102,12 @@
   .bottom-controls {
     left: 0;
     width: 100%;
-    padding: var(--spacing-sm) var(--spacing-md);
+    padding: var(--spacing-md);
     box-sizing: border-box;
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
-    gap: var(--spacing-xs);
+    gap: var(--spacing-md);
   }
 
   /* Ocultar badge flotante en móvil */
@@ -2136,6 +2132,22 @@
     overflow: hidden;
     text-overflow: ellipsis;
     padding: 0 var(--spacing-xs);
+  }
+
+  /* Botones solo con iconos en móvil */
+  .nav-button {
+    padding: var(--spacing-md);
+    min-width: 48px;
+    min-height: 48px;
+    justify-content: center;
+  }
+
+  .nav-button span {
+    display: none;
+  }
+
+  .nav-button svg {
+    margin: 0;
   }
 }
 
@@ -3464,15 +3476,6 @@
   .cta-button {
     padding: var(--spacing-md) var(--spacing-lg);
     font-size: 0.95rem;
-  }
-
-  /* Bottom controls */
-  .nav-button {
-    padding: var(--spacing-sm) var(--spacing-md);
-  }
-
-  .nav-button span {
-    display: none;
   }
 
   /* Service cards compact */

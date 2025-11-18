@@ -26,7 +26,7 @@ function CRMInteractive() {
 
   return (
     <div className="crm-interactive">
-      {/* Sidebar */}
+      {/* Sidebar Desktop */}
       <aside className="crm-sidebar-pro">
         <div className="crm-sidebar-header">
           <div className="crm-brand-pro">
@@ -132,6 +132,52 @@ function CRMInteractive() {
           {renderTabContent()}
         </div>
       </main>
+
+      {/* Mobile Bottom Navigation */}
+      <nav className="crm-mobile-nav" style={{display: 'none'}}>
+        <button 
+          className={`crm-mobile-nav-item ${activeTab === 'dashboard' ? 'active' : ''}`}
+          onClick={() => setActiveTab('dashboard')}
+        >
+          <LayoutDashboard size={20} />
+          <span>Dashboard</span>
+        </button>
+        <button 
+          className={`crm-mobile-nav-item ${activeTab === 'patients' ? 'active' : ''}`}
+          onClick={() => setActiveTab('patients')}
+        >
+          <Users size={20} />
+          <span>Pacientes</span>
+        </button>
+        <button 
+          className={`crm-mobile-nav-item ${activeTab === 'appointments' ? 'active' : ''}`}
+          onClick={() => setActiveTab('appointments')}
+        >
+          <Calendar size={20} />
+          <span>Agenda</span>
+        </button>
+        <button 
+          className={`crm-mobile-nav-item ${activeTab === 'treatments' ? 'active' : ''}`}
+          onClick={() => setActiveTab('treatments')}
+        >
+          <FileText size={20} />
+          <span>Tratamientos</span>
+        </button>
+        <button 
+          className={`crm-mobile-nav-item ${activeTab === 'billing' ? 'active' : ''}`}
+          onClick={() => setActiveTab('billing')}
+        >
+          <DollarSign size={20} />
+          <span>Facturación</span>
+        </button>
+        <button 
+          className={`crm-mobile-nav-item ${activeTab === 'analytics' ? 'active' : ''}`}
+          onClick={() => setActiveTab('analytics')}
+        >
+          <BarChart3 size={20} />
+          <span>Analytics</span>
+        </button>
+      </nav>
     </div>
   )
 }
