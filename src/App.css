@@ -2102,10 +2102,10 @@
   .bottom-controls {
     left: 0;
     width: 100%;
-    padding: var(--spacing-md);
+    padding: var(--spacing-md) var(--spacing-lg);
     box-sizing: border-box;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: var(--spacing-md);
   }
@@ -2118,20 +2118,6 @@
   /* Ocultar indicador de paso actual en móvil */
   .current-step-indicator {
     display: none;
-  }
-
-  /* Mostrar propuesta como texto en bottom-controls */
-  .bottom-controls::before {
-    content: attr(data-proposal-text);
-    grid-column: 2;
-    text-align: center;
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--gray-600);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding: 0 var(--spacing-xs);
   }
 
   /* Botones solo con iconos en móvil */
@@ -4294,6 +4280,10 @@
     padding: var(--spacing-2xl) var(--spacing-xl);
   }
 
+  .selector-header .welcome-logo img {
+    height: 40px;
+  }
+
   .selector-header h1 {
     font-size: 2rem;
   }
@@ -4331,8 +4321,16 @@
 }
 
 @media (max-width: 480px) {
+  .selector-header .welcome-logo img {
+    height: 35px;
+  }
+
   .selector-header h1 {
     font-size: 1.6rem;
+  }
+
+  .selector-header {
+    margin-bottom: var(--spacing-lg);
   }
 
   .proposal-card h2 {
