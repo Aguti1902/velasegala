@@ -150,12 +150,14 @@ function App() {
     },
     {
       id: 'crm',
-      title: 'CRM Vela Segalà - Desarrollo a Medida',
-      shortDescription: 'Sistema de gestión integral desarrollado 100% desde cero',
-      price: '22.000€ + 599€/mes',
+      title: 'CRM Vela Segalà - Desarrollo a Medida (OPCIONAL)',
+      shortDescription: 'Sistema propio 100% personalizado o integración con GESDEN G5 existente',
+      price: '53.000€ + 599€/mes',
       type: 'both',
       features: [
-        'Desarrollo completo desde cero, 100% personalizado',
+        '✓ Actualmente utilizan GESDEN G5 (líder en España con 14.000 clínicas)',
+        '✓ Opción A: Desarrollo CRM propio 100% personalizado',
+        '✓ Opción B: Integración avanzada con GESDEN G5 vía API',
         'Gestión avanzada de pacientes con historial completo',
         'Historial clínico digital con firma electrónica',
         'Sistema de citas con IA predictiva',
@@ -163,9 +165,9 @@ function App() {
         'Gestión de pagos y planes de financiación',
         'Dashboard ejecutivo con analytics en tiempo real',
         'Aplicación móvil nativa iOS y Android para dentistas',
-        'Sincronización en tiempo real entre las 3 clínicas',
+        'Sincronización en tiempo real entre las 2 clínicas',
         'Sistema de recordatorios multi-canal automatizado',
-        'Integración completa con WhatsApp y telefonía',
+        'Integración completa con Agentes IA (WhatsApp y telefónico)',
         'Portal del paciente con área privada',
         'Sistema de notificaciones push inteligente',
         'Informes personalizados con BI avanzado',
@@ -174,11 +176,13 @@ function App() {
         'Sistema de fidelización de pacientes',
         'Backup automático cifrado',
         'Cumplimiento RGPD y seguridad médica',
+        'Soporte técnico prioritario 24/7',
         'Formación intensiva de 40 horas',
+        'Propiedad intelectual 100% de Vela Segalà (si CRM propio)',
         'Documentación técnica completa',
-        'Garantía extendida de 2 años'
+        'Garantía extendida de 3 años'
       ],
-      pricing: { monthly: 599, initial: 22000 }
+      pricing: { monthly: 599, initial: 53000 }
     }
   ]
 

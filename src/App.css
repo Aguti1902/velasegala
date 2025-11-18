@@ -2953,3 +2953,397 @@
     max-width: 80px;
   }
 }
+
+/* ============================================
+   CRM COMPARISON STYLES - GESDEN G5 vs PROPIO
+   ============================================ */
+
+.crm-analysis-section,
+.crm-comparison-section {
+  margin-top: var(--spacing-3xl);
+  padding: var(--spacing-3xl);
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.gesden-info-box {
+  background: var(--gray-50);
+  border-left: 4px solid var(--black);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  margin-top: var(--spacing-xl);
+}
+
+.gesden-info-box h3 {
+  font-size: 1.3rem;
+  margin-bottom: var(--spacing-lg);
+  color: var(--black);
+}
+
+.gesden-features-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.gesden-features-list li {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  padding-left: 0;
+}
+
+.gesden-features-list li strong {
+  color: var(--black);
+  font-weight: 700;
+}
+
+/* Comparison Grid */
+.comparison-grid-crm {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-2xl);
+  margin-top: var(--spacing-2xl);
+}
+
+.comparison-card {
+  background: var(--white);
+  border: 2px solid var(--gray-200);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.comparison-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+}
+
+.comparison-header {
+  padding: var(--spacing-xl);
+  color: var(--white);
+  position: relative;
+}
+
+.comparison-header.option-a {
+  background: linear-gradient(135deg, var(--gray-700), var(--gray-900));
+}
+
+.comparison-header.option-b {
+  background: linear-gradient(135deg, var(--black), var(--gray-800));
+}
+
+.comparison-header h3 {
+  color: var(--white);
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.comparison-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.comparison-badge.premium {
+  background: rgba(255, 215, 0, 0.3);
+}
+
+.comparison-content {
+  padding: var(--spacing-xl);
+}
+
+.pros-title,
+.cons-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: var(--spacing-xl) 0 var(--spacing-md) 0;
+}
+
+.pros-title {
+  color: #059669;
+}
+
+.cons-title {
+  color: #dc2626;
+}
+
+.comparison-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.comparison-list li {
+  padding: var(--spacing-sm) 0;
+  padding-left: var(--spacing-md);
+  border-left: 3px solid var(--gray-200);
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.6;
+}
+
+.comparison-list li strong {
+  color: var(--black);
+  font-weight: 700;
+}
+
+.comparison-cost {
+  background: var(--gray-50);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  margin-top: var(--spacing-xl);
+}
+
+.comparison-cost h4 {
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--black);
+}
+
+.cost-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.cost-item {
+  font-size: 0.95rem;
+  padding: 0.4rem 0;
+  color: var(--gray-700);
+}
+
+.cost-item.highlight-cost {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--black);
+  padding-top: var(--spacing-md);
+  border-top: 2px solid var(--gray-300);
+  margin-top: var(--spacing-sm);
+}
+
+.cost-note {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--gray-600);
+  margin-top: var(--spacing-sm);
+}
+
+/* ROI Analysis */
+.roi-analysis {
+  margin-top: var(--spacing-3xl);
+  padding: var(--spacing-2xl);
+  background: linear-gradient(135deg, var(--gray-50), var(--white));
+  border-radius: var(--radius-xl);
+}
+
+.roi-analysis h3 {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+}
+
+.roi-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+}
+
+.roi-card {
+  background: var(--white);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.roi-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-5px);
+}
+
+.roi-card.highlight-roi {
+  background: linear-gradient(135deg, var(--black), var(--gray-800));
+  color: var(--white);
+}
+
+.roi-card.highlight-roi h4,
+.roi-card.highlight-roi p {
+  color: var(--white);
+}
+
+.roi-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--black);
+}
+
+.roi-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--gray-700);
+}
+
+/* Final Recommendation */
+.final-recommendation {
+  margin-top: var(--spacing-3xl);
+  padding: var(--spacing-3xl);
+  background: var(--gray-900);
+  color: var(--white);
+  border-radius: var(--radius-xl);
+}
+
+.final-recommendation h3 {
+  font-size: 1.8rem;
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+  color: var(--white);
+}
+
+.recommendation-box {
+  background: rgba(255, 255, 255, 0.05);
+  padding: var(--spacing-2xl);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.recommendation-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+  color: var(--white);
+}
+
+.recommendation-title.mt-lg {
+  margin-top: var(--spacing-3xl);
+}
+
+.recommendation-box p {
+  line-height: 1.8;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.recommendation-action {
+  margin-top: var(--spacing-2xl);
+  padding: var(--spacing-xl);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+}
+
+.recommendation-action h4 {
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-lg);
+  color: var(--white);
+}
+
+.action-steps {
+  list-style: none;
+  counter-reset: steps;
+  padding: 0;
+  margin: 0;
+}
+
+.action-steps li {
+  counter-increment: steps;
+  padding: var(--spacing-md);
+  padding-left: var(--spacing-2xl);
+  margin-bottom: var(--spacing-md);
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius-md);
+  position: relative;
+  line-height: 1.6;
+}
+
+.action-steps li::before {
+  content: counter(steps);
+  position: absolute;
+  left: var(--spacing-md);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  background: var(--white);
+  color: var(--black);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+  .comparison-grid-crm {
+    grid-template-columns: 1fr;
+  }
+
+  .roi-content {
+    grid-template-columns: 1fr;
+  }
+
+  .gesden-features-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .crm-analysis-section,
+  .crm-comparison-section,
+  .final-recommendation {
+    padding: var(--spacing-xl);
+  }
+
+  .comparison-header h3 {
+    font-size: 1.2rem;
+  }
+
+  .comparison-badge {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.8rem;
+  }
+
+  .comparison-content {
+    padding: var(--spacing-md);
+  }
+
+  .roi-analysis {
+    padding: var(--spacing-xl);
+  }
+
+  .recommendation-box {
+    padding: var(--spacing-xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .comparison-list li {
+    font-size: 0.85rem;
+    padding-left: var(--spacing-sm);
+  }
+
+  .cost-item {
+    font-size: 0.85rem;
+  }
+
+  .cost-item.highlight-cost {
+    font-size: 1rem;
+  }
+
+  .action-steps li {
+    padding-left: calc(var(--spacing-xl) + 10px);
+    font-size: 0.9rem;
+  }
+
+  .action-steps li::before {
+    width: 24px;
+    height: 24px;
+    font-size: 0.8rem;
+  }
+}
