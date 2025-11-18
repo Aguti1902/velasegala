@@ -328,6 +328,245 @@
   }
 }
 
+/* ============================================
+   PASSWORD PROTECTION PAGE
+   ============================================ */
+
+.password-protection-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
+  padding: var(--spacing-2xl);
+}
+
+.password-container {
+  max-width: 500px;
+  width: 100%;
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  padding: var(--spacing-3xl);
+  border: 2px solid var(--gray-200);
+}
+
+.password-header {
+  text-align: center;
+  margin-bottom: var(--spacing-3xl);
+}
+
+.lock-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto var(--spacing-xl);
+  background: linear-gradient(135deg, var(--black), var(--gray-700));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+}
+
+.password-header .welcome-logo {
+  margin-bottom: var(--spacing-xl);
+}
+
+.password-header .welcome-logo img {
+  max-width: 250px;
+  height: auto;
+}
+
+.password-header h1 {
+  font-size: 1.8rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--black);
+}
+
+.password-subtitle {
+  font-size: 0.95rem;
+  color: var(--gray-600);
+  line-height: 1.6;
+}
+
+.password-form {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.password-input-group {
+  position: relative;
+  margin-bottom: var(--spacing-md);
+}
+
+.password-input {
+  width: 100%;
+  padding: var(--spacing-md) var(--spacing-lg);
+  padding-right: 50px;
+  border: 2px solid var(--gray-300);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  transition: all 0.3s;
+  background: var(--white);
+}
+
+.password-input:focus {
+  outline: none;
+  border-color: var(--black);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.password-input.error {
+  border-color: #dc2626;
+  background: rgba(220, 38, 38, 0.05);
+}
+
+.toggle-password {
+  position: absolute;
+  right: var(--spacing-md);
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--gray-600);
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.toggle-password:hover {
+  color: var(--black);
+}
+
+.password-error {
+  padding: var(--spacing-md);
+  background: rgba(220, 38, 38, 0.1);
+  border: 1px solid #dc2626;
+  border-radius: var(--radius-md);
+  color: #dc2626;
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-md);
+  animation: slideIn 0.3s ease;
+}
+
+.password-submit {
+  width: 100%;
+  padding: var(--spacing-md) var(--spacing-xl);
+  background: var(--black);
+  color: var(--white);
+  border: 2px solid var(--black);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.password-submit:hover {
+  background: var(--white);
+  color: var(--black);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.password-footer {
+  border-top: 1px solid var(--gray-200);
+  padding-top: var(--spacing-xl);
+  text-align: center;
+}
+
+.agency-badge-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.agency-badge-login .agency-label {
+  font-size: 0.85rem;
+  color: var(--gray-600);
+}
+
+.agency-badge-login .agency-logo {
+  height: 30px;
+}
+
+.confidential-notice {
+  font-size: 0.85rem;
+  color: var(--gray-500);
+  margin: 0;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.password-form.shake {
+  animation: shake 0.5s;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .password-protection-page {
+    padding: var(--spacing-lg);
+  }
+
+  .password-container {
+    padding: var(--spacing-2xl);
+  }
+
+  .lock-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .lock-icon svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .password-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .password-header .welcome-logo img {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .password-container {
+    padding: var(--spacing-xl);
+  }
+
+  .password-header h1 {
+    font-size: 1.3rem;
+  }
+
+  .password-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .agency-badge-login .agency-logo {
+    height: 24px;
+  }
+}
+
 .page-container.backward {
   animation: slideInLeft 0.4s ease;
 }

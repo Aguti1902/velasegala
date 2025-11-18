@@ -360,35 +360,66 @@ function BlogAIStats() {
       </div>
 
       <div className="stats-section">
-        <h2>Comparativa de Costes</h2>
-        <div className="chart-container">
-          <div className="comparison-chart">
-            <div className="comparison-option">
-              <h4>Redactor Profesional</h4>
-              <div className="comparison-cost">€150</div>
-              <div className="comparison-label">por artículo</div>
-              <div className="comparison-total">Total: €1.500/mes</div>
-              <div className="comparison-details">
-                <div>• 10 artículos/mes</div>
-                <div>• Tiempo de entrega: 7-10 días</div>
-                <div>• Revisiones limitadas</div>
-              </div>
-            </div>
-            <div className="comparison-divider">vs</div>
-            <div className="comparison-option highlighted">
-              <div className="cost-badge">Recomendado</div>
-              <h4>Nuestro Sistema IA</h4>
-              <div className="comparison-cost success">€40</div>
-              <div className="comparison-label">por artículo</div>
-              <div className="comparison-total">Total: €399/mes</div>
-              <div className="comparison-details">
-                <div>• 10 artículos/mes</div>
-                <div>• Publicación inmediata</div>
-                <div>• Revisiones ilimitadas</div>
-                <div>• SEO optimizado</div>
-              </div>
-              <div className="savings-badge">Ahorro: €1.101/mes (73%)</div>
-            </div>
+        <h2>Ventajas Clave del Sistema IA</h2>
+        <div className="benefits-showcase-grid">
+          <div className="benefit-showcase-card">
+            <div className="benefit-icon">📈</div>
+            <h3>Posicionamiento SEO Superior</h3>
+            <p>
+              Contenido 100% optimizado para motores de búsqueda con análisis de palabras clave,
+              meta descripciones automáticas y estructura SEO perfecta en cada artículo.
+            </p>
+            <div className="benefit-stat">+350% tráfico orgánico promedio</div>
+          </div>
+
+          <div className="benefit-showcase-card">
+            <div className="benefit-icon">⚡</div>
+            <h3>Ahorro de Tiempo Masivo</h3>
+            <p>
+              De investigación, redacción y publicación manual que tomaba días,
+              a publicación automática instantánea. Tu equipo puede enfocarse en el negocio.
+            </p>
+            <div className="benefit-stat">~20 horas/mes ahorradas</div>
+          </div>
+
+          <div className="benefit-showcase-card">
+            <div className="benefit-icon">🎯</div>
+            <h3>Consistencia Garantizada</h3>
+            <p>
+              8-12 artículos de alta calidad publicados mensualmente de forma automática.
+              Sin depender de disponibilidad humana, vacaciones o enferm edades.
+            </p>
+            <div className="benefit-stat">100% fiabilidad</div>
+          </div>
+
+          <div className="benefit-showcase-card">
+            <div className="benefit-icon">🔄</div>
+            <h3>Actualización Continua</h3>
+            <p>
+              El sistema analiza constantemente tendencias del sector dental, noticias y
+              actualizaciones para mantener tu blog siempre relevante y actualizado.
+            </p>
+            <div className="benefit-stat">24/7 monitorización</div>
+          </div>
+
+          <div className="benefit-showcase-card">
+            <div className="benefit-icon">💰</div>
+            <h3>Escalable Sin Costes Extra</h3>
+            <p>
+              A diferencia de contratar más redactores, el sistema puede generar más contenido
+              sin incrementar significativamente los costes. Precio fijo mensual predecible.
+            </p>
+            <div className="benefit-stat">€399/mes todo incluido</div>
+          </div>
+
+          <div className="benefit-showcase-card">
+            <div className="benefit-icon">🎨</div>
+            <h3>Contenido Multimedia Completo</h3>
+            <p>
+              Generación automática de imágenes optimizadas, infografías y elementos visuales
+              atractivos que aumentan el engagement y tiempo en página.
+            </p>
+            <div className="benefit-stat">+80% engagement visual</div>
           </div>
         </div>
       </div>

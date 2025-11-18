@@ -678,6 +678,61 @@
   color: #10B981;
 }
 
+/* Benefits Showcase Grid */
+.benefits-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.benefit-showcase-card {
+  background: var(--white);
+  border: 2px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl);
+  transition: all 0.3s var(--ease-smooth);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.benefit-showcase-card:hover {
+  border-color: var(--black);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.benefit-icon {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.benefit-showcase-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--black);
+  font-weight: 700;
+}
+
+.benefit-showcase-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--gray-700);
+  flex: 1;
+}
+
+.benefit-stat {
+  padding: var(--spacing-md);
+  background: linear-gradient(135deg, var(--black), var(--gray-800));
+  color: var(--white);
+  border-radius: var(--radius-md);
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-top: var(--spacing-md);
+}
+
 /* Responsive for Charts */
 @media (max-width: 768px) {
   .comparison-chart {
@@ -814,6 +869,28 @@
 
   .showcase-item h4 {
     font-size: 1rem;
+  }
+
+  /* Benefits showcase mobile */
+  .benefits-showcase-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .benefit-showcase-card {
+    padding: var(--spacing-xl);
+  }
+
+  .benefit-icon {
+    font-size: 2.5rem;
+  }
+
+  .benefit-showcase-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .benefit-showcase-card p {
+    font-size: 0.9rem;
   }
 }
 

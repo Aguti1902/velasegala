@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Navigation from './components/Navigation'
+import PasswordProtection from './pages/PasswordProtection'
 import Welcome from './pages/Welcome'
 import ProposalSelector from './pages/ProposalSelector'
 import Introduction from './pages/Introduction'
@@ -11,10 +12,16 @@ import FinalProposal from './pages/FinalProposal'
 import './App.css'
 
 function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false)
   const [currentStep, setCurrentStep] = useState(0)
   const [selectedServices, setSelectedServices] = useState([])
   const [selectedProposal, setSelectedProposal] = useState(null)
   const [direction, setDirection] = useState('forward')
+
+  // Si no está autenticado, mostrar página de contraseña
+  if (!isAuthenticated) {
+    return <PasswordProtection onCorrectPassword={() => setIsAuthenticated(true)} />
+  }
 
   // Scroll to top when page changes
   useEffect(() => {
