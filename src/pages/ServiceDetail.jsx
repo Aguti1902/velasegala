@@ -258,7 +258,6 @@ function ServiceDetail({ service, selectedServices, toggleService }) {
                 {/* OPCIÓN A: GESDEN G5 + Integración API */}
                 <div className="option-card option-a-card">
                   <div className="option-header">
-                    <div className="option-icon">🔗</div>
                     <h3>Opción A: GESDEN G5 + Integración IA</h3>
                     <span className="option-badge badge-a">Recomendado si hay API</span>
                   </div>
@@ -303,7 +302,6 @@ function ServiceDetail({ service, selectedServices, toggleService }) {
                 {/* OPCIÓN B: CRM Propio */}
                 <div className="option-card option-b-card">
                   <div className="option-header">
-                    <div className="option-icon">🏗️</div>
                     <h3>Opción B: CRM Vela Segalà Propio</h3>
                     <span className="option-badge badge-b">Inversión Estratégica</span>
                   </div>

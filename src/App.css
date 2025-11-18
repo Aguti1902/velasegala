@@ -2965,6 +2965,7 @@
   background: var(--white);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-sm);
+  max-width: 100%;
 }
 
 .gesden-info-box {
@@ -3023,7 +3024,7 @@
 }
 
 .option-header {
-  padding: var(--spacing-2xl);
+  padding: var(--spacing-2xl) var(--spacing-3xl);
   text-align: center;
   background: var(--gray-50);
   position: relative;
@@ -3039,13 +3040,8 @@
   color: var(--white);
 }
 
-.option-icon {
-  font-size: 3rem;
-  margin-bottom: var(--spacing-md);
-}
-
 .option-header h3 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin-bottom: var(--spacing-md);
   font-weight: 700;
 }
@@ -3074,7 +3070,7 @@
 }
 
 .option-body {
-  padding: var(--spacing-2xl);
+  padding: var(--spacing-3xl);
 }
 
 .option-summary {
@@ -3085,9 +3081,10 @@
 }
 
 .option-summary p {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   color: var(--gray-700);
   line-height: 1.6;
+  font-weight: 500;
 }
 
 /* Pros/Cons Compact Design */
@@ -3100,7 +3097,7 @@
 
 .pros-column,
 .cons-column {
-  padding: var(--spacing-lg);
+  padding: var(--spacing-xl);
   border-radius: var(--radius-lg);
 }
 
@@ -3115,15 +3112,15 @@
 }
 
 .pros-column h4 {
-  font-size: 1rem;
-  margin-bottom: var(--spacing-md);
+  font-size: 1.05rem;
+  margin-bottom: var(--spacing-lg);
   color: #059669;
   font-weight: 700;
 }
 
 .cons-column h4 {
-  font-size: 1rem;
-  margin-bottom: var(--spacing-md);
+  font-size: 1.05rem;
+  margin-bottom: var(--spacing-lg);
   color: #dc2626;
   font-weight: 700;
 }
@@ -3137,9 +3134,9 @@
 
 .pros-column li,
 .cons-column li {
-  padding: 0.4rem 0;
-  font-size: 0.9rem;
-  line-height: 1.5;
+  padding: 0.6rem 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
   color: var(--gray-800);
 }
 
@@ -3357,10 +3354,6 @@
     padding: var(--spacing-xl);
   }
 
-  .option-icon {
-    font-size: 2.5rem;
-  }
-
   .option-header h3 {
     font-size: 1.3rem;
   }
@@ -3371,12 +3364,17 @@
   }
 
   .option-body {
-    padding: var(--spacing-lg);
+    padding: var(--spacing-xl);
   }
 
   .pros-cons-compact {
     grid-template-columns: 1fr;
     gap: var(--spacing-md);
+  }
+
+  .pros-column,
+  .cons-column {
+    padding: var(--spacing-lg);
   }
 
   .cost-value {
@@ -3393,20 +3391,22 @@
 }
 
 @media (max-width: 480px) {
-  .option-icon {
-    font-size: 2rem;
-  }
-
   .option-header h3 {
     font-size: 1.1rem;
   }
 
   .option-body {
+    padding: var(--spacing-lg);
+  }
+
+  .pros-column,
+  .cons-column {
     padding: var(--spacing-md);
   }
 
   .pros-column li,
   .cons-column li {
+    padding: 0.4rem 0;
     font-size: 0.85rem;
   }
 
