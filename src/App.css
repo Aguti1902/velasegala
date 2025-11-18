@@ -338,64 +338,61 @@
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
-  padding: var(--spacing-2xl);
+  padding: var(--spacing-lg);
 }
 
 .password-container {
-  max-width: 500px;
+  max-width: 480px;
   width: 100%;
   background: var(--white);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-xl);
-  padding: var(--spacing-3xl);
+  padding: var(--spacing-2xl);
   border: 2px solid var(--gray-200);
 }
 
 .password-header {
   text-align: center;
-  margin-bottom: var(--spacing-3xl);
-}
-
-.lock-icon {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto var(--spacing-xl);
-  background: linear-gradient(135deg, var(--black), var(--gray-700));
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--white);
-}
-
-.password-header .welcome-logo {
   margin-bottom: var(--spacing-xl);
 }
 
-.password-header .welcome-logo img {
-  max-width: 250px;
-  height: auto;
+.lock-icon {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lock-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .password-header h1 {
-  font-size: 1.8rem;
-  margin-bottom: var(--spacing-md);
+  font-size: 1.6rem;
+  margin-bottom: var(--spacing-sm);
   color: var(--black);
+  font-weight: 700;
 }
 
 .password-subtitle {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: var(--gray-600);
-  line-height: 1.6;
+  line-height: 1.5;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .password-form {
-  margin-bottom: var(--spacing-2xl);
+  margin-bottom: var(--spacing-xl);
 }
 
 .password-input-group {
   position: relative;
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
 }
 
 .password-input {
@@ -404,7 +401,7 @@
   padding-right: 50px;
   border: 2px solid var(--gray-300);
   border-radius: var(--radius-md);
-  font-size: 1rem;
+  font-size: 0.95rem;
   transition: all 0.3s;
   background: var(--white);
 }
@@ -441,13 +438,13 @@
 }
 
 .password-error {
-  padding: var(--spacing-md);
+  padding: var(--spacing-sm) var(--spacing-md);
   background: rgba(220, 38, 38, 0.1);
   border: 1px solid #dc2626;
   border-radius: var(--radius-md);
   color: #dc2626;
-  font-size: 0.9rem;
-  margin-bottom: var(--spacing-md);
+  font-size: 0.85rem;
+  margin-bottom: var(--spacing-sm);
   animation: slideIn 0.3s ease;
 }
 
@@ -458,7 +455,7 @@
   color: var(--white);
   border: 2px solid var(--black);
   border-radius: var(--radius-md);
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s;
@@ -473,7 +470,7 @@
 
 .password-footer {
   border-top: 1px solid var(--gray-200);
-  padding-top: var(--spacing-xl);
+  padding-top: var(--spacing-md);
   text-align: center;
 }
 
@@ -481,21 +478,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--spacing-sm);
-  margin-bottom: var(--spacing-md);
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-sm);
 }
 
 .agency-badge-login .agency-label {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--gray-600);
 }
 
 .agency-badge-login .agency-logo {
-  height: 30px;
+  height: 24px;
 }
 
 .confidential-notice {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--gray-500);
   margin: 0;
 }
@@ -523,11 +520,39 @@
 
 @media (max-width: 768px) {
   .password-protection-page {
-    padding: var(--spacing-lg);
+    padding: var(--spacing-md);
   }
 
   .password-container {
-    padding: var(--spacing-2xl);
+    padding: var(--spacing-xl);
+  }
+
+  .lock-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .password-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .password-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .password-header {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .password-form {
+    margin-bottom: var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .password-container {
+    padding: var(--spacing-lg);
   }
 
   .lock-icon {
@@ -535,35 +560,16 @@
     height: 80px;
   }
 
-  .lock-icon svg {
-    width: 36px;
-    height: 36px;
-  }
-
   .password-header h1 {
-    font-size: 1.5rem;
-  }
-
-  .password-header .welcome-logo img {
-    max-width: 200px;
-  }
-}
-
-@media (max-width: 480px) {
-  .password-container {
-    padding: var(--spacing-xl);
-  }
-
-  .password-header h1 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   .password-subtitle {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
 
   .agency-badge-login .agency-logo {
-    height: 24px;
+    height: 20px;
   }
 }
 

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Lock, Eye, EyeOff } from 'lucide-react'
+import { Eye, EyeOff } from 'lucide-react'
 
 function PasswordProtection({ onCorrectPassword }) {
   const [password, setPassword] = useState('')
@@ -29,10 +29,7 @@ function PasswordProtection({ onCorrectPassword }) {
       <div className="password-container">
         <div className="password-header">
           <div className="lock-icon">
-            <Lock size={48} />
-          </div>
-          <div className="welcome-logo">
-            <img src="/logos/Logo.png" alt="Vela Segalà" />
+            <img src="/logos/Isotipo.png" alt="Vela Segalà" />
           </div>
           <h1>Propuesta Confidencial</h1>
           <p className="password-subtitle">
