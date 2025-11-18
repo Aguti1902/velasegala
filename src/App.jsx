@@ -345,6 +345,7 @@ function App() {
         onPrev={prevStep}
         onGoTo={goToStep}
         steps={steps}
+        selectedProposal={selectedProposal}
       />
       <div className={`page-container ${direction}`}>
         {showProposalBadge && proposalLabel && (

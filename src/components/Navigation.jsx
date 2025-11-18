@@ -1,13 +1,22 @@
 import { ChevronLeft, ChevronRight, Menu, X } from 'lucide-react'
 import { useState } from 'react'
 
-function Navigation({ currentStep, totalSteps, onNext, onPrev, onGoTo, steps }) {
+function Navigation({ currentStep, totalSteps, onNext, onPrev, onGoTo, steps, selectedProposal }) {
   const progress = ((currentStep + 1) / totalSteps) * 100
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const handleNavClick = (index) => {
     onGoTo(index)
     setMobileMenuOpen(false) // Cerrar menú al navegar
+  }
+
+  // Texto para mostrar la propuesta en móvil
+  const getProposalText = () => {
+    if (!selectedProposal) return ''
+    if (selectedProposal === 'web') return '🌐 Web'
+    if (selectedProposal === 'tech') return '🧠 Tech'
+    if (selectedProposal === 'all') return '⭐ Completa'
+    return ''
   }
 
   return (
@@ -77,7 +86,7 @@ function Navigation({ currentStep, totalSteps, onNext, onPrev, onGoTo, steps }) 
         </div>
       </aside>
 
-      <div className="bottom-controls">
+      <div className="bottom-controls" data-proposal-text={getProposalText()}>
         <button 
           className="nav-button prev"
           onClick={onPrev}

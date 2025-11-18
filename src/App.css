@@ -2108,20 +2108,34 @@
     width: 100%;
     padding: var(--spacing-sm) var(--spacing-md);
     box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    gap: var(--spacing-sm);
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: var(--spacing-xs);
   }
 
-  /* Ajustar badge en móvil - más arriba para no solaparse con hamburguesa */
+  /* Ocultar badge flotante en móvil */
   .proposal-badge {
-    top: calc(var(--spacing-md) + 56px); /* Debajo de la hamburguesa */
-    right: var(--spacing-md);
-    left: var(--spacing-md);
-    padding: var(--spacing-xs) var(--spacing-sm);
-    font-size: 0.7rem;
+    display: none;
+  }
+
+  /* Ocultar indicador de paso actual en móvil */
+  .current-step-indicator {
+    display: none;
+  }
+
+  /* Mostrar propuesta como texto en bottom-controls */
+  .bottom-controls::before {
+    content: attr(data-proposal-text);
+    grid-column: 2;
     text-align: center;
-    max-width: none;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--gray-600);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 var(--spacing-xs);
   }
 }
 
