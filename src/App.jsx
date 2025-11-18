@@ -46,7 +46,9 @@ function App() {
 
   const handleProposalSelection = (proposal) => {
     setSelectedProposal(proposal)
-    nextStep() // Avanzar a la introducción
+    // Avanzar 2 pasos: saltar bienvenida e ir directo a introducción
+    setDirection('forward')
+    setCurrentStep(2) // Índice 2 = Introducción (después de Bienvenida y Selector)
   }
 
   const allServices = [
@@ -276,6 +278,17 @@ function App() {
   const CurrentComponent = steps[currentStep].component
   const currentProps = steps[currentStep].props || {}
 
+  // Determinar el nombre de la propuesta para el badge
+  const getProposalLabel = () => {
+    if (selectedProposal === 'web') return { text: '🌐 Propuesta: Servicios Web', color: 'web' }
+    if (selectedProposal === 'tech') return { text: '🧠 Propuesta: Tecnología Avanzada', color: 'tech' }
+    if (selectedProposal === 'all') return { text: '⭐ Propuesta: Integral Completa', color: 'all' }
+    return null
+  }
+
+  const proposalLabel = getProposalLabel()
+  const showProposalBadge = selectedProposal && currentStep > 1 // Mostrar después del selector
+
   return (
     <div className="app">
       <Navigation 
@@ -287,6 +300,11 @@ function App() {
         steps={steps}
       />
       <div className={`page-container ${direction}`}>
+        {showProposalBadge && proposalLabel && (
+          <div className={`proposal-badge proposal-badge-${proposalLabel.color}`}>
+            {proposalLabel.text}
+          </div>
+        )}
         <CurrentComponent 
           {...currentProps}
           onNext={nextStep}
