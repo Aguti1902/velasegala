@@ -29,7 +29,7 @@ function PasswordProtection({ onCorrectPassword }) {
       <div className="password-container">
         <div className="password-header">
           <div className="lock-icon">
-            <img src="/logos/Isotipo.png" alt="Vela Segalà" />
+            <img src="/logos/Isotipo blanco.png" alt="Vela Segalà" />
           </div>
           <h1>Propuesta Confidencial</h1>
           <p className="password-subtitle">

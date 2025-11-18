@@ -337,8 +337,36 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(0, 0, 0, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(0, 0, 0, 0.02) 0%, transparent 50%),
+    linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
   padding: var(--spacing-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.password-protection-page::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: 
+    radial-gradient(circle at 30% 40%, rgba(0, 0, 0, 0.02) 0%, transparent 30%),
+    radial-gradient(circle at 70% 60%, rgba(0, 0, 0, 0.015) 0%, transparent 40%);
+  animation: parallaxMove 20s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes parallaxMove {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(2%, 2%);
+  }
 }
 
 .password-container {
@@ -349,6 +377,8 @@
   box-shadow: var(--shadow-xl);
   padding: var(--spacing-2xl);
   border: 2px solid var(--gray-200);
+  position: relative;
+  z-index: 1;
 }
 
 .password-header {
@@ -363,12 +393,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(135deg, var(--black), var(--gray-700));
+  border-radius: 50%;
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-lg);
 }
 
 .lock-icon img {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   object-fit: contain;
+  filter: brightness(1.1);
 }
 
 .password-header h1 {
@@ -485,10 +520,12 @@
 .agency-badge-login .agency-label {
   font-size: 0.8rem;
   color: var(--gray-600);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .agency-badge-login .agency-logo {
-  height: 24px;
+  height: 32px;
 }
 
 .confidential-notice {
@@ -531,6 +568,12 @@
     width: 100px;
     height: 100px;
     margin-bottom: var(--spacing-md);
+    padding: var(--spacing-md);
+  }
+
+  .lock-icon img {
+    width: 75%;
+    height: 75%;
   }
 
   .password-header h1 {
@@ -548,6 +591,10 @@
   .password-form {
     margin-bottom: var(--spacing-md);
   }
+
+  .agency-badge-login .agency-logo {
+    height: 28px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -558,6 +605,12 @@
   .lock-icon {
     width: 80px;
     height: 80px;
+    padding: var(--spacing-sm);
+  }
+
+  .lock-icon img {
+    width: 70%;
+    height: 70%;
   }
 
   .password-header h1 {
@@ -569,7 +622,7 @@
   }
 
   .agency-badge-login .agency-logo {
-    height: 20px;
+    height: 24px;
   }
 }
 
