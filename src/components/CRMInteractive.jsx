@@ -510,18 +510,18 @@ function AnalyticsTab() {
           <h3>Ingresos Mensuales (2025)</h3>
           <div className="revenue-chart-realistic">
             {[
-              { month: 'E', value: 18500, height: 45 },
-              { month: 'F', value: 22300, height: 56 },
-              { month: 'M', value: 26800, height: 67 },
-              { month: 'A', value: 31200, height: 78 },
-              { month: 'M', value: 35600, height: 89 },
-              { month: 'J', value: 28900, height: 72 },
-              { month: 'J', value: 24100, height: 60 },
-              { month: 'A', value: 19800, height: 50 },
-              { month: 'S', value: 33400, height: 84 },
-              { month: 'O', value: 38700, height: 97 },
-              { month: 'N', value: 29500, height: 74 },
-              { month: 'D', value: 27600, height: 69 }
+              { month: 'E', value: 18500, height: 50 },
+              { month: 'F', value: 22300, height: 65 },
+              { month: 'M', value: 26800, height: 75 },
+              { month: 'A', value: 31200, height: 85 },
+              { month: 'M', value: 35600, height: 95 },
+              { month: 'J', value: 28900, height: 78 },
+              { month: 'J', value: 24100, height: 68 },
+              { month: 'A', value: 19800, height: 55 },
+              { month: 'S', value: 33400, height: 90 },
+              { month: 'O', value: 38700, height: 100 },
+              { month: 'N', value: 29500, height: 80 },
+              { month: 'D', value: 27600, height: 73 }
             ].map((data, i) => (
               <div key={i} className="revenue-bar-realistic">
                 <div className="revenue-value">{(data.value / 1000).toFixed(1)}k</div>
