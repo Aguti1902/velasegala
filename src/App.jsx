@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Navigation from './components/Navigation'
 import Welcome from './pages/Welcome'
+import ProposalSelector from './pages/ProposalSelector'
 import Introduction from './pages/Introduction'
 import ServiceDetail from './pages/ServiceDetail'
 import ServiceDemo from './pages/ServiceDemo'
@@ -12,6 +13,7 @@ import './App.css'
 function App() {
   const [currentStep, setCurrentStep] = useState(0)
   const [selectedServices, setSelectedServices] = useState([])
+  const [selectedProposal, setSelectedProposal] = useState(null)
   const [direction, setDirection] = useState('forward')
 
   // Scroll to top when page changes
@@ -42,7 +44,12 @@ function App() {
     setCurrentStep(step)
   }
 
-  const services = [
+  const handleProposalSelection = (proposal) => {
+    setSelectedProposal(proposal)
+    nextStep() // Avanzar a la introducción
+  }
+
+  const allServices = [
     {
       id: 'mantenimiento',
       title: 'Mantenimiento Web Premium',
@@ -193,10 +200,25 @@ function App() {
     }
   ]
 
+  // Filtrar servicios según la propuesta seleccionada
+  const services = selectedProposal === 'web' 
+    ? allServices.filter(s => ['mantenimiento', 'creacion', 'seo'].includes(s.id))
+    : selectedProposal === 'tech'
+    ? allServices.filter(s => ['ia-blog', 'ia-cliente', 'crm'].includes(s.id))
+    : allServices // 'all' muestra todos
+
   const steps = [
     { component: Welcome, title: 'Bienvenida', level: 0 },
-    { component: Introduction, title: 'Introducción', level: 0 },
-    ...services.flatMap((service, index) => {
+    { 
+      component: ProposalSelector, 
+      title: 'Selección de Propuesta', 
+      level: 0,
+      props: { onSelectProposal: handleProposalSelection }
+    },
+    ...(selectedProposal ? [
+      { component: Introduction, title: 'Introducción', level: 0 }
+    ] : []),
+    ...(selectedProposal ? services.flatMap((service, index) => {
       // Solo mantenimiento y creación web NO tienen subpáginas
       if (service.id === 'mantenimiento') {
         return [{ 
@@ -244,9 +266,11 @@ function App() {
           props: { service }
         }
       ]
-    }),
-    { component: BudgetCalculator, title: 'Presupuesto', level: 0 },
-    { component: FinalProposal, title: 'Propuesta Final', level: 0 }
+    }) : []),
+    ...(selectedProposal ? [
+      { component: BudgetCalculator, title: 'Presupuesto', level: 0 },
+      { component: FinalProposal, title: 'Propuesta Final', level: 0 }
+    ] : [])
   ]
 
   const CurrentComponent = steps[currentStep].component
