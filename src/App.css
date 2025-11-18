@@ -387,21 +387,21 @@
 }
 
 .lock-icon {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   margin: 0 auto var(--spacing-lg);
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, var(--black), var(--gray-700));
   border-radius: 50%;
-  padding: var(--spacing-lg);
+  padding: var(--spacing-md);
   box-shadow: var(--shadow-lg);
 }
 
 .lock-icon img {
-  width: 80%;
-  height: 80%;
+  width: 90%;
+  height: 90%;
   object-fit: contain;
   filter: brightness(1.1);
 }
@@ -565,15 +565,15 @@
   }
 
   .lock-icon {
-    width: 100px;
-    height: 100px;
+    width: 85px;
+    height: 85px;
     margin-bottom: var(--spacing-md);
-    padding: var(--spacing-md);
+    padding: var(--spacing-sm);
   }
 
   .lock-icon img {
-    width: 75%;
-    height: 75%;
+    width: 88%;
+    height: 88%;
   }
 
   .password-header h1 {
@@ -603,14 +603,14 @@
   }
 
   .lock-icon {
-    width: 80px;
-    height: 80px;
-    padding: var(--spacing-sm);
+    width: 70px;
+    height: 70px;
+    padding: var(--spacing-xs);
   }
 
   .lock-icon img {
-    width: 70%;
-    height: 70%;
+    width: 85%;
+    height: 85%;
   }
 
   .password-header h1 {
