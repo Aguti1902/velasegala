@@ -3000,137 +3000,190 @@
   font-weight: 700;
 }
 
-/* Comparison Grid */
-.comparison-grid-crm {
+/* Comparison Options Grid - Rediseñado */
+.comparison-options-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--spacing-2xl);
   margin-top: var(--spacing-2xl);
 }
 
-.comparison-card {
+.option-card {
   background: var(--white);
-  border: 2px solid var(--gray-200);
+  border: 3px solid var(--gray-200);
   border-radius: var(--radius-xl);
   overflow: hidden;
   transition: all 0.3s;
 }
 
-.comparison-card:hover {
-  box-shadow: var(--shadow-lg);
-  transform: translateY(-5px);
+.option-card:hover {
+  border-color: var(--black);
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-8px);
 }
 
-.comparison-header {
-  padding: var(--spacing-xl);
-  color: var(--white);
+.option-header {
+  padding: var(--spacing-2xl);
+  text-align: center;
+  background: var(--gray-50);
   position: relative;
 }
 
-.comparison-header.option-a {
+.option-a-card .option-header {
   background: linear-gradient(135deg, var(--gray-700), var(--gray-900));
-}
-
-.comparison-header.option-b {
-  background: linear-gradient(135deg, var(--black), var(--gray-800));
-}
-
-.comparison-header h3 {
   color: var(--white);
-  font-size: 1.5rem;
-  margin-bottom: var(--spacing-sm);
 }
 
-.comparison-badge {
+.option-b-card .option-header {
+  background: linear-gradient(135deg, var(--black), var(--gray-700));
+  color: var(--white);
+}
+
+.option-icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.option-header h3 {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-md);
+  font-weight: 700;
+}
+
+.option-a-card .option-header h3,
+.option-b-card .option-header h3 {
+  color: var(--white);
+}
+
+.option-badge {
   display: inline-block;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 0.4rem 1rem;
+  padding: 0.5rem 1.2rem;
   border-radius: var(--radius-full);
   font-size: 0.85rem;
   font-weight: 600;
 }
 
-.comparison-badge.premium {
+.badge-a {
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--white);
+}
+
+.badge-b {
   background: rgba(255, 215, 0, 0.3);
+  color: var(--white);
 }
 
-.comparison-content {
-  padding: var(--spacing-xl);
+.option-body {
+  padding: var(--spacing-2xl);
 }
 
-.pros-title,
-.cons-title {
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin: var(--spacing-xl) 0 var(--spacing-md) 0;
+.option-summary {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+  padding-bottom: var(--spacing-xl);
+  border-bottom: 2px solid var(--gray-200);
 }
 
-.pros-title {
+.option-summary p {
+  font-size: 1.05rem;
+  color: var(--gray-700);
+  line-height: 1.6;
+}
+
+/* Pros/Cons Compact Design */
+.pros-cons-compact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.pros-column,
+.cons-column {
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+}
+
+.pros-column {
+  background: rgba(5, 150, 105, 0.05);
+  border: 2px solid rgba(5, 150, 105, 0.2);
+}
+
+.cons-column {
+  background: rgba(220, 38, 38, 0.05);
+  border: 2px solid rgba(220, 38, 38, 0.2);
+}
+
+.pros-column h4 {
+  font-size: 1rem;
+  margin-bottom: var(--spacing-md);
   color: #059669;
+  font-weight: 700;
 }
 
-.cons-title {
+.cons-column h4 {
+  font-size: 1rem;
+  margin-bottom: var(--spacing-md);
   color: #dc2626;
+  font-weight: 700;
 }
 
-.comparison-list {
+.pros-column ul,
+.cons-column ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.comparison-list li {
-  padding: var(--spacing-sm) 0;
-  padding-left: var(--spacing-md);
-  border-left: 3px solid var(--gray-200);
-  margin-bottom: var(--spacing-sm);
-  line-height: 1.6;
-}
-
-.comparison-list li strong {
-  color: var(--black);
-  font-weight: 700;
-}
-
-.comparison-cost {
-  background: var(--gray-50);
-  padding: var(--spacing-lg);
-  border-radius: var(--radius-lg);
-  margin-top: var(--spacing-xl);
-}
-
-.comparison-cost h4 {
-  font-size: 1.1rem;
-  margin-bottom: var(--spacing-md);
-  color: var(--black);
-}
-
-.cost-breakdown {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-sm);
-}
-
-.cost-item {
-  font-size: 0.95rem;
+.pros-column li,
+.cons-column li {
   padding: 0.4rem 0;
-  color: var(--gray-700);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--gray-800);
 }
 
-.cost-item.highlight-cost {
-  font-size: 1.2rem;
+.pros-column li::before {
+  content: "✓ ";
+  color: #059669;
   font-weight: 700;
-  color: var(--black);
-  padding-top: var(--spacing-md);
-  border-top: 2px solid var(--gray-300);
-  margin-top: var(--spacing-sm);
+  margin-right: 0.5rem;
 }
 
-.cost-note {
+.cons-column li::before {
+  content: "✗ ";
+  color: #dc2626;
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+/* Option Cost */
+.option-cost {
+  background: linear-gradient(135deg, var(--gray-900), var(--black));
+  color: var(--white);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.cost-label {
   font-size: 0.85rem;
-  font-style: italic;
-  color: var(--gray-600);
-  margin-top: var(--spacing-sm);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.8;
+  margin-bottom: var(--spacing-sm);
+}
+
+.cost-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-xs);
+  color: var(--white);
+}
+
+.cost-detail {
+  font-size: 0.9rem;
+  opacity: 0.9;
 }
 
 /* ROI Analysis */
@@ -3278,9 +3331,9 @@
   font-size: 0.9rem;
 }
 
-/* Mobile Responsive */
+/* Mobile Responsive - Redesigned */
 @media (max-width: 1024px) {
-  .comparison-grid-crm {
+  .comparison-options-grid {
     grid-template-columns: 1fr;
   }
 
@@ -3300,17 +3353,34 @@
     padding: var(--spacing-xl);
   }
 
-  .comparison-header h3 {
-    font-size: 1.2rem;
+  .option-header {
+    padding: var(--spacing-xl);
   }
 
-  .comparison-badge {
+  .option-icon {
+    font-size: 2.5rem;
+  }
+
+  .option-header h3 {
+    font-size: 1.3rem;
+  }
+
+  .option-badge {
     font-size: 0.75rem;
-    padding: 0.3rem 0.8rem;
+    padding: 0.4rem 0.9rem;
   }
 
-  .comparison-content {
-    padding: var(--spacing-md);
+  .option-body {
+    padding: var(--spacing-lg);
+  }
+
+  .pros-cons-compact {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .cost-value {
+    font-size: 2rem;
   }
 
   .roi-analysis {
@@ -3323,17 +3393,29 @@
 }
 
 @media (max-width: 480px) {
-  .comparison-list li {
-    font-size: 0.85rem;
-    padding-left: var(--spacing-sm);
+  .option-icon {
+    font-size: 2rem;
   }
 
-  .cost-item {
+  .option-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .option-body {
+    padding: var(--spacing-md);
+  }
+
+  .pros-column li,
+  .cons-column li {
     font-size: 0.85rem;
   }
 
-  .cost-item.highlight-cost {
-    font-size: 1rem;
+  .cost-value {
+    font-size: 1.8rem;
+  }
+
+  .cost-detail {
+    font-size: 0.8rem;
   }
 
   .action-steps li {

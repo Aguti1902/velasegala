@@ -248,99 +248,99 @@ function ServiceDetail({ service, selectedServices, toggleService }) {
             </div>
 
             <div className="service-section crm-comparison-section">
-              <h2 className="section-heading">Análisis: ¿CRM Propio o Continuar con GESDEN G5?</h2>
+              <h2 className="section-heading">Análisis: ¿CRM Propio o Integración con GESDEN G5?</h2>
               <p className="intro-text">
-                Esta es una <strong>decisión estratégica crítica</strong> que afectará a las operaciones 
-                de Vela Segalà durante años. A continuación analizamos ambas opciones:
+                Decisión estratégica con dos caminos posibles. Cada opción tiene sus ventajas según 
+                la disponibilidad de API de GESDEN G5:
               </p>
 
-              <div className="comparison-grid-crm">
+              <div className="comparison-options-grid">
                 {/* OPCIÓN A: GESDEN G5 + Integración API */}
-                <div className="comparison-card">
-                  <div className="comparison-header option-a">
+                <div className="option-card option-a-card">
+                  <div className="option-header">
+                    <div className="option-icon">🔗</div>
                     <h3>Opción A: GESDEN G5 + Integración IA</h3>
-                    <div className="comparison-badge">Recomendado si GESDEN G5 tiene API</div>
+                    <span className="option-badge badge-a">Recomendado si hay API</span>
                   </div>
-                  
-                  <div className="comparison-content">
-                    <h4 className="pros-title">✅ Ventajas</h4>
-                    <ul className="comparison-list">
-                      <li><strong>Menor inversión inicial:</strong> Sin desarrollo desde cero</li>
-                      <li><strong>Sistema probado:</strong> 14.000 clínicas lo usan con éxito</li>
-                      <li><strong>Soporte especializado:</strong> Equipo de 50 técnicos dentales</li>
-                      <li><strong>Actualizaciones continuas:</strong> Mejoras y nuevas funcionalidades</li>
-                      <li><strong>Integraciones nativas:</strong> Compatible con equipos médicos</li>
-                      <li><strong>Cumplimiento normativo:</strong> RGPD y normativa sanitaria</li>
-                      <li><strong>Formación disponible:</strong> Equipo ya familiarizado</li>
-                      <li><strong>Implementación rápida:</strong> Solo desarrollo de API de conexión</li>
-                      <li><strong>Módulos especializados:</strong> IA dental (DENTIA), odontograma avanzado</li>
-                    </ul>
 
-                    <h4 className="cons-title">❌ Desventajas</h4>
-                    <ul className="comparison-list">
-                      <li><strong>Dependencia de terceros:</strong> Licencias mensuales perpetuas</li>
-                      <li><strong>Costes recurrentes:</strong> Cuotas mensuales que aumentan con el tiempo</li>
-                      <li><strong>Personalización limitada:</strong> Cambios sujetos al proveedor</li>
-                      <li><strong>API puede ser limitada:</strong> Restricciones en la integración con IA</li>
-                      <li><strong>Sin propiedad del software:</strong> No es un activo de la empresa</li>
-                      <li><strong>Riesgo de cambios de precio:</strong> Aumentos sin control</li>
-                      <li><strong>Datos en servidores externos:</strong> Menor control sobre la información</li>
-                      <li><strong>Competencia usa lo mismo:</strong> Sin ventaja competitiva tecnológica</li>
-                    </ul>
+                  <div className="option-body">
+                    <div className="option-summary">
+                      <p>Mantener GESDEN G5 actual e integrar Agentes IA mediante API</p>
+                    </div>
 
-                    <div className="comparison-cost">
-                      <h4>💰 Coste Estimado (5 años)</h4>
-                      <p className="cost-breakdown">
-                        <span className="cost-item">Licencias GESDEN G5: ~40.000€ - 60.000€</span>
-                        <span className="cost-item">Desarrollo API integración: 8.000€ - 12.000€</span>
-                        <span className="cost-item highlight-cost">Total estimado: 48.000€ - 72.000€</span>
-                      </p>
+                    <div className="pros-cons-compact">
+                      <div className="pros-column">
+                        <h4>✅ Principales Ventajas</h4>
+                        <ul>
+                          <li>Menor inversión inicial</li>
+                          <li>Sistema ya probado (14.000 clínicas)</li>
+                          <li>Soporte especializado dental</li>
+                          <li>Equipo ya familiarizado</li>
+                          <li>Implementación rápida</li>
+                        </ul>
+                      </div>
+
+                      <div className="cons-column">
+                        <h4>❌ Principales Desventajas</h4>
+                        <ul>
+                          <li>Dependencia de terceros</li>
+                          <li>Costes recurrentes perpetuos</li>
+                          <li>API puede ser limitada</li>
+                          <li>Sin propiedad del software</li>
+                          <li>Sin ventaja competitiva</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div className="option-cost">
+                      <div className="cost-label">Coste estimado 5 años</div>
+                      <div className="cost-value">48.000€ - 72.000€</div>
+                      <div className="cost-detail">+ Licencias GESDEN G5 perpetuas</div>
                     </div>
                   </div>
                 </div>
 
                 {/* OPCIÓN B: CRM Propio */}
-                <div className="comparison-card">
-                  <div className="comparison-header option-b">
+                <div className="option-card option-b-card">
+                  <div className="option-header">
+                    <div className="option-icon">🏗️</div>
                     <h3>Opción B: CRM Vela Segalà Propio</h3>
-                    <div className="comparison-badge premium">Inversión Estratégica a Largo Plazo</div>
+                    <span className="option-badge badge-b">Inversión Estratégica</span>
                   </div>
-                  
-                  <div className="comparison-content">
-                    <h4 className="pros-title">✅ Ventajas</h4>
-                    <ul className="comparison-list">
-                      <li><strong>100% personalizado:</strong> Diseñado específicamente para Vela Segalà</li>
-                      <li><strong>Propiedad intelectual:</strong> El software es un activo de la empresa</li>
-                      <li><strong>Independencia total:</strong> Sin dependencia de proveedores</li>
-                      <li><strong>Integración nativa con IAs:</strong> Agentes IA conectados al núcleo</li>
-                      <li><strong>Escalabilidad sin límites:</strong> Crece con el negocio</li>
-                      <li><strong>Sin costes recurrentes:</strong> Solo mantenimiento y hosting</li>
-                      <li><strong>Ventaja competitiva:</strong> Tecnología única en el mercado</li>
-                      <li><strong>Control total de datos:</strong> Información en servidores propios</li>
-                      <li><strong>Funcionalidades exclusivas:</strong> Lo que imaginen, lo tendrán</li>
-                      <li><strong>Valor de reventa:</strong> Aumenta el valor de la empresa</li>
-                      <li><strong>Marca blanca:</strong> Posibilidad de licenciar a otras clínicas</li>
-                    </ul>
 
-                    <h4 className="cons-title">❌ Desventajas</h4>
-                    <ul className="comparison-list">
-                      <li><strong>Inversión inicial alta:</strong> 53.000€ de desarrollo</li>
-                      <li><strong>Tiempo de desarrollo:</strong> 6-9 meses hasta producción</li>
-                      <li><strong>Riesgo de proyecto:</strong> Requiere gestión técnica adecuada</li>
-                      <li><strong>Curva de aprendizaje:</strong> Equipo debe adaptarse a nuevo sistema</li>
-                      <li><strong>Migración de datos:</strong> Traspasar información de GESDEN G5</li>
-                      <li><strong>Mantenimiento propio:</strong> Responsabilidad del equipo técnico</li>
-                      <li><strong>Sin soporte 24/7 inicial:</strong> Hasta establecer equipo propio</li>
-                    </ul>
+                  <div className="option-body">
+                    <div className="option-summary">
+                      <p>Desarrollo 100% personalizado desde cero con propiedad total</p>
+                    </div>
 
-                    <div className="comparison-cost">
-                      <h4>💰 Coste Estimado (5 años)</h4>
-                      <p className="cost-breakdown">
-                        <span className="cost-item">Desarrollo inicial: 53.000€</span>
-                        <span className="cost-item">Mantenimiento (5 años): 35.940€</span>
-                        <span className="cost-item highlight-cost">Total: 88.940€</span>
-                        <span className="cost-note">Después de 5 años, solo costes de hosting (~200€/mes)</span>
-                      </p>
+                    <div className="pros-cons-compact">
+                      <div className="pros-column">
+                        <h4>✅ Principales Ventajas</h4>
+                        <ul>
+                          <li>100% personalizado</li>
+                          <li>Propiedad intelectual</li>
+                          <li>Independencia total</li>
+                          <li>Integración nativa con IA</li>
+                          <li>Ventaja competitiva única</li>
+                        </ul>
+                      </div>
+
+                      <div className="cons-column">
+                        <h4>❌ Principales Desventajas</h4>
+                        <ul>
+                          <li>Inversión inicial alta (53.000€)</li>
+                          <li>Tiempo de desarrollo (6-9 meses)</li>
+                          <li>Curva de aprendizaje</li>
+                          <li>Migración de datos</li>
+                          <li>Mantenimiento propio</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div className="option-cost">
+                      <div className="cost-label">Coste estimado 5 años</div>
+                      <div className="cost-value">88.940€</div>
+                      <div className="cost-detail">Luego solo hosting ~200€/mes</div>
                     </div>
                   </div>
                 </div>

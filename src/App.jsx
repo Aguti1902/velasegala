@@ -155,9 +155,9 @@ function App() {
       price: '53.000€ + 599€/mes',
       type: 'both',
       features: [
-        '✓ Actualmente utilizan GESDEN G5 (líder en España con 14.000 clínicas)',
-        '✓ Opción A: Desarrollo CRM propio 100% personalizado',
-        '✓ Opción B: Integración avanzada con GESDEN G5 vía API',
+        'Actualmente utilizan GESDEN G5 (líder en España con 14.000 clínicas)',
+        'Desarrollo CRM propio 100% personalizado',
+        'Integración avanzada con GESDEN G5 vía API',
         'Gestión avanzada de pacientes con historial completo',
         'Historial clínico digital con firma electrónica',
         'Sistema de citas con IA predictiva',
