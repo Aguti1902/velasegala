@@ -227,7 +227,7 @@ function App() {
     ...(selectedProposal ? [
       { component: Introduction, title: 'Introducción', level: 0 }
     ] : []),
-    ...(selectedProposal ? services.flatMap((service, index) => {
+    ...(selectedProposal ? services.flatMap((service) => {
       // Solo mantenimiento y creación web NO tienen subpáginas
       if (service.id === 'mantenimiento') {
         return [{ 
@@ -281,6 +281,26 @@ function App() {
       { component: FinalProposal, title: 'Propuesta Final', level: 0 }
     ] : [])
   ]
+
+  // Verificación de seguridad
+  if (steps.length === 0 || !steps[currentStep]) {
+    return (
+      <div className="app">
+        <div className="page-container">
+          <div style={{ 
+            display: 'flex', 
+            alignItems: 'center', 
+            justifyContent: 'center', 
+            minHeight: '100vh',
+            fontSize: '1.5rem',
+            color: 'var(--gray-600)'
+          }}>
+            Cargando...
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   const CurrentComponent = steps[currentStep].component
   const currentProps = steps[currentStep].props || {}
