@@ -275,17 +275,20 @@ function App() {
 
   const CurrentComponent = steps[currentStep].component
   const currentProps = steps[currentStep].props || {}
+  const isProposalSelector = CurrentComponent === ProposalSelector
 
   return (
-    <div className="app">
-      <Navigation 
-        currentStep={currentStep}
-        totalSteps={steps.length}
-        onNext={nextStep}
-        onPrev={prevStep}
-        onGoTo={goToStep}
-        steps={steps}
-      />
+    <div className={`app ${isProposalSelector ? 'hide-navigation' : ''}`}>
+      {!isProposalSelector && (
+        <Navigation 
+          currentStep={currentStep}
+          totalSteps={steps.length}
+          onNext={nextStep}
+          onPrev={prevStep}
+          onGoTo={goToStep}
+          steps={steps}
+        />
+      )}
       <div className={`page-container ${direction}`}>
         <CurrentComponent 
           {...currentProps}

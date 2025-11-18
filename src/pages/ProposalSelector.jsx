@@ -26,23 +26,17 @@ function ProposalSelector({ onSelectProposal }) {
           
           <div className="proposal-services">
             <div className="service-item">
-              <CheckCircle size={20} />
+              <CheckCircle size={18} />
               <span>Desarrollo Web Viladecans</span>
             </div>
             <div className="service-item">
-              <CheckCircle size={20} />
+              <CheckCircle size={18} />
               <span>Mantenimiento Web Premium</span>
             </div>
             <div className="service-item">
-              <CheckCircle size={20} />
+              <CheckCircle size={18} />
               <span>Posicionamiento SEO Avanzado</span>
             </div>
-          </div>
-
-          <div className="proposal-price">
-            <span className="price-label">Desde</span>
-            <span className="price-value">1.500€</span>
-            <span className="price-detail">+ 649€/mes</span>
           </div>
 
           <button 
@@ -66,23 +60,17 @@ function ProposalSelector({ onSelectProposal }) {
           
           <div className="proposal-services">
             <div className="service-item">
-              <CheckCircle size={20} />
+              <CheckCircle size={18} />
               <span>Agente IA Generación de Contenido</span>
             </div>
             <div className="service-item">
-              <CheckCircle size={20} />
+              <CheckCircle size={18} />
               <span>Agente IA Atención al Paciente</span>
             </div>
             <div className="service-item">
-              <CheckCircle size={20} />
+              <CheckCircle size={18} />
               <span>CRM Vela Segalà (Opcional)</span>
             </div>
-          </div>
-
-          <div className="proposal-price">
-            <span className="price-label">Desde</span>
-            <span className="price-value">13.000€</span>
-            <span className="price-detail">+ 1.098€/mes</span>
           </div>
 
           <button 
@@ -105,6 +93,10 @@ function ProposalSelector({ onSelectProposal }) {
         >
           Ver Propuesta Integral Completa
         </button>
+        <div className="selector-agency">
+          <span>Propuesta elaborada por</span>
+          <img src="/nexgent-logo.png" alt="NexGent" />
+        </div>
       </div>
     </div>
   )
