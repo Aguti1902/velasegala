@@ -2106,18 +2106,22 @@
   .bottom-controls {
     left: 0;
     width: 100%;
-    padding-right: 80px; /* Espacio para botón hamburguesa */
+    padding: var(--spacing-sm) var(--spacing-md);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-sm);
   }
 
-  /* Ajustar badge en móvil */
+  /* Ajustar badge en móvil - más arriba para no solaparse con hamburguesa */
   .proposal-badge {
-    top: var(--spacing-md);
+    top: calc(var(--spacing-md) + 56px); /* Debajo de la hamburguesa */
     right: var(--spacing-md);
-    padding: var(--spacing-xs) var(--spacing-md);
-    font-size: 0.75rem;
-    left: auto;
-    right: var(--spacing-md);
-    max-width: calc(100% - calc(80px + var(--spacing-md) * 2)); /* Espacio para hamburguesa */
+    left: var(--spacing-md);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 0.7rem;
+    text-align: center;
+    max-width: none;
   }
 }
 
