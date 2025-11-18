@@ -221,18 +221,29 @@ src/
 
 ## 🔄 Cambios Recientes
 
-### Versión 3.6 (Actual)
+### Versión 3.7 (Actual)
+- ✅ **Rediseño Sección CRM - Más Clara y Visual**: Comparativa simplificada y fácil de entender
+  - Eliminadas menciones incorrectas de "Opción A/B" en feature cards
+  - Ventajas/desventajas reducidas: 18 → 10 puntos por opción (-45% texto)
+  - Solo 5 pros y 5 contras esenciales por opción
+  - Diseño side-by-side con iconos grandes (🔗 y 🏗️)
+  - Pros/cons en columnas compactas con fondos verde/rojo
+  - Headers con gradientes y badges distintivos
+  - Coste muy visible en footer negro
+  - Jerarquía visual profesional
+  - Escaneo rápido en 10 segundos
+  - 100% responsive (columnas en móvil)
+
+### Versión 3.6
 - ✅ **CRM Actualizado - Análisis GESDEN G5**: Precio 53.000€ + análisis estratégico completo
   - Precio actualizado: 22.000€ → 53.000€
   - CRM ahora es **OPCIONAL**
   - Información sobre GESDEN G5 (líder con 14.000 clínicas)
   - **Comparativa exhaustiva**: GESDEN G5 + API vs CRM propio
-  - Ventajas y desventajas de ambas opciones (9 pros/8 contras cada una)
   - Análisis de costes a 5 años con ROI
   - Recomendación según disponibilidad de API
   - Próximos pasos para toma de decisión
   - +300 líneas de contenido estratégico
-  - Diseño premium con cards comparativas
 
 ### Versión 3.5
 - ✅ **Menú Hamburguesa Móvil**: UX mejorada para dispositivos móviles
