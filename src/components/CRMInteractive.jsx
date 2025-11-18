@@ -508,15 +508,31 @@ function AnalyticsTab() {
       <div className="analytics-grid">
         <div className="analytics-card large">
           <h3>Ingresos Mensuales (2025)</h3>
-          <div className="revenue-chart">
-            {[38, 42, 45, 48, 52, 49, 51, 54, 57, 53, 56, 58].map((value, i) => (
-              <div key={i} className="revenue-bar">
-                <div className="revenue-bar-fill" style={{height: `${value}%`}}></div>
-                <span className="revenue-bar-label">
-                  {['E', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D'][i]}
-                </span>
+          <div className="revenue-chart-realistic">
+            {[
+              { month: 'E', value: 18500, height: 45 },
+              { month: 'F', value: 22300, height: 56 },
+              { month: 'M', value: 26800, height: 67 },
+              { month: 'A', value: 31200, height: 78 },
+              { month: 'M', value: 35600, height: 89 },
+              { month: 'J', value: 28900, height: 72 },
+              { month: 'J', value: 24100, height: 60 },
+              { month: 'A', value: 19800, height: 50 },
+              { month: 'S', value: 33400, height: 84 },
+              { month: 'O', value: 38700, height: 97 },
+              { month: 'N', value: 29500, height: 74 },
+              { month: 'D', value: 27600, height: 69 }
+            ].map((data, i) => (
+              <div key={i} className="revenue-bar-realistic">
+                <div className="revenue-value">{(data.value / 1000).toFixed(1)}k</div>
+                <div className="revenue-bar-fill-realistic" style={{height: `${data.height}%`}}></div>
+                <span className="revenue-bar-label-realistic">{data.month}</span>
               </div>
             ))}
+          </div>
+          <div className="revenue-total">
+            <span className="revenue-total-label">Total Anual:</span>
+            <span className="revenue-total-value">336.400€</span>
           </div>
         </div>
 
