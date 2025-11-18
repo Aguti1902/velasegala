@@ -2121,6 +2121,200 @@
   }
 }
 
+/* ============================================
+   PROPOSAL BRIDGE PAGE (ENLACE ENTRE PROPUESTAS)
+   ============================================ */
+
+.proposal-bridge-page {
+  padding: var(--spacing-3xl) var(--spacing-2xl);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.bridge-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3xl);
+}
+
+.bridge-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.bridge-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.bridge-icon.success {
+  background: linear-gradient(135deg, #10B981, #059669);
+  color: var(--white);
+  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+}
+
+.bridge-icon.question {
+  background: linear-gradient(135deg, var(--black), var(--gray-700));
+  color: var(--white);
+  box-shadow: var(--shadow-lg);
+}
+
+.bridge-section h1 {
+  font-size: 1.8rem;
+  color: var(--gray-700);
+  font-weight: 600;
+  margin: 0;
+}
+
+.bridge-proposal-name {
+  font-size: 2.2rem;
+  color: var(--black);
+  font-weight: 700;
+  margin: 0;
+}
+
+.bridge-section h2 {
+  font-size: 1.6rem;
+  color: var(--gray-700);
+  font-weight: 600;
+  margin: 0;
+}
+
+.bridge-other-name {
+  font-size: 2rem;
+  color: var(--black);
+  font-weight: 700;
+  margin: var(--spacing-sm) 0;
+}
+
+.bridge-description,
+.bridge-other-description {
+  font-size: 1.1rem;
+  color: var(--gray-600);
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.bridge-divider {
+  position: relative;
+  padding: var(--spacing-2xl) 0;
+}
+
+.divider-line {
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--gray-300) 20%,
+    var(--gray-300) 80%,
+    transparent 100%
+  );
+  position: relative;
+}
+
+.divider-line::before {
+  content: '○';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--white);
+  color: var(--gray-400);
+  font-size: 2rem;
+  padding: 0 var(--spacing-md);
+}
+
+.other-services-preview {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin: var(--spacing-xl) 0;
+  padding: var(--spacing-xl);
+  background: var(--gray-50);
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--gray-200);
+  width: 100%;
+  max-width: 500px;
+}
+
+.service-preview-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: 1rem;
+  color: var(--gray-700);
+}
+
+.service-preview-item svg {
+  color: #10B981;
+  flex-shrink: 0;
+}
+
+.view-other-button {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg) var(--spacing-2xl);
+  background: linear-gradient(135deg, var(--black), var(--gray-800));
+  color: var(--white);
+  border: 2px solid var(--black);
+  border-radius: var(--radius-lg);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: var(--shadow-md);
+}
+
+.view-other-button:hover {
+  background: var(--white);
+  color: var(--black);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.bridge-note {
+  font-size: 0.9rem;
+  color: var(--gray-500);
+  font-style: italic;
+  max-width: 500px;
+}
+
+.bridge-footer {
+  border-top: 1px solid var(--gray-200);
+  padding-top: var(--spacing-xl);
+  text-align: center;
+}
+
+.continue-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-xl);
+  background: transparent;
+  color: var(--gray-600);
+  border: 2px solid var(--gray-300);
+  border-radius: var(--radius-lg);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.continue-button:hover {
+  background: var(--gray-50);
+  border-color: var(--gray-400);
+  color: var(--gray-700);
+}
+
 @media (max-width: 480px) {
   .mobile-menu-toggle {
     top: var(--spacing-md);
@@ -4139,5 +4333,54 @@
   .proposal-button {
     font-size: 0.95rem;
     padding: var(--spacing-md) var(--spacing-lg);
+  }
+
+  /* Proposal Bridge responsive */
+  .proposal-bridge-page {
+    padding: var(--spacing-2xl) var(--spacing-lg);
+  }
+
+  .bridge-container {
+    gap: var(--spacing-2xl);
+  }
+
+  .bridge-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .bridge-icon svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .bridge-section h1 {
+    font-size: 1.4rem;
+  }
+
+  .bridge-proposal-name {
+    font-size: 1.8rem;
+  }
+
+  .bridge-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .bridge-other-name {
+    font-size: 1.6rem;
+  }
+
+  .bridge-description,
+  .bridge-other-description {
+    font-size: 1rem;
+  }
+
+  .other-services-preview {
+    padding: var(--spacing-lg);
+  }
+
+  .view-other-button {
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: 1rem;
   }
 }

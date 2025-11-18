@@ -7,6 +7,7 @@ import Introduction from './pages/Introduction'
 import ServiceDetail from './pages/ServiceDetail'
 import ServiceDemo from './pages/ServiceDemo'
 import ServiceStats from './pages/ServiceStats'
+import ProposalBridge from './pages/ProposalBridge'
 import BudgetCalculator from './pages/BudgetCalculator'
 import FinalProposal from './pages/FinalProposal'
 import './App.css'
@@ -278,6 +279,23 @@ function App() {
         }
       ]
     }) : []),
+    // Mostrar ProposalBridge solo si no es 'all' (para ofrecer ver la otra propuesta)
+    ...(selectedProposal && selectedProposal !== 'all' ? [
+      { 
+        component: ProposalBridge, 
+        title: '¿Ver otra propuesta?', 
+        level: 0,
+        props: {
+          currentProposal: selectedProposal,
+          onViewOther: () => {
+            setSelectedProposal('all')
+            // Resetear al paso de Introducción para ver ambas propuestas
+            setCurrentStep(2)
+          },
+          onContinue: nextStep
+        }
+      }
+    ] : []),
     ...(selectedProposal ? [
       { component: BudgetCalculator, title: 'Presupuesto', level: 0 },
       { component: FinalProposal, title: 'Propuesta Final', level: 0 }
