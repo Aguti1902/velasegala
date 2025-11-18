@@ -155,7 +155,7 @@ function App() {
       price: '53.000€ + 599€/mes',
       type: 'both',
       features: [
-        '✅ Todas las funcionalidades de GESDEN G5 incluidas',
+        'Todas las funcionalidades de GESDEN G5 incluidas',
         'Gestión completa de pacientes con historial clínico digital',
         'Odontograma digital interactivo con anotaciones',
         'Historial clínico con firma electrónica y validación legal',
@@ -170,7 +170,7 @@ function App() {
         'Control de inventario y gestión de almacén',
         'Control de horarios, turnos y vacaciones del personal',
         'Sistema de fidelización y puntos de pacientes',
-        '🚀 VENTAJAS ADICIONALES DEL CRM PROPIO:',
+        'VENTAJAS ADICIONALES DEL CRM PROPIO:',
         'Integración nativa de Agentes IA (WhatsApp + telefónico)',
         'Arquitectura escalable preparada para crecimiento futuro',
         'Interfaz moderna, intuitiva y personalizada para Vela Segalà',

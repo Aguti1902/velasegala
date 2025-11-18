@@ -757,17 +757,28 @@
 }
 
 /* Separador: Paridad con GESDEN G5 */
-.features-grid .feature-card:first-child .feature-text {
-  font-weight: 600;
-}
-
 .features-grid .feature-card:first-child {
-  background: var(--gray-50);
-  border: 3px solid var(--black);
+  background: linear-gradient(135deg, var(--gray-700), var(--gray-900));
+  border: none;
+  color: var(--white);
   grid-column: 1 / -1;
   justify-content: center;
   text-align: center;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 1.15rem;
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-lg);
+  cursor: default;
+}
+
+.features-grid .feature-card:first-child .feature-text {
+  color: var(--white);
+  font-weight: 700;
+}
+
+.features-grid .feature-card:first-child:hover {
+  transform: none;
+  box-shadow: var(--shadow-lg);
 }
 
 /* Separador: Ventajas Adicionales */
@@ -785,6 +796,10 @@
   cursor: default;
 }
 
+.features-grid .feature-card:nth-child(16) .feature-text {
+  color: var(--white);
+}
+
 .features-grid .feature-card:nth-child(16):hover {
   transform: none;
   box-shadow: var(--shadow-lg);
@@ -795,7 +810,7 @@
 }
 
 .features-grid .feature-card:first-child .feature-check {
-  color: var(--black);
+  display: none;
 }
 
 .feature-check {
