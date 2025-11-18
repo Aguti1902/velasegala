@@ -18,15 +18,17 @@ function App() {
   const [selectedProposal, setSelectedProposal] = useState(null)
   const [direction, setDirection] = useState('forward')
 
+  // Scroll to top when page changes (DEBE estar antes del return condicional)
+  useEffect(() => {
+    if (isAuthenticated) {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+  }, [currentStep, isAuthenticated])
+
   // Si no está autenticado, mostrar página de contraseña
   if (!isAuthenticated) {
     return <PasswordProtection onCorrectPassword={() => setIsAuthenticated(true)} />
   }
-
-  // Scroll to top when page changes
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }, [currentStep])
 
   const toggleService = (serviceId) => {
     setSelectedServices(prev => 
