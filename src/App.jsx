@@ -65,12 +65,14 @@ function App() {
     {
       id: 'mantenimiento',
       title: 'Mantenimiento Web Premium',
-      shortDescription: 'Gestión integral de 2 sitios web corporativos',
+      shortDescription: 'Gestión integral de 4 sitios web corporativos',
       price: '199€/mes',
       type: 'monthly',
       features: [
+        'Mantenimiento de velasegala.com',
         'Mantenimiento de velasegalasantceloni.com',
         'Mantenimiento de velasegalaviladecans.com',
+        'Mantenimiento de esteticavelasegala.com',
         'Actualizaciones de seguridad mensuales',
         'Backups automáticos diarios en múltiples ubicaciones',
         'Monitorización 24/7 con alertas en tiempo real',
@@ -126,8 +128,8 @@ function App() {
       id: 'ia-blog',
       title: 'Agente IA Generación de Contenido',
       shortDescription: 'Sistema inteligente de creación y publicación automática',
-      price: '399€/mes',
-      type: 'monthly',
+      price: '2.000€ + 399€/mes',
+      type: 'both',
       features: [
         'Publicación automática de artículos de alta calidad (8-12/mes)',
         'Contenido 100% SEO-optimizado con palabras clave estratégicas',
@@ -141,7 +143,7 @@ function App() {
         'A/B testing de titulares',
         'Dashboard de rendimiento en tiempo real'
       ],
-      pricing: { monthly: 399, initial: 0 }
+      pricing: { monthly: 399, initial: 2000 }
     },
     {
       id: 'ia-cliente',
