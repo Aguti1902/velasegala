@@ -39,6 +39,10 @@ function ProposalSelector({ onSelectProposal }) {
             </div>
             <div className="service-item">
               <CheckCircle size={18} />
+              <span>Campañas SEM Google Ads</span>
+            </div>
+            <div className="service-item">
+              <CheckCircle size={18} />
               <span>Agente IA Generación de Contenido</span>
             </div>
           </div>
