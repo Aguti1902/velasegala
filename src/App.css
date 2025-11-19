@@ -4212,6 +4212,49 @@
   box-shadow: var(--shadow-md);
 }
 
+/* Locked Card Styles */
+.locked-card {
+  position: relative;
+  opacity: 0.75;
+  pointer-events: none;
+}
+
+.locked-badge {
+  position: absolute;
+  top: var(--spacing-lg);
+  right: var(--spacing-lg);
+  background: var(--black);
+  color: var(--white);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: 0.75rem;
+  font-weight: 600;
+  z-index: 10;
+}
+
+.locked-icon {
+  opacity: 0.5;
+}
+
+.locked-services {
+  opacity: 0.6;
+}
+
+.locked-button {
+  background: var(--gray-300) !important;
+  color: var(--gray-600) !important;
+  cursor: not-allowed !important;
+  pointer-events: none;
+}
+
+.locked-button:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
 .selector-footer {
   text-align: center;
   max-width: 900px;

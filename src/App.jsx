@@ -214,9 +214,9 @@ function App() {
 
   // Filtrar servicios según la propuesta seleccionada
   const services = selectedProposal === 'web' 
-    ? allServices.filter(s => ['mantenimiento', 'creacion', 'seo'].includes(s.id))
+    ? allServices.filter(s => ['mantenimiento', 'creacion', 'seo', 'ia-blog'].includes(s.id))
     : selectedProposal === 'tech'
-    ? allServices.filter(s => ['ia-blog', 'ia-cliente', 'crm'].includes(s.id))
+    ? allServices.filter(s => ['ia-cliente', 'crm'].includes(s.id))
     : allServices // 'all' muestra todos
 
   const steps = [

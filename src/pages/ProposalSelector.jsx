@@ -1,4 +1,4 @@
-import { Globe, Brain, ArrowRight, CheckCircle } from 'lucide-react'
+import { Globe, Brain, ArrowRight, CheckCircle, Lock } from 'lucide-react'
 
 function ProposalSelector({ onSelectProposal }) {
   return (
@@ -37,6 +37,10 @@ function ProposalSelector({ onSelectProposal }) {
               <CheckCircle size={18} />
               <span>Posicionamiento SEO Avanzado</span>
             </div>
+            <div className="service-item">
+              <CheckCircle size={18} />
+              <span>Agente IA Generación de Contenido</span>
+            </div>
           </div>
 
           <button 
@@ -48,9 +52,13 @@ function ProposalSelector({ onSelectProposal }) {
           </button>
         </div>
 
-        {/* Card 2: Tecnología Avanzada (IA + CRM) */}
-        <div className="proposal-card tech-card">
-          <div className="proposal-icon">
+        {/* Card 2: Tecnología Avanzada (IA + CRM) - BLOQUEADA */}
+        <div className="proposal-card tech-card locked-card">
+          <div className="locked-badge">
+            <Lock size={16} />
+            <span>Próximamente</span>
+          </div>
+          <div className="proposal-icon locked-icon">
             <Brain size={48} />
           </div>
           <h2>Tecnología Avanzada</h2>
@@ -58,11 +66,7 @@ function ProposalSelector({ onSelectProposal }) {
             Automatización inteligente y gestión empresarial de última generación
           </p>
           
-          <div className="proposal-services">
-            <div className="service-item">
-              <CheckCircle size={18} />
-              <span>Agente IA Generación de Contenido</span>
-            </div>
+          <div className="proposal-services locked-services">
             <div className="service-item">
               <CheckCircle size={18} />
               <span>Agente IA Atención al Paciente</span>
@@ -74,25 +78,16 @@ function ProposalSelector({ onSelectProposal }) {
           </div>
 
           <button 
-            className="proposal-button"
-            onClick={() => onSelectProposal('tech')}
+            className="proposal-button locked-button"
+            disabled
           >
-            <span>Ver Propuesta Completa</span>
-            <ArrowRight size={20} />
+            <Lock size={20} />
+            <span>No Disponible</span>
           </button>
         </div>
       </div>
 
       <div className="selector-footer">
-        <p className="footer-note">
-          También puede contratar ambas propuestas juntas para una transformación digital completa
-        </p>
-        <button 
-          className="view-all-button"
-          onClick={() => onSelectProposal('all')}
-        >
-          Ver Propuesta Integral Completa
-        </button>
         <div className="selector-agency">
           <span>Propuesta elaborada por</span>
           <img src="/nexgent-logo.png" alt="NexGent" />
