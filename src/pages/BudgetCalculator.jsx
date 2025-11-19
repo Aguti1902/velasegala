@@ -21,7 +21,7 @@ function BudgetCalculator({ selectedServices, allServices }) {
   const totalFirstYear = initialTotal + annualTotal
 
   const hasSelection = selectedServices.length > 0
-  const allServicesSelected = selectedServices.length === 6
+  const allServicesSelected = selectedServices.length === allServices.length
   const discount = allServicesSelected ? 0.10 : 0
 
   const discountedMonthly = monthlyTotal * (1 - discount)

@@ -15,7 +15,7 @@ function FinalProposal({ selectedServices, allServices }) {
   })()
 
   const hasSelection = selectedServices.length > 0
-  const allServicesSelected = selectedServices.length === 6
+  const allServicesSelected = selectedServices.length === allServices.length
   const discount = allServicesSelected ? 0.10 : 0
   const finalMonthly = monthlyTotal * (1 - discount)
   const finalInitial = initialTotal * (1 - discount)
@@ -35,7 +35,7 @@ function FinalProposal({ selectedServices, allServices }) {
               <div className="summary-stats">
                 <div className="stat-item">
                   <div className="stat-label">Servicios Seleccionados</div>
-                  <div className="stat-value">{selectedServices.length} de 6</div>
+                  <div className="stat-value">{selectedServices.length} de {allServices.length}</div>
                 </div>
                 <div className="stat-item">
                   <div className="stat-label">Inversión Inicial</div>
