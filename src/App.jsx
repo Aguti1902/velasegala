@@ -279,6 +279,17 @@ function App() {
           }
         ]
       }
+      // Google Ads solo tiene la página de detalle (sin demo ni stats)
+      if (service.id === 'google-ads') {
+        return [
+          { 
+            component: ServiceDetail, 
+            title: service.title,
+            level: 0,
+            props: { service }
+          }
+        ]
+      }
       // El resto de servicios tienen demo + estadísticas
       return [
         { 
