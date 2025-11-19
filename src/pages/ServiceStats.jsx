@@ -276,7 +276,7 @@ function SEOStats() {
               <div className="position-progress">
                 <div className="position-bar">
                   <div className="position-before" style={{width: '60%'}}>Posición 12</div>
-                  <div className="position-after" style={{width: '5%'}}>Posición 1</div>
+                  <div className="position-after" style={{width: '40%'}}>Posición 1</div>
                 </div>
               </div>
             </div>
@@ -363,7 +363,6 @@ function BlogAIStats() {
         <h2>Ventajas Clave del Sistema IA</h2>
         <div className="benefits-showcase-grid">
           <div className="benefit-showcase-card">
-            <div className="benefit-icon">📈</div>
             <h3>Posicionamiento SEO Superior</h3>
             <p>
               Contenido 100% optimizado para motores de búsqueda con análisis de palabras clave,
@@ -373,7 +372,6 @@ function BlogAIStats() {
           </div>
 
           <div className="benefit-showcase-card">
-            <div className="benefit-icon">⚡</div>
             <h3>Ahorro de Tiempo Masivo</h3>
             <p>
               De investigación, redacción y publicación manual que tomaba días,
@@ -383,7 +381,6 @@ function BlogAIStats() {
           </div>
 
           <div className="benefit-showcase-card">
-            <div className="benefit-icon">🎯</div>
             <h3>Consistencia Garantizada</h3>
             <p>
               8-12 artículos de alta calidad publicados mensualmente de forma automática.
@@ -393,7 +390,6 @@ function BlogAIStats() {
           </div>
 
           <div className="benefit-showcase-card">
-            <div className="benefit-icon">🔄</div>
             <h3>Actualización Continua</h3>
             <p>
               El sistema analiza constantemente tendencias del sector dental, noticias y
@@ -403,7 +399,6 @@ function BlogAIStats() {
           </div>
 
           <div className="benefit-showcase-card">
-            <div className="benefit-icon">💰</div>
             <h3>Escalable Sin Costes Extra</h3>
             <p>
               A diferencia de contratar más redactores, el sistema puede generar más contenido
@@ -413,7 +408,6 @@ function BlogAIStats() {
           </div>
 
           <div className="benefit-showcase-card">
-            <div className="benefit-icon">🎨</div>
             <h3>Contenido Multimedia Completo</h3>
             <p>
               Generación automática de imágenes optimizadas, infografías y elementos visuales
