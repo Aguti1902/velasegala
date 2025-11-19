@@ -7,7 +7,6 @@ import Introduction from './pages/Introduction'
 import ServiceDetail from './pages/ServiceDetail'
 import ServiceDemo from './pages/ServiceDemo'
 import ServiceStats from './pages/ServiceStats'
-import ProposalBridge from './pages/ProposalBridge'
 import BudgetCalculator from './pages/BudgetCalculator'
 import FinalProposal from './pages/FinalProposal'
 import './App.css'
@@ -125,6 +124,27 @@ function App() {
       pricing: { monthly: 450, initial: 1000 }
     },
     {
+      id: 'google-ads',
+      title: 'Campañas SEM Google Ads',
+      shortDescription: 'Gestión profesional de publicidad en Google',
+      price: '300€/mes',
+      type: 'monthly',
+      features: [
+        'Gestión completa de campañas de búsqueda',
+        'Optimización continua de anuncios y keywords',
+        'Segmentación avanzada de público objetivo',
+        'A/B testing de creatividades y copys',
+        'Remarketing estratégico',
+        'Informes semanales de rendimiento',
+        'Optimización de conversiones y CTR',
+        'Ajuste de pujas automático basado en rendimiento',
+        'Extensiones de anuncios optimizadas',
+        'Análisis de competencia en pujas',
+        'Presupuesto publicitario no incluido (gestionado aparte)'
+      ],
+      pricing: { monthly: 300, initial: 0 }
+    },
+    {
       id: 'ia-blog',
       title: 'Agente IA Generación de Contenido',
       shortDescription: 'Sistema inteligente de creación y publicación automática',
@@ -216,7 +236,7 @@ function App() {
 
   // Filtrar servicios según la propuesta seleccionada
   const services = selectedProposal === 'web' 
-    ? allServices.filter(s => ['mantenimiento', 'creacion', 'seo', 'ia-blog'].includes(s.id))
+    ? allServices.filter(s => ['mantenimiento', 'creacion', 'seo', 'google-ads', 'ia-blog'].includes(s.id))
     : selectedProposal === 'tech'
     ? allServices.filter(s => ['ia-cliente', 'crm'].includes(s.id))
     : allServices // 'all' muestra todos
@@ -281,23 +301,6 @@ function App() {
         }
       ]
     }) : []),
-    // Mostrar ProposalBridge solo si no es 'all' (para ofrecer ver la otra propuesta)
-    ...(selectedProposal && selectedProposal !== 'all' ? [
-      { 
-        component: ProposalBridge, 
-        title: '¿Ver otra propuesta?', 
-        level: 0,
-        props: {
-          currentProposal: selectedProposal,
-          onViewOther: () => {
-            setSelectedProposal('all')
-            // Resetear al paso de Introducción para ver ambas propuestas
-            setCurrentStep(2)
-          },
-          onContinue: nextStep
-        }
-      }
-    ] : []),
     ...(selectedProposal ? [
       { component: BudgetCalculator, title: 'Presupuesto', level: 0 },
       { component: FinalProposal, title: 'Propuesta Final', level: 0 }
