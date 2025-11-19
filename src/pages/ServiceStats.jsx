@@ -173,12 +173,12 @@ function WebsiteStats() {
               <span className="chart-label">Primeros 12 Meses</span>
             </div>
             <div className="line-chart-grid">
-              <div className="line-chart-line" style={{height: '25%', left: '0%'}}></div>
-              <div className="line-chart-line" style={{height: '35%', left: '16.66%'}}></div>
-              <div className="line-chart-line" style={{height: '48%', left: '33.33%'}}></div>
-              <div className="line-chart-line" style={{height: '52%', left: '50%'}}></div>
-              <div className="line-chart-line" style={{height: '68%', left: '66.66%'}}></div>
-              <div className="line-chart-line" style={{height: '85%', left: '83.33%'}}></div>
+              <div className="line-chart-line" style={{height: '25%', left: '8.33%'}}></div>
+              <div className="line-chart-line" style={{height: '35%', left: '25%'}}></div>
+              <div className="line-chart-line" style={{height: '48%', left: '41.67%'}}></div>
+              <div className="line-chart-line" style={{height: '52%', left: '58.33%'}}></div>
+              <div className="line-chart-line" style={{height: '68%', left: '75%'}}></div>
+              <div className="line-chart-line" style={{height: '85%', left: '91.67%'}}></div>
             </div>
             <div className="line-chart-labels">
               <span>Mes 2</span>
@@ -426,11 +426,12 @@ function BlogAIStats() {
               <span className="chart-label">Crecimiento de Visitas (6 meses)</span>
             </div>
             <div className="line-chart-grid">
-              <div className="line-chart-line" style={{height: '20%', left: '0%'}}></div>
-              <div className="line-chart-line" style={{height: '38%', left: '20%'}}></div>
-              <div className="line-chart-line" style={{height: '52%', left: '40%'}}></div>
-              <div className="line-chart-line" style={{height: '68%', left: '60%'}}></div>
-              <div className="line-chart-line" style={{height: '82%', left: '80%'}}></div>
+              <div className="line-chart-line" style={{height: '15%', left: '8.33%'}}></div>
+              <div className="line-chart-line" style={{height: '30%', left: '25%'}}></div>
+              <div className="line-chart-line" style={{height: '45%', left: '41.67%'}}></div>
+              <div className="line-chart-line" style={{height: '62%', left: '58.33%'}}></div>
+              <div className="line-chart-line" style={{height: '78%', left: '75%'}}></div>
+              <div className="line-chart-line" style={{height: '92%', left: '91.67%'}}></div>
             </div>
             <div className="line-chart-labels">
               <span>Mes 1</span>
@@ -441,16 +442,17 @@ function BlogAIStats() {
               <span>Mes 6</span>
             </div>
             <div className="line-chart-values">
-              <span>800</span>
-              <span>1.5K</span>
-              <span>2.1K</span>
-              <span>2.7K</span>
-              <span>3.3K</span>
+              <span>180</span>
+              <span>320</span>
+              <span>510</span>
+              <span>750</span>
+              <span>1.0K</span>
+              <span>1.4K</span>
             </div>
           </div>
           <div className="chart-insight">
             <TrendingUp size={20} />
-            <span>Incremento: <strong>+312% en 6 meses</strong></span>
+            <span>Incremento: <strong>+678% en 6 meses</strong></span>
           </div>
         </div>
       </div>

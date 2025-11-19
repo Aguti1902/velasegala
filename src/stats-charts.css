@@ -230,6 +230,7 @@
   background: var(--black);
   border-radius: var(--radius-sm) var(--radius-sm) 0 0;
   transition: height 1s ease;
+  transform: translateX(-50%);
 }
 
 .line-chart-labels,
