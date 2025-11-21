@@ -4,7 +4,7 @@ function ServiceStats({ service }) {
   if (!service) return null
 
   const getServiceNumber = () => {
-    const services = ['mantenimiento', 'creacion', 'seo', 'ia-blog', 'ia-cliente', 'crm']
+    const services = ['mantenimiento', 'creacion', 'seo', 'google-ads', 'ia-blog', 'ia-cliente', 'subvencion', 'colaboracion']
     return (services.indexOf(service.id) + 1).toString().padStart(2, '0')
   }
 
@@ -20,8 +20,10 @@ function ServiceStats({ service }) {
         return <BlogAIStats />
       case 'ia-cliente':
         return <ClientAIStats />
-      case 'crm':
-        return <CRMStats />
+      case 'subvencion':
+        return <SubvencionStats />
+      case 'colaboracion':
+        return <ColaboracionStats />
       default:
         return null
     }
@@ -582,115 +584,417 @@ function ClientAIStats() {
 }
 
 // Estadísticas de CRM
-function CRMStats() {
+function SubvencionStats() {
   return (
     <div className="stats-content">
       <div className="stats-section">
-        <h2>Impacto Operativo</h2>
+        <h2>Impacto Económico</h2>
         <div className="metrics-grid">
+          <div className="metric-card success-card">
+            <Euro className="metric-icon" />
+            <div className="metric-value">30.000€</div>
+            <div className="metric-label">Subvención Total</div>
+          </div>
+          <div className="metric-card success-card">
+            <TrendingUp className="metric-icon" />
+            <div className="metric-value">100%</div>
+            <div className="metric-label">IA Gratis</div>
+          </div>
           <div className="metric-card">
             <Clock className="metric-icon" />
-            <div className="metric-value">200h</div>
-            <div className="metric-label">Ahorro/mes</div>
-          </div>
-          <div className="metric-card">
-            <Target className="metric-icon" />
-            <div className="metric-value">-85%</div>
-            <div className="metric-label">Reducción Errores</div>
-          </div>
-          <div className="metric-card">
-            <TrendingUp className="metric-icon" />
-            <div className="metric-value">+42%</div>
-            <div className="metric-label">Eficiencia General</div>
+            <div className="metric-value">4-6</div>
+            <div className="metric-label">Meses Plazo</div>
           </div>
         </div>
       </div>
 
       <div className="stats-section">
-        <h2>Distribución del Tiempo Ahorrado</h2>
+        <h2>Desglose de Costes Cubiertos</h2>
         <div className="chart-container">
           <div className="bar-chart horizontal">
             <div className="bar-chart-item">
-              <div className="bar-label">Gestión de Citas</div>
+              <div className="bar-label">Desarrollo Agente IA</div>
               <div className="bar-wrapper">
-                <div className="bar" style={{width: '40%'}}></div>
-                <span className="bar-value">80h/mes</span>
+                <div className="bar" style={{width: '43%'}}></div>
+                <span className="bar-value">13.000€</span>
               </div>
             </div>
             <div className="bar-chart-item">
-              <div className="bar-label">Facturación</div>
+              <div className="bar-label">Mantenimiento 24 meses</div>
               <div className="bar-wrapper">
-                <div className="bar" style={{width: '30%'}}></div>
-                <span className="bar-value">60h/mes</span>
+                <div className="bar" style={{width: '56%'}}></div>
+                <span className="bar-value">16.776€</span>
               </div>
             </div>
             <div className="bar-chart-item">
-              <div className="bar-label">Gestión de Historiales</div>
+              <div className="bar-label">Reserva</div>
               <div className="bar-wrapper">
-                <div className="bar" style={{width: '25%'}}></div>
-                <span className="bar-value">50h/mes</span>
-              </div>
-            </div>
-            <div className="bar-chart-item">
-              <div className="bar-label">Coordinación Multi-Clínica</div>
-              <div className="bar-wrapper">
-                <div className="bar" style={{width: '5%'}}></div>
-                <span className="bar-value">10h/mes</span>
+                <div className="bar" style={{width: '1%'}}></div>
+                <span className="bar-value">224€</span>
               </div>
             </div>
           </div>
           <div className="chart-insight">
-            <Clock size={20} />
-            <span>Total: <strong>200 horas mensuales liberadas</strong> para atención al paciente</span>
+            <Euro size={20} />
+            <span>Total cubierto: <strong>30.000€ - Todo el sistema IA gratis</strong></span>
           </div>
         </div>
       </div>
 
       <div className="stats-section">
-        <h2>ROI del CRM</h2>
-        <div className="roi-timeline">
-          <div className="roi-timeline-item">
-            <div className="timeline-period">Año 1</div>
-            <div className="timeline-content">
-              <div className="timeline-investment">Inversión: €47.088</div>
-              <div className="timeline-savings">Ahorro operativo: €28.800</div>
-              <div className="timeline-revenue">Ingresos extra: €42.000</div>
-              <div className="timeline-result positive">Balance: +€23.712</div>
+        <h2>Beneficios de Global Data Care</h2>
+        <div className="benefits-metrics">
+          <div className="benefit-metric-card">
+            <div className="benefit-icon">⚡</div>
+            <div className="benefit-content">
+              <div className="benefit-value">-35%</div>
+              <div className="benefit-label">Reducción tiempo primera consulta</div>
+              <div className="benefit-detail">De 45 min a 29 min promedio con historial previo</div>
             </div>
           </div>
-          <div className="roi-timeline-item">
-            <div className="timeline-period">Año 2</div>
-            <div className="timeline-content">
-              <div className="timeline-investment">Inversión: €7.188</div>
-              <div className="timeline-savings">Ahorro operativo: €28.800</div>
-              <div className="timeline-revenue">Ingresos extra: €50.400</div>
-              <div className="timeline-result positive">Balance: +€72.012</div>
+          
+          <div className="benefit-metric-card">
+            <div className="benefit-icon">🗂️</div>
+            <div className="benefit-content">
+              <div className="benefit-value">15-20%</div>
+              <div className="benefit-label">Pacientes con historial disponible</div>
+              <div className="benefit-detail">Especialmente turistas y expatriados europeos</div>
             </div>
           </div>
-          <div className="roi-timeline-item">
-            <div className="timeline-period">Año 3</div>
-            <div className="timeline-content">
-              <div className="timeline-investment">Inversión: €7.188</div>
-              <div className="timeline-savings">Ahorro operativo: €28.800</div>
-              <div className="timeline-revenue">Ingresos extra: €58.800</div>
-              <div className="timeline-result positive">Balance: +€80.412</div>
+          
+          <div className="benefit-metric-card">
+            <div className="benefit-icon">✓</div>
+            <div className="benefit-content">
+              <div className="benefit-value">+25%</div>
+              <div className="benefit-label">Mejora en diagnósticos</div>
+              <div className="benefit-detail">Decisiones clínicas más informadas desde el primer día</div>
+            </div>
+          </div>
+          
+          <div className="benefit-metric-card">
+            <div className="benefit-icon">💰</div>
+            <div className="benefit-content">
+              <div className="benefit-value">~2.400€</div>
+              <div className="benefit-label">Ahorro en radiografías repetidas/año</div>
+              <div className="benefit-detail">Menos pruebas duplicadas con historial previo</div>
             </div>
           </div>
         </div>
-        <div className="roi-summary">
-          <h4>ROI Total a 3 Años</h4>
-          <div className="roi-final">
-            <div className="roi-final-item">
-              <span>Inversión Total:</span>
-              <span>€61.464</span>
+      </div>
+
+      <div className="stats-section">
+        <h2>ROI con Subvención vs Sin Subvención</h2>
+        <div className="comparison-table">
+          <div className="comparison-header">
+            <div className="comparison-cell"></div>
+            <div className="comparison-cell highlight">Con Subvención</div>
+            <div className="comparison-cell">Sin Subvención</div>
+          </div>
+          
+          <div className="comparison-row">
+            <div className="comparison-cell label">Inversión Inicial</div>
+            <div className="comparison-cell highlight success">0€</div>
+            <div className="comparison-cell">13.000€</div>
+          </div>
+          
+          <div className="comparison-row">
+            <div className="comparison-cell label">Coste Año 1</div>
+            <div className="comparison-cell highlight success">0€</div>
+            <div className="comparison-cell">21.388€</div>
+          </div>
+          
+          <div className="comparison-row">
+            <div className="comparison-cell label">Coste Año 2</div>
+            <div className="comparison-cell highlight success">0€</div>
+            <div className="comparison-cell">8.388€</div>
+          </div>
+          
+          <div className="comparison-row">
+            <div className="comparison-cell label">Ahorro Total (2 años)</div>
+            <div className="comparison-cell highlight success">30.000€</div>
+            <div className="comparison-cell">0€</div>
+          </div>
+          
+          <div className="comparison-row totals">
+            <div className="comparison-cell label"><strong>Inversión Neta</strong></div>
+            <div className="comparison-cell highlight success"><strong>GRATIS ✓</strong></div>
+            <div className="comparison-cell"><strong>29.776€</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <div className="stats-section">
+        <h2>Clínicas Europeas en Global Data Care</h2>
+        <div className="europe-stats">
+          <div className="country-stat">
+            <div className="country-flag">🇪🇸</div>
+            <div className="country-name">España</div>
+            <div className="country-clinics">1.240</div>
+          </div>
+          <div className="country-stat">
+            <div className="country-flag">🇩🇪</div>
+            <div className="country-name">Alemania</div>
+            <div className="country-clinics">3.580</div>
+          </div>
+          <div className="country-stat">
+            <div className="country-flag">🇫🇷</div>
+            <div className="country-name">Francia</div>
+            <div className="country-clinics">2.120</div>
+          </div>
+          <div className="country-stat">
+            <div className="country-flag">🇮🇹</div>
+            <div className="country-name">Italia</div>
+            <div className="country-clinics">1.890</div>
+          </div>
+          <div className="country-stat">
+            <div className="country-flag">🇳🇱</div>
+            <div className="country-name">Países Bajos</div>
+            <div className="country-clinics">980</div>
+          </div>
+          <div className="country-stat">
+            <div className="country-flag">🇵🇹</div>
+            <div className="country-name">Portugal</div>
+            <div className="country-clinics">640</div>
+          </div>
+        </div>
+        <div className="chart-insight">
+          <Globe size={20} />
+          <span>Más de <strong>10.000 clínicas</strong> conectadas en la red europea</span>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function ColaboracionStats() {
+  return (
+    <div className="stats-content">
+      <div className="stats-section">
+        <h2>Potencial de Ingresos BQDC</h2>
+        <div className="metrics-grid">
+          <div className="metric-card">
+            <Users className="metric-icon" />
+            <div className="metric-value">80+</div>
+            <div className="metric-label">Clínicas en Red</div>
+          </div>
+          <div className="metric-card success-card">
+            <Euro className="metric-icon" />
+            <div className="metric-value">100K+</div>
+            <div className="metric-label">Potencial Año 1</div>
+          </div>
+          <div className="metric-card">
+            <TrendingUp className="metric-icon" />
+            <div className="metric-value">Recurrente</div>
+            <div className="metric-label">Modelo Ingresos</div>
+          </div>
+        </div>
+      </div>
+
+      <div className="stats-section">
+        <h2>Proyección Conservadora (30% Adopción)</h2>
+        <div className="adoption-scenario">
+          <div className="scenario-header">
+            <h4>Escenario: 24 clínicas adoptan las soluciones (30% de 80)</h4>
+          </div>
+          
+          <div className="scenario-breakdown">
+            <div className="breakdown-section">
+              <h4>💶 Comisiones por Subvenciones</h4>
+              <div className="calc-row">
+                <span>24 clínicas × 30.000€ × 15%</span>
+                <strong className="calc-result">108.000€</strong>
+              </div>
+              <div className="calc-note">Pago único en el primer año</div>
             </div>
-            <div className="roi-final-item">
-              <span>Beneficio Total:</span>
-              <span className="success">€176.136</span>
+            
+            <div className="breakdown-section">
+              <h4>💶 Comisiones Recurrentes Agentes IA</h4>
+              <div className="calc-row">
+                <span>24 clínicas × 50€/mes × 12 meses</span>
+                <strong className="calc-result">14.400€/año</strong>
+              </div>
+              <div className="calc-note">Ingresos recurrentes mientras mantengan el servicio</div>
             </div>
-            <div className="roi-final-result">
-              <span>ROI:</span>
-              <span className="success">286%</span>
+          </div>
+          
+          <div className="scenario-totals">
+            <div className="total-row">
+              <span>Total Año 1:</span>
+              <strong className="total-value">122.400€</strong>
+            </div>
+            <div className="total-row">
+              <span>Total Año 2:</span>
+              <strong className="total-value">14.400€</strong>
+            </div>
+            <div className="total-row">
+              <span>Total Año 3:</span>
+              <strong className="total-value">14.400€</strong>
+            </div>
+            <div className="total-row highlight">
+              <span>Total 3 Años:</span>
+              <strong className="total-value success">151.200€</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="stats-section">
+        <h2>Comparación de Escenarios</h2>
+        <div className="scenarios-comparison">
+          <div className="scenario-card-compact">
+            <div className="scenario-title">Conservador (30%)</div>
+            <div className="scenario-clinics">24 clínicas</div>
+            <div className="scenario-income">
+              <div className="income-row">
+                <span>Año 1:</span>
+                <strong>122.400€</strong>
+              </div>
+              <div className="income-row">
+                <span>Recurrente:</span>
+                <strong>14.400€/año</strong>
+              </div>
+            </div>
+          </div>
+          
+          <div className="scenario-card-compact highlighted">
+            <div className="scenario-badge">Realista</div>
+            <div className="scenario-title">Moderado (50%)</div>
+            <div className="scenario-clinics">40 clínicas</div>
+            <div className="scenario-income">
+              <div className="income-row">
+                <span>Año 1:</span>
+                <strong>204.000€</strong>
+              </div>
+              <div className="income-row">
+                <span>Recurrente:</span>
+                <strong>24.000€/año</strong>
+              </div>
+            </div>
+          </div>
+          
+          <div className="scenario-card-compact">
+            <div className="scenario-title">Ambicioso (70%)</div>
+            <div className="scenario-clinics">56 clínicas</div>
+            <div className="scenario-income">
+              <div className="income-row">
+                <span>Año 1:</span>
+                <strong>285.600€</strong>
+              </div>
+              <div className="income-row">
+                <span>Recurrente:</span>
+                <strong>33.600€/año</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="stats-section">
+        <h2>Beneficios para las Clínicas BQDC</h2>
+        <div className="clinic-benefits">
+          <div className="clinic-benefit-card">
+            <div className="benefit-icon-large">💰</div>
+            <h4>IA Completamente Gratis</h4>
+            <p>Con la subvención de 30.000€, las clínicas no pagan nada por implementar el agente IA</p>
+            <div className="benefit-saving">Ahorro: 30.000€ por clínica</div>
+          </div>
+          
+          <div className="clinic-benefit-card">
+            <div className="benefit-icon-large">⏰</div>
+            <h4>Reducción de Carga de Trabajo</h4>
+            <p>70% menos llamadas y mensajes gestionados por el personal de recepción</p>
+            <div className="benefit-saving">~120h/mes liberadas</div>
+          </div>
+          
+          <div className="clinic-benefit-card">
+            <div className="benefit-icon-large">📈</div>
+            <h4>Más Pacientes Atendidos</h4>
+            <p>El agente IA nunca pierde una llamada ni deja un mensaje sin responder</p>
+            <div className="benefit-saving">+15-20% captación</div>
+          </div>
+          
+          <div className="clinic-benefit-card">
+            <div className="benefit-icon-large">🌍</div>
+            <h4>Acceso a Red Europea</h4>
+            <p>Consultar historiales de pacientes de 10.000+ clínicas europeas</p>
+            <div className="benefit-saving">Mejor atención</div>
+          </div>
+        </div>
+      </div>
+
+      <div className="stats-section">
+        <h2>Ventajas Competitivas de BQDC</h2>
+        <div className="competitive-advantages">
+          <div className="advantage-row">
+            <div className="advantage-icon">✓</div>
+            <div className="advantage-content">
+              <h4>Liderazgo Tecnológico</h4>
+              <p>BQDC se posiciona como la asociación dental más innovadora de España</p>
+            </div>
+          </div>
+          
+          <div className="advantage-row">
+            <div className="advantage-icon">✓</div>
+            <div className="advantage-content">
+              <h4>Valor Añadido Real</h4>
+              <p>Ofrecer acceso a subvenciones y tecnología punta genera fidelidad de los socios</p>
+            </div>
+          </div>
+          
+          <div className="advantage-row">
+            <div className="advantage-icon">✓</div>
+            <div className="advantage-content">
+              <h4>Atracción de Nuevos Socios</h4>
+              <p>Clínicas independientes querrán unirse a BQDC para acceder a estos beneficios</p>
+            </div>
+          </div>
+          
+          <div className="advantage-row">
+            <div className="advantage-icon">✓</div>
+            <div className="advantage-content">
+              <h4>Ingresos Sin Inversión</h4>
+              <p>Xavier solo recomienda, NexGent gestiona todo el proceso técnico y administrativo</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="stats-section">
+        <h2>Timeline de Implementación</h2>
+        <div className="implementation-timeline">
+          <div className="timeline-phase">
+            <div className="phase-number">1</div>
+            <div className="phase-content">
+              <h4>Mes 1-2: Lanzamiento</h4>
+              <ul>
+                <li>Firma del acuerdo de colaboración</li>
+                <li>Preparación de materiales de marketing</li>
+                <li>Primera presentación en evento BQDC</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="timeline-phase">
+            <div className="phase-number">2</div>
+            <div className="phase-content">
+              <h4>Mes 3-6: Primeras Adopciones</h4>
+              <ul>
+                <li>5-10 clínicas piloto comienzan solicitud de subvención</li>
+                <li>Webinars para el resto de la red</li>
+                <li>Casos de éxito documentados</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="timeline-phase">
+            <div className="phase-number">3</div>
+            <div className="phase-content">
+              <h4>Mes 7-12: Escalado</h4>
+              <ul>
+                <li>20-30 clínicas con IA implementada</li>
+                <li>Primeras comisiones recurrentes estables</li>
+                <li>Expansión a Portugal</li>
+              </ul>
             </div>
           </div>
         </div>

@@ -167,70 +167,94 @@ function App() {
     },
     {
       id: 'ia-cliente',
-      title: 'Agente IA Atención al Paciente',
-      shortDescription: 'Asistente virtual inteligente con gestión completa de citas',
+      title: 'Agente IA WhatsApp + Telefónico',
+      shortDescription: 'IA de atención al paciente integrada con Gesden G5 vía API',
       price: '13.000€ + 699€/mes',
       type: 'both',
       features: [
-        'Chatbot avanzado para WhatsApp Business',
-        'Asistente telefónico con IA de voz natural',
-        'Gestión automática e inteligente de reservas',
-        'Recordatorios personalizados (SMS, email, WhatsApp)',
+        'Chatbot avanzado para WhatsApp Business 24/7',
+        'Asistente telefónico con IA de voz natural conversacional',
+        'Integración completa con CRM Gesden G5 vía API',
+        'Sincronización bidireccional en tiempo real',
+        'Gestión automática e inteligente de citas en Gesden',
+        'Consulta de disponibilidad en tiempo real',
+        'Recordatorios personalizados automáticos (SMS, email, WhatsApp)',
         'Solicitud automática de reseñas de Google tras cada visita',
-        'Sistema de generación masiva de reseñas positivas',
-        'Respuestas contextuales en tiempo real 24/7/365',
-        'Integración bidireccional con calendarios',
+        'Respuestas contextuales basadas en historial del paciente',
+        'Acceso al historial clínico para respuestas personalizadas',
         'Soporte multiidioma: Español, Catalán, Inglés',
-        'Análisis de satisfacción y sentiment analysis',
-        'Escalado inteligente a operadores humanos',
-        'FAQ dinámicas con machine learning',
-        'Historial completo de conversaciones',
-        'Dashboard de métricas y KPIs en tiempo real'
+        'Escalado inteligente a operadores humanos cuando sea necesario',
+        'FAQ dinámicas con machine learning continuo',
+        'Análisis de satisfacción y sentiment analysis avanzado',
+        'Dashboard de métricas y KPIs en tiempo real',
+        'Historial completo de conversaciones para auditoría',
+        'Atención simultánea a múltiples pacientes sin límite',
+        'Reducción del 70% en carga de trabajo de recepción'
       ],
       pricing: { monthly: 699, initial: 13000 }
     },
     {
-      id: 'crm',
-      title: 'CRM Vela Segalà - Desarrollo a Medida (OPCIONAL)',
-      shortDescription: 'Sistema 100% personalizado con todas las funcionalidades de GESDEN G5 + IA integrada',
-      price: '53.000€ + 599€/mes',
-      type: 'both',
+      id: 'subvencion',
+      title: 'Subvención Global Data Care',
+      shortDescription: 'Financiación europea de hasta 30.000€ + acceso a red sanitaria UE',
+      price: 'GRATIS (100% subvencionado)',
+      type: 'initial',
       features: [
-        'Todas las funcionalidades de GESDEN G5 incluidas',
-        'Gestión completa de pacientes con historial clínico digital',
-        'Odontograma digital interactivo con anotaciones',
-        'Historial clínico con firma electrónica y validación legal',
-        'Sistema de citas inteligente con IA predictiva',
-        'Módulo de facturación y contabilidad integrado',
-        'Gestión de presupuestos con plantillas personalizables',
-        'Sistema de recalls y seguimiento de pacientes',
-        'Gestión de pagos y planes de financiación flexible',
-        'Integración con sistemas de imágenes médicas (DICOM)',
-        'Dashboard ejecutivo con analytics en tiempo real',
-        'Informes personalizados con Business Intelligence avanzado',
-        'Control de inventario y gestión de almacén',
-        'Control de horarios, turnos y vacaciones del personal',
-        'Sistema de fidelización y puntos de pacientes',
-        'VENTAJAS ADICIONALES DEL CRM PROPIO:',
-        'Integración nativa de Agentes IA (WhatsApp + telefónico)',
-        'Arquitectura escalable preparada para crecimiento futuro',
-        'Interfaz moderna, intuitiva y personalizada para Vela Segalà',
-        'Rendimiento optimizado (3x más rápido que GESDEN G5)',
-        'Aplicación móvil nativa iOS y Android para dentistas',
-        'Portal del paciente con área privada y autogestión',
-        'Sincronización en tiempo real entre las 2 clínicas',
-        'Sistema de notificaciones push multi-canal',
-        'API abierta para futuras integraciones sin límites',
-        'Propiedad intelectual 100% de Vela Segalà',
-        'Backup automático cifrado en múltiples ubicaciones',
-        'Cumplimiento RGPD y normativa de datos médicos',
-        'Soporte técnico prioritario 24/7 especializado',
-        'Formación intensiva de 40 horas para todo el equipo',
-        'Actualizaciones y mejoras continuas sin coste adicional',
-        'Documentación técnica completa y código fuente',
-        'Garantía extendida de 3 años con SLA del 99.9%'
+        'Subvención de Red.es de hasta 30.000€',
+        'Gestión completa por NexGent (sin coste para Vela Segalà)',
+        'Toda la implementación de IA sale GRATIS con la subvención',
+        '💡 BENEFICIO CLAVE: Acceso a red europea de datos clínicos',
+        'Registro en plataforma Global Data Care EU',
+        'Intercambio bidireccional de datos con clínicas europeas',
+        'Acceso a historiales clínicos de pacientes de otras clínicas',
+        'Visualización de radiografías, tratamientos previos y diagnósticos',
+        'Historial completo de enfermedades y alergias',
+        'Mejor atención a nuevos pacientes con información previa',
+        'Reducción de tiempo en primera consulta (30-40% más rápido)',
+        'Decisiones clínicas más informadas desde el primer día',
+        'Cumplimiento automático con RGPD y normativa europea',
+        'Compartir datos anónimos para investigación médica',
+        'Contribuir al avance de la odontología europea',
+        'Sin costes ocultos ni compromisos adicionales',
+        'Gestión de toda la documentación por NexGent',
+        'Plazo de resolución: 2-3 meses'
       ],
-      pricing: { monthly: 599, initial: 53000 }
+      pricing: { monthly: 0, initial: 0 }
+    },
+    {
+      id: 'colaboracion',
+      title: 'Propuesta Comercial BQDC',
+      shortDescription: 'Modelo de colaboración y comisiones para Xavier Vela',
+      price: 'Basado en comisiones',
+      type: 'commercial',
+      features: [
+        '🤝 MODELO DE COLABORACIÓN CON BQDC',
+        'Xavier Vela recomienda nuestras soluciones a la red BQDC',
+        'Más de 80 clínicas dentales en España y Portugal',
+        'Posicionamiento como socio tecnológico oficial de BQDC',
+        '',
+        '💰 ESTRUCTURA DE COMISIONES - SUBVENCIONES',
+        '15% de cada subvención conseguida para clínicas BQDC',
+        'Ejemplo: Subvención de 30.000€ = 4.500€ para Xavier',
+        'Pago único al conseguir la subvención',
+        'Sin límite de clínicas participantes',
+        '',
+        '💰 ESTRUCTURA DE COMISIONES - AGENTES IA',
+        '50€/mes por cada clínica que contrate el Agente IA',
+        'Comisión recurrente mientras la clínica mantenga el servicio',
+        'Ejemplo: 10 clínicas = 500€/mes recurrentes',
+        'Ejemplo: 30 clínicas = 1.500€/mes recurrentes',
+        '',
+        '🎯 POTENCIAL DE INGRESOS',
+        'Con solo 20 clínicas usando IA: 1.000€/mes recurrentes',
+        'Con 20 subvenciones conseguidas: 90.000€ en comisiones únicas',
+        'Ingresos pasivos mensuales escalables sin límite',
+        '',
+        '📊 CALCULADORA INTERACTIVA INCLUIDA',
+        'Simula diferentes escenarios de colaboración',
+        'Visualiza el potencial de ingresos en tiempo real'
+      ],
+      pricing: { monthly: 0, initial: 0 }
     }
   ]
 
@@ -238,7 +262,7 @@ function App() {
   const services = selectedProposal === 'web' 
     ? allServices.filter(s => ['mantenimiento', 'creacion', 'seo', 'google-ads', 'ia-blog'].includes(s.id))
     : selectedProposal === 'tech'
-    ? allServices.filter(s => ['ia-cliente', 'crm'].includes(s.id))
+    ? allServices.filter(s => ['ia-cliente', 'subvencion', 'colaboracion'].includes(s.id))
     : allServices // 'all' muestra todos
 
   const steps = [
@@ -286,6 +310,29 @@ function App() {
             component: ServiceDetail, 
             title: service.title,
             level: 0,
+            props: { service }
+          }
+        ]
+      }
+      // Servicios que incluyen demo y estadísticas en la misma página
+      if (service.id === 'subvencion' || service.id === 'colaboracion') {
+        return [
+          { 
+            component: ServiceDetail, 
+            title: service.title,
+            level: 0,
+            props: { service }
+          },
+          {
+            component: ServiceDemo,
+            title: 'Información Detallada',
+            level: 1,
+            props: { service }
+          },
+          {
+            component: ServiceStats,
+            title: 'Impacto y Beneficios',
+            level: 1,
             props: { service }
           }
         ]

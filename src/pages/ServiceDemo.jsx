@@ -1,11 +1,11 @@
-import { Play, MessageCircle, Globe, Bot, Database, TrendingUp } from 'lucide-react'
-import CRMInteractive from '../components/CRMInteractive'
+import { Play, MessageCircle, Globe, Bot, Database, TrendingUp, Award, Users, Euro, CheckCircle, FileText } from 'lucide-react'
+import CommissionCalculator from '../components/CommissionCalculator'
 
 function ServiceDemo({ service }) {
   if (!service) return null
 
   const getServiceNumber = () => {
-    const services = ['mantenimiento', 'creacion', 'seo', 'ia-blog', 'ia-cliente', 'crm']
+    const services = ['mantenimiento', 'creacion', 'seo', 'google-ads', 'ia-blog', 'ia-cliente', 'subvencion', 'colaboracion']
     return (services.indexOf(service.id) + 1).toString().padStart(2, '0')
   }
 
@@ -21,8 +21,10 @@ function ServiceDemo({ service }) {
         return <BlogAIDemo />
       case 'ia-cliente':
         return <ClientAIDemo />
-      case 'crm':
-        return <CRMDemo />
+      case 'subvencion':
+        return <SubvencionDemo />
+      case 'colaboracion':
+        return <ColaboracionDemo />
       default:
         return null
     }
@@ -500,12 +502,69 @@ function BlogAIDemo() {
 function ClientAIDemo() {
   return (
     <div className="demo-content">
+      {/* Integración con Gesden G5 */}
+      <div className="demo-section highlight-section">
+        <h2>🔗 Integración Completa con Gesden G5</h2>
+        <p className="section-intro">
+          El agente IA se conecta directamente con su sistema Gesden G5 mediante API, 
+          sincronizando citas, pacientes e historial clínico en tiempo real.
+        </p>
+        
+        <div className="gesden-integration">
+          <div className="integration-diagram">
+            <div className="integration-node">
+              <MessageCircle size={32} />
+              <h4>WhatsApp</h4>
+              <p>Paciente solicita cita</p>
+            </div>
+            <div className="integration-arrow">↓</div>
+            <div className="integration-node primary">
+              <Bot size={32} />
+              <h4>Agente IA</h4>
+              <p>Procesa la solicitud</p>
+            </div>
+            <div className="integration-arrow">↔</div>
+            <div className="integration-node">
+              <Database size={32} />
+              <h4>Gesden G5 API</h4>
+              <p>Consulta disponibilidad</p>
+            </div>
+            <div className="integration-arrow">↓</div>
+            <div className="integration-node success">
+              <TrendingUp size={32} />
+              <h4>Cita Confirmada</h4>
+              <p>Registro sincronizado</p>
+            </div>
+          </div>
+
+          <div className="integration-benefits">
+            <div className="benefit-card">
+              <h4>✅ Sin Doble Gestión</h4>
+              <p>Todo se registra automáticamente en Gesden G5</p>
+            </div>
+            <div className="benefit-card">
+              <h4>⚡ Tiempo Real</h4>
+              <p>Disponibilidad actualizada al instante</p>
+            </div>
+            <div className="benefit-card">
+              <h4>📊 Historial Completo</h4>
+              <p>Acceso al historial clínico del paciente</p>
+            </div>
+            <div className="benefit-card">
+              <h4>🔒 Seguridad Garantizada</h4>
+              <p>Conexión cifrada y cumplimiento RGPD</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Conversación WhatsApp */}
       <div className="demo-section">
-        <h2>Conversación Ejemplo - WhatsApp</h2>
+        <h2>💬 Conversación Ejemplo - WhatsApp</h2>
         <div className="chat-mockup">
           <div className="chat-header">
             <MessageCircle size={20} />
-            <span>Vela Segala IA Assistant</span>
+            <span>Vela Segalà IA Assistant</span>
             <span className="chat-status">Online</span>
           </div>
           <div className="chat-messages">
@@ -515,22 +574,22 @@ function ClientAIDemo() {
             </div>
             <div className="message bot">
               <div className="message-content">
-                ¡Hola! Encantado de ayudarte. 😊 Para programar tu cita de limpieza dental, 
-                ¿qué clínica te queda mejor: Barcelona, Sant Cugat o Viladecans?
+                ¡Hola! Encantado de ayudarte. 😊 Veo en tu historial que tu última limpieza fue hace 6 meses. 
+                ¿Qué clínica te queda mejor: Sant Celoni o Viladecans?
               </div>
               <div className="message-time">10:23</div>
             </div>
             <div className="message user">
-              <div className="message-content">Sant Cugat</div>
+              <div className="message-content">Sant Celoni</div>
               <div className="message-time">10:24</div>
             </div>
             <div className="message bot">
               <div className="message-content">
-                Perfecto. Tengo disponibilidad en Sant Cugat para esta semana:
-                <br/><br/>
+                Perfecto. Consultando disponibilidad en Gesden...<br/>
+                Tengo estos horarios disponibles:<br/><br/>
                 📅 Jueves 21 Nov - 10:00h, 16:30h<br/>
                 📅 Viernes 22 Nov - 09:30h, 11:00h, 17:00h<br/><br/>
-                ¿Alguno de estos horarios te viene bien?
+                ¿Alguno te viene bien?
               </div>
               <div className="message-time">10:24</div>
             </div>
@@ -540,13 +599,13 @@ function ClientAIDemo() {
             </div>
             <div className="message bot">
               <div className="message-content">
-                ¡Cita confirmada! ✅<br/><br/>
-                📍 Vela Segala Sant Cugat<br/>
+                ¡Cita confirmada y registrada en Gesden! ✅<br/><br/>
+                📍 Vela Segalà Sant Celoni<br/>
                 📅 Jueves 21 Noviembre 2025<br/>
                 🕐 10:00h<br/>
                 👨‍⚕️ Dra. Martínez<br/>
                 🦷 Limpieza Dental<br/><br/>
-                Te enviaré un recordatorio 24h antes. ¿Necesitas algo más?
+                Te enviaré un recordatorio 24h antes por WhatsApp. ¿Necesitas algo más?
               </div>
               <div className="message-time">10:25</div>
             </div>
@@ -554,28 +613,63 @@ function ClientAIDemo() {
         </div>
       </div>
 
+      {/* Asistente Telefónico */}
       <div className="demo-section">
-        <h2>Capacidades del Asistente IA</h2>
-        <div className="ai-capabilities">
-          <div className="capability-item">
-            <h4>🗓️ Gestión de Citas</h4>
-            <p>Reserva, modifica y cancela citas automáticamente</p>
+        <h2>📞 Asistente Telefónico con IA de Voz</h2>
+        <p className="section-intro">
+          Además de WhatsApp, el agente también funciona como operador telefónico con voz natural, 
+          atendiendo llamadas 24/7 y gestionando citas por teléfono.
+        </p>
+        
+        <div className="phone-demo">
+          <div className="phone-mockup">
+            <div className="phone-screen">
+              <div className="call-header">
+                <div className="call-icon">📞</div>
+                <div className="call-info">
+                  <h4>Llamada Entrante</h4>
+                  <p>+34 612 345 678</p>
+                </div>
+                <div className="call-status">En curso</div>
+              </div>
+              
+              <div className="call-transcript">
+                <div className="transcript-line caller">
+                  <strong>Paciente:</strong> "Hola, quería pedir cita para una revisión"
+                </div>
+                <div className="transcript-line ai">
+                  <strong>IA:</strong> "Buenos días, encantada de atenderle. Déjeme consultar la disponibilidad en nuestro sistema Gesden. ¿Tiene preferencia por alguna clínica?"
+                </div>
+                <div className="transcript-line caller">
+                  <strong>Paciente:</strong> "Viladecans, por favor"
+                </div>
+                <div className="transcript-line ai">
+                  <strong>IA:</strong> "Perfecto, tengo disponibilidad en Viladecans el próximo martes a las 11:00 o el miércoles a las 16:30. ¿Cuál le viene mejor?"
+                </div>
+              </div>
+
+              <div className="call-features">
+                <div className="feature-badge">Voz Natural</div>
+                <div className="feature-badge">Reconocimiento Catalán/Español</div>
+                <div className="feature-badge">Gesden G5 Integrado</div>
+              </div>
+            </div>
           </div>
-          <div className="capability-item">
-            <h4>🔔 Recordatorios Inteligentes</h4>
-            <p>Notificaciones personalizadas 24h antes</p>
-          </div>
-          <div className="capability-item">
-            <h4>💬 Respuestas Contextuales</h4>
-            <p>Entiende preguntas complejas y responde naturalmente</p>
-          </div>
-          <div className="capability-item">
-            <h4>🌐 Multiidioma</h4>
-            <p>Español, Catalán e Inglés</p>
+
+          <div className="phone-benefits">
+            <h4>Ventajas del Asistente Telefónico:</h4>
+            <ul>
+              <li>✓ <strong>Disponibilidad 24/7:</strong> Atiende llamadas fuera del horario de oficina</li>
+              <li>✓ <strong>Sin Esperas:</strong> Los pacientes no esperan en la línea</li>
+              <li>✓ <strong>Voz Natural:</strong> Conversación fluida y profesional</li>
+              <li>✓ <strong>Reducción de Carga:</strong> Libera al personal de recepción</li>
+              <li>✓ <strong>Registro Automático:</strong> Todo queda documentado en Gesden</li>
+            </ul>
           </div>
         </div>
       </div>
 
+      {/* Generación de Reseñas */}
       <div className="demo-section highlight-section">
         <h2>⭐ Generación Automática de Reseñas de Google</h2>
         <p className="section-intro">
@@ -588,25 +682,25 @@ function ClientAIDemo() {
             <div className="flow-step">
               <div className="step-number">1</div>
               <h4>Visita Completada</h4>
-              <p>El paciente finaliza su tratamiento</p>
+              <p>Registro en Gesden G5</p>
             </div>
             <div className="flow-arrow">→</div>
             <div className="flow-step">
               <div className="step-number">2</div>
-              <h4>Solicitud Automática</h4>
-              <p>IA envía mensaje personalizado via WhatsApp/SMS</p>
+              <h4>IA Detecta</h4>
+              <p>Sincronización automática</p>
             </div>
             <div className="flow-arrow">→</div>
             <div className="flow-step">
               <div className="step-number">3</div>
-              <h4>Enlace Directo</h4>
-              <p>Link directo a Google Reviews en 1 clic</p>
+              <h4>Solicitud Enviada</h4>
+              <p>WhatsApp personalizado</p>
             </div>
             <div className="flow-arrow">→</div>
             <div className="flow-step">
               <div className="step-number">4</div>
               <h4>Reseña Publicada</h4>
-              <p>Mejora automática del posicionamiento</p>
+              <p>SEO mejorado</p>
             </div>
           </div>
 
@@ -619,7 +713,7 @@ function ClientAIDemo() {
             <div className="impact-card">
               <div className="impact-icon">⭐</div>
               <div className="impact-stat">4.8+</div>
-              <div className="impact-label">Valoración media mantenida</div>
+              <div className="impact-label">Valoración media</div>
             </div>
             <div className="impact-card">
               <div className="impact-icon">🎯</div>
@@ -627,103 +721,413 @@ function ClientAIDemo() {
               <div className="impact-label">Tasa de respuesta</div>
             </div>
           </div>
-
-          <div className="reviews-benefits">
-            <h4>Beneficios Clave:</h4>
-            <ul>
-              <li>✓ <strong>SEO Local Mejorado:</strong> Más reseñas = mejor posicionamiento en Google Maps</li>
-              <li>✓ <strong>Mayor Confianza:</strong> Pacientes nuevos confían más con muchas reseñas recientes</li>
-              <li>✓ <strong>100% Automático:</strong> Sin intervención manual del personal</li>
-              <li>✓ <strong>Timing Perfecto:</strong> Solicitud enviada cuando el paciente está más satisfecho</li>
-              <li>✓ <strong>Seguimiento Inteligente:</strong> Recordatorio amable si no responden en 48h</li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>
   )
 }
 
-// Demostración de CRM
-function CRMDemo() {
+// Demostración de Subvención Global Data Care
+function SubvencionDemo() {
   return (
     <div className="demo-content">
-      <div className="demo-section full-width">
-        <h2>Sistema CRM Interactivo - Desarrollo 100% Personalizado</h2>
-        <p className="demo-intro">
-          Sistema de gestión integral desarrollado completamente desde cero para las 2 clínicas Vela Segalà. 
-          <strong> Haz clic en las pestañas del menú lateral para navegar entre módulos.</strong>
+      <div className="demo-section highlight-section">
+        <h2>🇪🇺 Subvención Global Data Care - Red.es</h2>
+        <p className="section-intro">
+          Financiación europea de hasta <strong>30.000€</strong> para digitalización sanitaria y 
+          participación en la red europea de intercambio de datos clínicos.
         </p>
         
-        <div className="crm-demo-container">
-          <CRMInteractive />
+        <div className="subvencion-hero">
+          <div className="hero-card">
+            <Award size={48} />
+            <div className="hero-amount">30.000€</div>
+            <div className="hero-label">Subvención Máxima</div>
+            <div className="hero-note">Toda la IA gratis</div>
+          </div>
         </div>
       </div>
 
       <div className="demo-section">
-        <h2>Módulos y Funcionalidades del CRM</h2>
-        <div className="crm-modules-grid">
-          <div className="module-card-detailed">
-            <Database size={32} />
-            <h4>Gestión de Pacientes</h4>
-            <ul className="module-features">
-              <li>Ficha completa con historial clínico digital</li>
-              <li>Documentación y consentimientos firmados</li>
-              <li>Comunicaciones integradas (email, SMS, WhatsApp)</li>
-              <li>Alertas y recordatorios automáticos</li>
+        <h2>📋 ¿En Qué Consiste la Subvención?</h2>
+        <div className="subvencion-explanation">
+          <div className="explanation-card">
+            <div className="card-header">
+              <FileText size={24} />
+              <h3>Programa Red.es</h3>
+            </div>
+            <p>
+              Subvención del Ministerio de Asuntos Económicos y Transformación Digital 
+              para promover la digitalización del sector sanitario español y su integración 
+              en la red europea de datos de salud.
+            </p>
+          </div>
+
+          <div className="explanation-card">
+            <div className="card-header">
+              <Globe size={24} />
+              <h3>Global Data Care EU</h3>
+            </div>
+            <p>
+              Plataforma europea que permite el intercambio seguro de datos clínicos entre 
+              clínicas dentales de toda Europa. Al registrarte, puedes acceder a historiales 
+              de pacientes que hayan visitado otras clínicas participantes.
+            </p>
+          </div>
+
+          <div className="explanation-card">
+            <div className="card-header">
+              <CheckCircle size={24} />
+              <h3>Requisitos</h3>
+            </div>
+            <ul>
+              <li>✓ Ser clínica dental registrada en España</li>
+              <li>✓ Comprometerse a compartir datos anónimos con la red europea</li>
+              <li>✓ Implementar soluciones de digitalización (como nuestra IA)</li>
+              <li>✓ Cumplir con RGPD y normativa de protección de datos</li>
             </ul>
           </div>
-          <div className="module-card-detailed">
-            <TrendingUp size={32} />
-            <h4>Analytics Avanzado</h4>
-            <ul className="module-features">
-              <li>Dashboard en tiempo real con KPIs clave</li>
-              <li>Reportes personalizados por clínica</li>
-              <li>Gráficas de rendimiento y ocupación</li>
-              <li>Exportación de datos a Excel/PDF</li>
-            </ul>
+        </div>
+      </div>
+
+      <div className="demo-section">
+        <h2>🎯 Beneficios de Participar</h2>
+        <div className="benefits-grid-large">
+          <div className="benefit-card-large">
+            <div className="benefit-number">1</div>
+            <h4>💰 Financiación Completa</h4>
+            <p>
+              Los 30.000€ de subvención cubren completamente el coste del Agente IA 
+              (13.000€ desarrollo + 699€/mes durante 2 años). <strong>Todo sale gratis.</strong>
+            </p>
           </div>
-          <div className="module-card-detailed">
-            <MessageCircle size={32} />
-            <h4>Agenda Multi-Clínica</h4>
-            <ul className="module-features">
-              <li>Calendario sincronizado entre clínicas</li>
-              <li>Gestión de disponibilidad por doctor</li>
-              <li>Confirmaciones automáticas de citas</li>
-              <li>Lista de espera inteligente</li>
-            </ul>
+
+          <div className="benefit-card-large">
+            <div className="benefit-number">2</div>
+            <h4>🗂️ Acceso a Historiales Europeos</h4>
+            <p>
+              Cuando un paciente nuevo llegue a tu clínica, podrás ver si ha visitado otras 
+              clínicas de la red Global Data Care y acceder a sus radiografías, tratamientos 
+              previos, alergias y enfermedades registradas.
+            </p>
           </div>
-          <div className="module-card-detailed">
+
+          <div className="benefit-card-large">
+            <div className="benefit-number">3</div>
+            <h4>⚡ Atención Más Rápida y Precisa</h4>
+            <p>
+              Reducción del 30-40% en el tiempo de primera consulta al tener acceso inmediato 
+              al historial clínico del paciente. Mejores decisiones clínicas desde el primer día.
+            </p>
+          </div>
+
+          <div className="benefit-card-large">
+            <div className="benefit-number">4</div>
+            <h4>🔬 Contribución a la Investigación</h4>
+            <p>
+              Los datos compartidos (100% anónimos) ayudan a mejorar protocolos dentales 
+              europeos y avanzar en la odontología basada en evidencia.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="demo-section">
+        <h2>🌍 Cómo Funciona Global Data Care</h2>
+        <div className="gdc-workflow">
+          <div className="workflow-step">
+            <div className="step-icon">1</div>
+            <h4>Paciente Nuevo</h4>
+            <p>Un paciente llega a tu clínica por primera vez</p>
+          </div>
+          <div className="workflow-arrow">→</div>
+          <div className="workflow-step">
+            <div className="step-icon">2</div>
+            <h4>Búsqueda en GDC</h4>
+            <p>Buscas su DNI/NIE en la plataforma Global Data Care</p>
+          </div>
+          <div className="workflow-arrow">→</div>
+          <div className="workflow-step">
+            <div className="step-icon">3</div>
+            <h4>Historial Disponible</h4>
+            <p>Si ha visitado otras clínicas, ves todo su historial</p>
+          </div>
+          <div className="workflow-arrow">→</div>
+          <div className="workflow-step">
+            <div className="step-icon">4</div>
+            <h4>Mejor Atención</h4>
+            <p>Tratas al paciente con información completa desde el día 1</p>
+          </div>
+        </div>
+
+        <div className="gdc-example">
+          <h4>Ejemplo Práctico:</h4>
+          <div className="example-card">
+            <p>
+              <strong>Escenario:</strong> Un turista alemán llega a tu clínica con dolor dental.<br/>
+              <strong>Con Global Data Care:</strong> Ves que hace 3 meses se hizo un tratamiento 
+              de conductos en Berlín. Tienes acceso a las radiografías y al informe del dentista alemán. 
+              Puedes tratar el problema informado desde el minuto 1.<br/>
+              <strong>Sin Global Data Care:</strong> Tendrías que hacer nuevas radiografías, 
+              investigar desde cero y posiblemente repetir pruebas que ya se hicieron.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="demo-section highlight-section">
+        <h2>🚀 Gestión Completa por NexGent</h2>
+        <p className="section-intro">
+          No te preocupes por la burocracia. Nosotros nos encargamos de TODO.
+        </p>
+        
+        <div className="gestion-grid">
+          <div className="gestion-item">
+            <CheckCircle size={20} color="#10b981" />
+            <span>Preparación de toda la documentación</span>
+          </div>
+          <div className="gestion-item">
+            <CheckCircle size={20} color="#10b981" />
+            <span>Presentación de la solicitud ante Red.es</span>
+          </div>
+          <div className="gestion-item">
+            <CheckCircle size={20} color="#10b981" />
+            <span>Seguimiento del proceso de aprobación</span>
+          </div>
+          <div className="gestion-item">
+            <CheckCircle size={20} color="#10b981" />
+            <span>Registro en plataforma Global Data Care</span>
+          </div>
+          <div className="gestion-item">
+            <CheckCircle size={20} color="#10b981" />
+            <span>Justificación de gastos para cobrar la subvención</span>
+          </div>
+          <div className="gestion-item">
+            <CheckCircle size={20} color="#10b981" />
+            <span>Implementación técnica completa</span>
+          </div>
+        </div>
+
+        <div className="timeline">
+          <h4>Plazo Estimado:</h4>
+          <div className="timeline-bar">
+            <div className="timeline-segment">
+              <div className="segment-label">Solicitud</div>
+              <div className="segment-duration">2 semanas</div>
+            </div>
+            <div className="timeline-segment">
+              <div className="segment-label">Evaluación</div>
+              <div className="segment-duration">1-2 meses</div>
+            </div>
+            <div className="timeline-segment">
+              <div className="segment-label">Aprobación</div>
+              <div className="segment-duration">1 semana</div>
+            </div>
+            <div className="timeline-segment">
+              <div className="segment-label">Implementación</div>
+              <div className="segment-duration">2-3 meses</div>
+            </div>
+          </div>
+          <div className="timeline-total">Plazo total: 4-6 meses</div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+// Demostración de Propuesta Comercial BQDC
+function ColaboracionDemo() {
+  return (
+    <div className="demo-content">
+      <div className="demo-section highlight-section">
+        <h2>🤝 Propuesta de Colaboración Comercial</h2>
+        <p className="section-intro">
+          Como presidente de BQDC, Xavier Vela tiene acceso a más de 80 clínicas dentales 
+          en España y Portugal. Proponemos un modelo de colaboración win-win para promover 
+          nuestras soluciones de IA y subvenciones.
+        </p>
+        
+        <div className="bqdc-stats">
+          <div className="stat-card">
+            <Users size={32} />
+            <div className="stat-number">80+</div>
+            <div className="stat-label">Clínicas en la Red</div>
+          </div>
+          <div className="stat-card">
             <Globe size={32} />
-            <h4>Facturación Integrada</h4>
-            <ul className="module-features">
-              <li>Generación automática de facturas</li>
-              <li>Gestión de pagos y planes de financiación</li>
-              <li>Control de impagados y reclamaciones</li>
-              <li>Integración con contabilidad</li>
-            </ul>
+            <div className="stat-number">2</div>
+            <div className="stat-label">Países (ES + PT)</div>
+          </div>
+          <div className="stat-card">
+            <TrendingUp size={32} />
+            <div className="stat-number">Alta</div>
+            <div className="stat-label">Confianza y Prestigio</div>
           </div>
         </div>
       </div>
 
       <div className="demo-section">
-        <h2>Ventajas del Desarrollo Personalizado</h2>
-        <div className="advantages-grid">
-          <div className="advantage-card">
-            <h4>✓ 100% Adaptado</h4>
-            <p>Diseñado específicamente para los procesos de Vela Segalà</p>
+        <h2>💰 Modelo de Comisiones</h2>
+        
+        <div className="commission-models">
+          <div className="model-card">
+            <div className="model-header">
+              <Award size={28} />
+              <h3>Comisiones por Subvenciones</h3>
+            </div>
+            <div className="model-content">
+              <div className="model-highlight">
+                <span className="percentage">15%</span>
+                <span className="description">de cada subvención conseguida</span>
+              </div>
+              <div className="model-example">
+                <h4>Ejemplo:</h4>
+                <div className="example-row">
+                  <span>Subvención de 30.000€</span>
+                  <span className="result">= 4.500€ para Xavier</span>
+                </div>
+                <div className="example-row">
+                  <span>10 clínicas × 30.000€</span>
+                  <span className="result">= 45.000€ en comisiones</span>
+                </div>
+              </div>
+              <div className="model-features">
+                <div className="feature-item">✓ Pago único al conseguir cada subvención</div>
+                <div className="feature-item">✓ Sin límite de clínicas</div>
+                <div className="feature-item">✓ NexGent gestiona todo el proceso</div>
+              </div>
+            </div>
           </div>
-          <div className="advantage-card">
-            <h4>✓ Propiedad Total</h4>
-            <p>Código fuente 100% de su propiedad, sin dependencias externas</p>
+
+          <div className="model-card">
+            <div className="model-header">
+              <Bot size={28} />
+              <h3>Comisiones por Agentes IA</h3>
+            </div>
+            <div className="model-content">
+              <div className="model-highlight">
+                <span className="percentage">50€/mes</span>
+                <span className="description">por cada clínica con Agente IA</span>
+              </div>
+              <div className="model-example">
+                <h4>Ejemplo:</h4>
+                <div className="example-row">
+                  <span>10 clínicas activas</span>
+                  <span className="result">= 500€/mes recurrentes</span>
+                </div>
+                <div className="example-row">
+                  <span>30 clínicas activas</span>
+                  <span className="result">= 1.500€/mes recurrentes</span>
+                </div>
+              </div>
+              <div className="model-features">
+                <div className="feature-item">✓ Ingresos recurrentes mensuales</div>
+                <div className="feature-item">✓ Mientras la clínica mantenga el servicio</div>
+                <div className="feature-item">✓ Escalable sin límite</div>
+              </div>
+            </div>
           </div>
-          <div className="advantage-card">
-            <h4>✓ Escalable</h4>
-            <p>Preparado para crecer con el negocio y añadir nuevas clínicas</p>
+        </div>
+      </div>
+
+      {/* Calculadora Interactiva */}
+      <div className="demo-section full-width">
+        <CommissionCalculator />
+      </div>
+
+      <div className="demo-section">
+        <h2>🎯 Estrategia de Promoción</h2>
+        <div className="strategy-grid">
+          <div className="strategy-card">
+            <h4>1. Presentación en Eventos BQDC</h4>
+            <p>Presentar las soluciones en reuniones y eventos de la asociación</p>
           </div>
-          <div className="advantage-card">
-            <h4>✓ Sin Límites</h4>
-            <p>Sin restricciones de usuarios, pacientes o almacenamiento</p>
+          <div className="strategy-card">
+            <h4>2. Newsletter BQDC</h4>
+            <p>Campañas de email explicando los beneficios de la IA y la subvención</p>
+          </div>
+          <div className="strategy-card">
+            <h4>3. Webinars Exclusivos</h4>
+            <p>Sesiones online demostrando el Agente IA y la calculadora de ROI</p>
+          </div>
+          <div className="strategy-card">
+            <h4>4. Soporte de NexGent</h4>
+            <p>Nosotros proporcionamos todo el material de marketing y presentaciones</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="demo-section highlight-section">
+        <h2>✨ Ventajas para Xavier y BQDC</h2>
+        <div className="advantages-list">
+          <div className="advantage-item">
+            <CheckCircle size={24} color="#10b981" />
+            <div>
+              <h4>Ingresos Adicionales Significativos</h4>
+              <p>Potencial de 100.000€+ en comisiones con adopción moderada de la red</p>
+            </div>
+          </div>
+          <div className="advantage-item">
+            <CheckCircle size={24} color="#10b981" />
+            <div>
+              <h4>Valor Añadido para los Socios</h4>
+              <p>Ofrecer tecnología punta y acceso a subvenciones exclusivas</p>
+            </div>
+          </div>
+          <div className="advantage-item">
+            <CheckCircle size={24} color="#10b981" />
+            <div>
+              <h4>Sin Inversión ni Riesgo</h4>
+              <p>Xavier solo recomienda, NexGent hace todo el trabajo técnico y gestión</p>
+            </div>
+          </div>
+          <div className="advantage-item">
+            <CheckCircle size={24} color="#10b981" />
+            <div>
+              <h4>Posicionamiento Tecnológico</h4>
+              <p>BQDC se posiciona como asociación innovadora y tecnológicamente avanzada</p>
+            </div>
+          </div>
+          <div className="advantage-item">
+            <CheckCircle size={24} color="#10b981" />
+            <div>
+              <h4>Beneficio Real para las Clínicas</h4>
+              <p>Las clínicas reciben IA gratis con la subvención y mejoran su eficiencia</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="demo-section">
+        <h2>📞 Próximos Pasos</h2>
+        <div className="next-steps">
+          <div className="step-card">
+            <div className="step-number-large">1</div>
+            <div className="step-content">
+              <h4>Revisión de la Propuesta</h4>
+              <p>Xavier revisa los términos y condiciones de la colaboración</p>
+            </div>
+          </div>
+          <div className="step-card">
+            <div className="step-number-large">2</div>
+            <div className="step-content">
+              <h4>Acuerdo Marco</h4>
+              <p>Firmamos un acuerdo de colaboración comercial</p>
+            </div>
+          </div>
+          <div className="step-card">
+            <div className="step-number-large">3</div>
+            <div className="step-content">
+              <h4>Material de Marketing</h4>
+              <p>NexGent prepara presentaciones, demos y calculadoras</p>
+            </div>
+          </div>
+          <div className="step-card">
+            <div className="step-number-large">4</div>
+            <div className="step-content">
+              <h4>Lanzamiento</h4>
+              <p>Comenzamos la promoción en la red BQDC</p>
+            </div>
           </div>
         </div>
       </div>

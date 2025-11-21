@@ -56,37 +56,41 @@ function ProposalSelector({ onSelectProposal }) {
           </button>
         </div>
 
-        {/* Card 2: Tecnología Avanzada (IA + CRM) - BLOQUEADA */}
-        <div className="proposal-card tech-card locked-card">
-          <div className="locked-badge">
-            <Lock size={16} />
-            <span>Próximamente</span>
-          </div>
-          <div className="proposal-icon locked-icon">
+        {/* Card 2: Tecnología Avanzada - IA + Subvención */}
+        <div className="proposal-card tech-card">
+          <div className="proposal-icon">
             <Brain size={48} />
           </div>
-          <h2>Tecnología Avanzada</h2>
+          <h2>Tecnología Avanzada + Subvención</h2>
           <p className="proposal-description">
-            Automatización inteligente y gestión empresarial de última generación
+            IA de atención al paciente con financiación europea hasta 30.000€
           </p>
           
-          <div className="proposal-services locked-services">
+          <div className="proposal-services">
             <div className="service-item">
               <CheckCircle size={18} />
-              <span>Agente IA Atención al Paciente</span>
+              <span>Agente IA WhatsApp + Telefónico</span>
             </div>
             <div className="service-item">
               <CheckCircle size={18} />
-              <span>CRM Vela Segalà (Opcional)</span>
+              <span>Integración con Gesden G5</span>
+            </div>
+            <div className="service-item">
+              <CheckCircle size={18} />
+              <span>Subvención Global Data Care (30.000€)</span>
+            </div>
+            <div className="service-item">
+              <CheckCircle size={18} />
+              <span>Propuesta Comercial BQDC</span>
             </div>
           </div>
 
           <button 
-            className="proposal-button locked-button"
-            disabled
+            className="proposal-button"
+            onClick={() => onSelectProposal('tech')}
           >
-            <Lock size={20} />
-            <span>No Disponible</span>
+            <span>Ver Propuesta Completa</span>
+            <ArrowRight size={20} />
           </button>
         </div>
       </div>
