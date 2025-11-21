@@ -142,16 +142,6 @@ function Introduction({ onNext }) {
               </p>
             </div>
           </div>
-          <div className="challenge-item">
-            <div className="challenge-number">04</div>
-            <div className="challenge-content">
-              <h3>Contenido y Marketing</h3>
-              <p>
-                Mantener un blog actualizado y presencia en redes sociales requiere tiempo 
-                y recursos que las clínicas no siempre tienen disponibles.
-              </p>
-            </div>
-          </div>
         </div>
       </div>
 
