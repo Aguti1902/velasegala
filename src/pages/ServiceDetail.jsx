@@ -29,16 +29,120 @@ function ServiceDetail({ service, selectedServices, toggleService }) {
 
         <div className="service-features-section">
           <h2 className="features-title">Características y Beneficios</h2>
-          <div className="features-grid">
-            {service.features.map((feature, index) => (
-              <div key={index} className="feature-card">
-                <div className="feature-check">
-                  <Check size={20} />
+          
+          {service.id === 'ia-cliente' ? (
+            <div className="ia-features-redesign">
+              {/* Hero Channels */}
+              <div className="ia-channels-hero">
+                <div className="ia-channel-card whatsapp">
+                  <div className="channel-icon">💬</div>
+                  <h3>WhatsApp Business 24/7</h3>
+                  <p>Chatbot avanzado con IA que gestiona consultas, reservas y recordatorios automáticamente</p>
                 </div>
-                <span className="feature-text">{feature}</span>
+                <div className="ia-channel-card phone">
+                  <div className="channel-icon">📞</div>
+                  <h3>Asistente Telefónico con Voz</h3>
+                  <p>IA de voz natural que atiende llamadas, agenda citas y responde preguntas 24/7</p>
+                </div>
               </div>
-            ))}
-          </div>
+
+              {/* Core Features */}
+              <div className="ia-core-section">
+                <h3 className="ia-section-title">🔗 Integración Total con Gesden G5</h3>
+                <div className="ia-features-grid">
+                  <div className="ia-feature-item">
+                    <Check size={18} />
+                    <span>Sincronización bidireccional en tiempo real</span>
+                  </div>
+                  <div className="ia-feature-item">
+                    <Check size={18} />
+                    <span>Gestión automática de citas en Gesden</span>
+                  </div>
+                  <div className="ia-feature-item">
+                    <Check size={18} />
+                    <span>Consulta de disponibilidad en tiempo real</span>
+                  </div>
+                  <div className="ia-feature-item">
+                    <Check size={18} />
+                    <span>Acceso al historial clínico del paciente</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Automation Features */}
+              <div className="ia-core-section">
+                <h3 className="ia-section-title">⚡ Automatización Inteligente</h3>
+                <div className="ia-features-grid">
+                  <div className="ia-feature-item">
+                    <Check size={18} />
+                    <span>Recordatorios personalizados (SMS, email, WhatsApp)</span>
+                  </div>
+                  <div className="ia-feature-item">
+                    <Check size={18} />
+                    <span>Solicitud automática de reseñas de Google tras cada visita</span>
+                  </div>
+                  <div className="ia-feature-item">
+                    <Check size={18} />
+                    <span>Sistema de generación masiva de reseñas positivas</span>
+                  </div>
+                  <div className="ia-feature-item">
+                    <Check size={18} />
+                    <span>Respuestas contextuales basadas en historial</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Intelligence Features */}
+              <div className="ia-core-section">
+                <h3 className="ia-section-title">🧠 Inteligencia Avanzada</h3>
+                <div className="ia-features-grid">
+                  <div className="ia-feature-item">
+                    <Check size={18} />
+                    <span>Escalado inteligente a operadores humanos cuando necesario</span>
+                  </div>
+                  <div className="ia-feature-item">
+                    <Check size={18} />
+                    <span>Soporte multiidioma: Español, Catalán, Inglés</span>
+                  </div>
+                  <div className="ia-feature-item">
+                    <Check size={18} />
+                    <span>Análisis de satisfacción y sentiment analysis</span>
+                  </div>
+                  <div className="ia-feature-item">
+                    <Check size={18} />
+                    <span>Dashboard de métricas y KPIs en tiempo real</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Impact Banner */}
+              <div className="ia-impact-banner">
+                <div className="impact-stat">
+                  <div className="impact-number">70%</div>
+                  <div className="impact-label">Reducción carga de recepción</div>
+                </div>
+                <div className="impact-stat">
+                  <div className="impact-number">24/7</div>
+                  <div className="impact-label">Atención sin interrupciones</div>
+                </div>
+                <div className="impact-stat">
+                  <div className="impact-number">3x</div>
+                  <div className="impact-label">Más reseñas de Google</div>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div className="features-grid">
+              {service.features.map((feature, index) => (
+                <div key={index} className="feature-card">
+                  <div className="feature-check">
+                    <Check size={20} />
+                  </div>
+                  <span className="feature-text">{feature}</span>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
 
         <div className="service-action">
