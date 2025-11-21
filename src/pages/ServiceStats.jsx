@@ -1,4 +1,5 @@
 import { TrendingUp, Clock, Euro, Users, Target, Zap } from 'lucide-react'
+import './ServiceExtras.css'
 
 function ServiceStats({ service }) {
   if (!service) return null

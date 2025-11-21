@@ -1,5 +1,6 @@
 import { Play, MessageCircle, Globe, Bot, Database, TrendingUp, Award, Users, Euro, CheckCircle, FileText } from 'lucide-react'
 import CommissionCalculator from '../components/CommissionCalculator'
+import './ServiceExtras.css'
 
 function ServiceDemo({ service }) {
   if (!service) return null
