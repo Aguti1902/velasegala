@@ -1229,7 +1229,12 @@
   font-size: 3.5rem;
   margin-bottom: 1.5rem;
   line-height: 1;
-  opacity: 0.9;
+  opacity: 1;
+  filter: brightness(1.1);
+}
+
+.ia-channel-card.whatsapp .channel-icon {
+  filter: brightness(2.5);
 }
 
 .ia-channel-card h3 {
@@ -1239,11 +1244,20 @@
   letter-spacing: 0.3px;
 }
 
+.ia-channel-card.whatsapp h3 {
+  color: var(--white);
+}
+
 .ia-channel-card p {
   font-size: 0.95rem;
   line-height: 1.6;
   opacity: 0.85;
   font-weight: 500;
+}
+
+.ia-channel-card.whatsapp p {
+  color: var(--white);
+  opacity: 0.9;
 }
 
 /* Core Sections */
