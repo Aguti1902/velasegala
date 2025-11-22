@@ -829,6 +829,21 @@ function SubvencionDemo() {
         </div>
       </div>
 
+      {/* BANNER DE VERIFICACIÓN - SI VES ESTO, LA PÁGINA SE ACTUALIZÓ */}
+      <div style={{
+        background: 'linear-gradient(135deg, #ff0000 0%, #cc0000 100%)',
+        color: 'white',
+        padding: '2rem',
+        textAlign: 'center',
+        fontSize: '2rem',
+        fontWeight: '900',
+        margin: '2rem 0',
+        borderRadius: '1rem',
+        boxShadow: '0 10px 30px rgba(255,0,0,0.3)'
+      }}>
+        🚨 PÁGINA ACTUALIZADA - DICIEMBRE 2024 - SI VES ESTO, FUNCIONA 🚨
+      </div>
+
       <div className="demo-section">
         <h2>💰 Distribución de la Subvención (30.000€)</h2>
         <div className="subvencion-breakdown">
