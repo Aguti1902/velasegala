@@ -2558,6 +2558,12 @@
   font-size: 1.5rem;
   margin-bottom: var(--spacing-lg);
   font-weight: 600;
+  text-align: center;
+}
+
+.demo-section h3,
+.stats-section h3 {
+  text-align: center;
 }
 
 /* Dashboard Mockup */
