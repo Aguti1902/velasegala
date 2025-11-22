@@ -22,7 +22,8 @@ function BudgetCalculator({ selectedServices, allServices, selectedProposal }) {
 
   const hasSelection = selectedServices.length > 0
   const allServicesSelected = selectedServices.length === allServices.length
-  const discount = allServicesSelected ? 0.10 : 0
+  // No aplicar descuento en propuesta tech (la subvención ya lo cubre todo)
+  const discount = (allServicesSelected && selectedProposal !== 'tech') ? 0.10 : 0
 
   const discountedMonthly = monthlyTotal * (1 - discount)
   const discountedInitial = initialTotal * (1 - discount)
@@ -41,7 +42,7 @@ function BudgetCalculator({ selectedServices, allServices, selectedProposal }) {
 
       {hasSelection ? (
         <>
-          {allServicesSelected && (
+          {allServicesSelected && selectedProposal !== 'tech' && (
             <div className="discount-alert">
               <Percent size={32} />
               <div className="discount-content">

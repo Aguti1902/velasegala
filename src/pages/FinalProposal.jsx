@@ -16,7 +16,8 @@ function FinalProposal({ selectedServices, allServices, selectedProposal }) {
 
   const hasSelection = selectedServices.length > 0
   const allServicesSelected = selectedServices.length === allServices.length
-  const discount = allServicesSelected ? 0.10 : 0
+  // No aplicar descuento en propuesta tech (la subvención ya lo cubre todo)
+  const discount = (allServicesSelected && selectedProposal !== 'tech') ? 0.10 : 0
   const finalMonthly = monthlyTotal * (1 - discount)
   const finalInitial = initialTotal * (1 - discount)
 
@@ -46,7 +47,7 @@ function FinalProposal({ selectedServices, allServices, selectedProposal }) {
                   <div className="stat-value">{finalMonthly.toLocaleString('es-ES')}€</div>
                 </div>
               </div>
-              {allServicesSelected && (
+              {allServicesSelected && selectedProposal !== 'tech' && (
                 <div className="summary-discount">
                   <Award size={24} />
                   <span>Incluye 10% de descuento por paquete completo</span>
