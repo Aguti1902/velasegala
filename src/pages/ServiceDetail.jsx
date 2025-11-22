@@ -352,7 +352,6 @@ function ServiceDetail({ service, selectedServices, toggleService }) {
         )}
 
         <div className="service-benefits">
-          <h2 className="features-title">Beneficios Clave para Vela Segala</h2>
           <div className="benefits-cards">
             {service.id === 'mantenimiento' && (
               <>
