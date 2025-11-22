@@ -785,8 +785,8 @@ function SubvencionDemo() {
             padding: '2rem',
             boxShadow: '0 2px 8px rgba(0,0,0,0.08)'
           }}>
-            <div style={{fontSize: '2rem', marginBottom: '1rem'}}>
-              <FileText size={32} style={{color: '#0066cc'}} />
+            <div style={{textAlign: 'center', marginBottom: '1rem'}}>
+              <FileText size={32} style={{color: '#000000'}} />
             </div>
             <h3 style={{fontSize: '1.2rem', fontWeight: '700', marginBottom: '1rem', color: '#1f2937'}}>Programa Red.es</h3>
             <p style={{fontSize: '0.95rem', lineHeight: '1.6', color: '#6b7280'}}>
@@ -803,8 +803,8 @@ function SubvencionDemo() {
             padding: '2rem',
             boxShadow: '0 2px 8px rgba(0,0,0,0.08)'
           }}>
-            <div style={{fontSize: '2rem', marginBottom: '1rem'}}>
-              <Globe size={32} style={{color: '#0066cc'}} />
+            <div style={{textAlign: 'center', marginBottom: '1rem'}}>
+              <Globe size={32} style={{color: '#000000'}} />
             </div>
             <h3 style={{fontSize: '1.2rem', fontWeight: '700', marginBottom: '1rem', color: '#1f2937'}}>Global Data Care EU</h3>
             <p style={{fontSize: '0.95rem', lineHeight: '1.6', color: '#6b7280'}}>
@@ -821,8 +821,8 @@ function SubvencionDemo() {
             padding: '2rem',
             boxShadow: '0 2px 8px rgba(0,0,0,0.08)'
           }}>
-            <div style={{fontSize: '2rem', marginBottom: '1rem'}}>
-              <CheckCircle size={32} style={{color: '#0066cc'}} />
+            <div style={{textAlign: 'center', marginBottom: '1rem'}}>
+              <CheckCircle size={32} style={{color: '#000000'}} />
             </div>
             <h3 style={{fontSize: '1.2rem', fontWeight: '700', marginBottom: '1rem', color: '#1f2937'}}>Requisitos</h3>
             <ul style={{fontSize: '0.95rem', lineHeight: '1.9', color: '#6b7280', paddingLeft: '1.2rem'}}>
