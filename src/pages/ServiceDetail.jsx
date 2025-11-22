@@ -131,6 +131,112 @@ function ServiceDetail({ service, selectedServices, toggleService }) {
                 </div>
               </div>
             </div>
+          ) : service.id === 'subvencion' ? (
+            <div className="subvencion-detail-content">
+              {/* Distribución de la Subvención */}
+              <div className="subvencion-distribution" style={{marginBottom: '3rem'}}>
+                <h3 style={{fontSize: '1.5rem', marginBottom: '2rem', textAlign: 'center'}}>💰 Distribución de la Subvención (30.000€)</h3>
+                <div className="subvencion-breakdown">
+                  <div className="breakdown-card primary">
+                    <div className="breakdown-amount">15.000€</div>
+                    <div className="breakdown-label">Comisión de Gestión</div>
+                    <div className="breakdown-description">
+                      Accuro (empresa gestora) se encarga de toda la tramitación, documentación 
+                      y justificación de la subvención ante Red.es
+                    </div>
+                  </div>
+                  
+                  <div className="breakdown-card success">
+                    <div className="breakdown-amount">15.000€</div>
+                    <div className="breakdown-label">Para Vela Segalà</div>
+                    <div className="breakdown-description">
+                      <strong>Desarrollo completo del Agente IA:</strong> 13.000€<br/>
+                      <strong>Mantenimiento (2 meses):</strong> 1.398€ (699€/mes)<br/>
+                      <em>Total cubierto sin coste para la clínica</em>
+                    </div>
+                  </div>
+                </div>
+                <p className="breakdown-note">
+                  ℹ️ <strong>Importante:</strong> A partir del 3er mes, Vela Segalà asumirá 
+                  el coste mensual de 699€ del Agente IA. Sin embargo, el desarrollo (13.000€) 
+                  ya estará completamente pagado por la subvención.
+                </p>
+              </div>
+
+              {/* Beneficios Clave */}
+              <div className="subvencion-benefits" style={{background: 'linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%)', padding: '3rem', borderRadius: '1rem', marginBottom: '3rem'}}>
+                <h3 style={{fontSize: '1.5rem', marginBottom: '1rem', textAlign: 'center'}}>✨ Beneficios Clave de Global Data Care</h3>
+                <p style={{textAlign: 'center', marginBottom: '2rem', fontSize: '1.05rem', color: '#666'}}>
+                  Más allá de la financiación, la verdadera ventaja es el acceso a la red europea 
+                  de datos clínicos que transformará la atención a tus pacientes.
+                </p>
+                <div className="benefits-grid-large" style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem'}}>
+                  <div className="benefit-card-large highlight">
+                    <div className="benefit-icon-large">🗂️</div>
+                    <h4>Acceso a Historiales Clínicos Europeos</h4>
+                    <p>
+                      Visualiza el historial completo de cualquier paciente que haya visitado clínicas 
+                      de la red Global Data Care en toda Europa. Accede a radiografías, tratamientos 
+                      previos, diagnósticos, alergias y medicación.
+                    </p>
+                    <div className="benefit-highlight">
+                      <strong>Impacto:</strong> 15-20% de tus pacientes nuevos tendrán historial disponible 
+                      (especialmente turistas y expatriados)
+                    </div>
+                  </div>
+
+                  <div className="benefit-card-large highlight">
+                    <div className="benefit-icon-large">⚡</div>
+                    <h4>Atención 40% Más Rápida</h4>
+                    <p>
+                      Reduce el tiempo de primera consulta de 45 minutos a 29 minutos al tener 
+                      información previa del paciente. No necesitas repetir radiografías ni pruebas 
+                      ya realizadas en otras clínicas europeas.
+                    </p>
+                    <div className="benefit-highlight">
+                      <strong>Ahorro:</strong> ~2.400€/año en radiografías y pruebas no duplicadas
+                    </div>
+                  </div>
+
+                  <div className="benefit-card-large highlight">
+                    <div className="benefit-icon-large">🎯</div>
+                    <h4>Decisiones Clínicas Más Informadas</h4>
+                    <p>
+                      Mejora del 25% en diagnósticos al tener el contexto completo del paciente desde 
+                      el primer día. Conoce tratamientos previos, complicaciones pasadas y evolución 
+                      de su salud dental.
+                    </p>
+                    <div className="benefit-highlight">
+                      <strong>Resultado:</strong> Mayor satisfacción del paciente y mejor calidad asistencial
+                    </div>
+                  </div>
+
+                  <div className="benefit-card-large highlight">
+                    <div className="benefit-icon-large">🔬</div>
+                    <h4>Red de 10.000+ Clínicas en Europa</h4>
+                    <p>
+                      Acceso a la mayor red de datos clínicos dentales de Europa. Compartir datos 
+                      anónimos contribuye a la investigación y mejora de protocolos dentales europeos.
+                    </p>
+                    <div className="benefit-highlight">
+                      <strong>Ventaja:</strong> Posicionamiento como clínica innovadora y conectada
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Resto de características del servicio */}
+              <div className="features-grid">
+                {service.features.map((feature, index) => (
+                  <div key={index} className="feature-card">
+                    <div className="feature-check">
+                      <Check size={20} />
+                    </div>
+                    <span className="feature-text">{feature}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           ) : (
             <div className="features-grid">
               {service.features.map((feature, index) => (
