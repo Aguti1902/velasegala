@@ -770,267 +770,190 @@ function ClientAIDemo() {
 function SubvencionDemo() {
   return (
     <div className="demo-content">
-      <div className="demo-section highlight-section">
-        <h2>🇪🇺 Subvención Global Data Care - Red.es</h2>
-        <p className="section-intro">
+      <div className="demo-section">
+        <h2 style={{textAlign: 'center', marginBottom: '1rem'}}>📋 ¿En Qué Consiste la Subvención?</h2>
+        <p className="section-intro" style={{textAlign: 'center', marginBottom: '3rem'}}>
           Financiación europea de hasta <strong>30.000€</strong> para digitalización sanitaria y 
           participación en la red europea de intercambio de datos clínicos.
         </p>
-        
-        <div className="subvencion-hero">
-          <div className="hero-card">
-            <Award size={48} />
-            <div className="hero-amount">30.000€</div>
-            <div className="hero-label">Subvención Máxima</div>
-            <div className="hero-note">Toda la IA gratis</div>
-          </div>
-        </div>
-      </div>
-
-      <div className="demo-section">
-        <h2>📋 ¿En Qué Consiste la Subvención?</h2>
-        <div className="subvencion-explanation">
-          <div className="explanation-card">
-            <div className="card-header">
-              <FileText size={24} />
-              <h3>Programa Red.es</h3>
+        <div style={{display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem', marginBottom: '3rem'}}>
+          <div style={{
+            background: 'white',
+            border: '2px solid #e5e7eb',
+            borderRadius: '12px',
+            padding: '2rem',
+            boxShadow: '0 2px 8px rgba(0,0,0,0.08)'
+          }}>
+            <div style={{fontSize: '2rem', marginBottom: '1rem'}}>
+              <FileText size={32} style={{color: '#0066cc'}} />
             </div>
-            <p>
+            <h3 style={{fontSize: '1.2rem', fontWeight: '700', marginBottom: '1rem', color: '#1f2937'}}>Programa Red.es</h3>
+            <p style={{fontSize: '0.95rem', lineHeight: '1.6', color: '#6b7280'}}>
               Subvención del Ministerio de Asuntos Económicos y Transformación Digital 
               para promover la digitalización del sector sanitario español y su integración 
               en la red europea de datos de salud.
             </p>
           </div>
 
-          <div className="explanation-card">
-            <div className="card-header">
-              <Globe size={24} />
-              <h3>Global Data Care EU</h3>
+          <div style={{
+            background: 'white',
+            border: '2px solid #e5e7eb',
+            borderRadius: '12px',
+            padding: '2rem',
+            boxShadow: '0 2px 8px rgba(0,0,0,0.08)'
+          }}>
+            <div style={{fontSize: '2rem', marginBottom: '1rem'}}>
+              <Globe size={32} style={{color: '#0066cc'}} />
             </div>
-            <p>
+            <h3 style={{fontSize: '1.2rem', fontWeight: '700', marginBottom: '1rem', color: '#1f2937'}}>Global Data Care EU</h3>
+            <p style={{fontSize: '0.95rem', lineHeight: '1.6', color: '#6b7280'}}>
               Plataforma europea que permite el intercambio seguro de datos clínicos entre 
               clínicas dentales de toda Europa. Al registrarte, puedes acceder a historiales 
               de pacientes que hayan visitado otras clínicas participantes.
             </p>
           </div>
 
-          <div className="explanation-card">
-            <div className="card-header">
-              <CheckCircle size={24} />
-              <h3>Requisitos</h3>
+          <div style={{
+            background: 'white',
+            border: '2px solid #e5e7eb',
+            borderRadius: '12px',
+            padding: '2rem',
+            boxShadow: '0 2px 8px rgba(0,0,0,0.08)'
+          }}>
+            <div style={{fontSize: '2rem', marginBottom: '1rem'}}>
+              <CheckCircle size={32} style={{color: '#0066cc'}} />
             </div>
-            <ul>
-              <li>✓ Ser clínica dental registrada en España</li>
-              <li>✓ Comprometerse a compartir datos anónimos con la red europea</li>
-              <li>✓ Implementar soluciones de digitalización (como nuestra IA)</li>
-              <li>✓ Cumplir con RGPD y normativa de protección de datos</li>
+            <h3 style={{fontSize: '1.2rem', fontWeight: '700', marginBottom: '1rem', color: '#1f2937'}}>Requisitos</h3>
+            <ul style={{fontSize: '0.95rem', lineHeight: '1.9', color: '#6b7280', paddingLeft: '1.2rem'}}>
+              <li>Clínica dental registrada en España</li>
+              <li>Compartir datos anónimos con la UE</li>
+              <li>Implementar digitalización (IA)</li>
+              <li>Cumplir con RGPD</li>
             </ul>
           </div>
         </div>
       </div>
 
-      {/* BANNER DE VERIFICACIÓN - SI VES ESTO, LA PÁGINA SE ACTUALIZÓ */}
-      <div style={{
-        background: 'linear-gradient(135deg, #ff0000 0%, #cc0000 100%)',
-        color: 'white',
-        padding: '2rem',
-        textAlign: 'center',
-        fontSize: '2rem',
-        fontWeight: '900',
-        margin: '2rem 0',
-        borderRadius: '1rem',
-        boxShadow: '0 10px 30px rgba(255,0,0,0.3)'
-      }}>
-        🚨 PÁGINA ACTUALIZADA - DICIEMBRE 2024 - SI VES ESTO, FUNCIONA 🚨
-      </div>
-
       <div className="demo-section">
-        <h2>💰 Distribución de la Subvención (30.000€)</h2>
-        <div className="subvencion-breakdown">
-          <div className="breakdown-card primary">
-            <div className="breakdown-amount">15.000€</div>
-            <div className="breakdown-label">Comisión de Gestión</div>
-            <div className="breakdown-description">
-              Accuro (empresa gestora) se encarga de toda la tramitación, documentación 
-              y justificación de la subvención ante Red.es
+        <h2 style={{textAlign: 'center', marginBottom: '3rem'}}>🌍 Cómo Funciona Global Data Care</h2>
+        <div style={{display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.5rem'}}>
+          {[
+            {step: 1, title: 'Paciente Nuevo', desc: 'Llega a tu clínica por primera vez', color: '#0066cc'},
+            {step: 2, title: 'Búsqueda en GDC', desc: 'Buscas su DNI/NIE en la plataforma', color: '#0066cc'},
+            {step: 3, title: 'Historial Disponible', desc: 'Ves todo su historial clínico europeo', color: '#0066cc'},
+            {step: 4, title: 'Mejor Atención', desc: 'Información completa desde el día 1', color: '#10b981'}
+          ].map((item, idx) => (
+            <div key={idx} style={{
+              background: 'white',
+              border: '2px solid #e5e7eb',
+              borderRadius: '12px',
+              padding: '2rem 1.5rem',
+              textAlign: 'center',
+              boxShadow: '0 2px 8px rgba(0,0,0,0.08)'
+            }}>
+              <div style={{
+                background: item.color,
+                color: 'white',
+                width: '48px',
+                height: '48px',
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '0 auto 1rem',
+                fontSize: '1.5rem',
+                fontWeight: '700'
+              }}>{item.step === 4 ? '✓' : item.step}</div>
+              <h4 style={{fontSize: '1.1rem', fontWeight: '700', marginBottom: '0.5rem', color: '#1f2937'}}>{item.title}</h4>
+              <p style={{fontSize: '0.9rem', color: '#6b7280'}}>{item.desc}</p>
             </div>
-          </div>
-          
-          <div className="breakdown-card success">
-            <div className="breakdown-amount">15.000€</div>
-            <div className="breakdown-label">Para Vela Segalà</div>
-            <div className="breakdown-description">
-              <strong>Desarrollo completo del Agente IA:</strong> 13.000€<br/>
-              <strong>Mantenimiento (2 meses):</strong> 1.398€ (699€/mes)<br/>
-              <em>Total cubierto sin coste para la clínica</em>
-            </div>
-          </div>
+          ))}
         </div>
-        <p className="breakdown-note">
-          ℹ️ <strong>Importante:</strong> A partir del 3er mes, Vela Segalà asumirá 
-          el coste mensual de 699€ del Agente IA. Sin embargo, el desarrollo (13.000€) 
-          ya estará completamente pagado por la subvención.
-        </p>
-      </div>
 
-      <div className="demo-section highlight-section" style={{background: 'linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%)', padding: '3rem', borderRadius: '1rem', marginTop: '3rem'}}>
-        <h2>✨ Beneficios Clave de Global Data Care</h2>
-        <p className="section-intro" style={{fontSize: '1.1rem', marginBottom: '2rem'}}>
-          Más allá de la financiación, la verdadera ventaja es el acceso a la red europea 
-          de datos clínicos que transformará la atención a tus pacientes.
-        </p>
-        <div className="benefits-grid-large" style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem'}}>
-          <div className="benefit-card-large highlight">
-            <div className="benefit-icon-large">🗂️</div>
-            <h4>Acceso a Historiales Clínicos Europeos</h4>
-            <p>
-              Visualiza el historial completo de cualquier paciente que haya visitado clínicas 
-              de la red Global Data Care en toda Europa. Accede a radiografías, tratamientos 
-              previos, diagnósticos, alergias y medicación.
-            </p>
-            <div className="benefit-highlight">
-              <strong>Impacto:</strong> 15-20% de tus pacientes nuevos tendrán historial disponible 
-              (especialmente turistas y expatriados)
-            </div>
-          </div>
-
-          <div className="benefit-card-large highlight">
-            <div className="benefit-icon-large">⚡</div>
-            <h4>Atención 40% Más Rápida</h4>
-            <p>
-              Reduce el tiempo de primera consulta de 45 minutos a 29 minutos al tener 
-              información previa del paciente. No necesitas repetir radiografías ni pruebas 
-              ya realizadas en otras clínicas europeas.
-            </p>
-            <div className="benefit-highlight">
-              <strong>Ahorro:</strong> ~2.400€/año en radiografías y pruebas no duplicadas
-            </div>
-          </div>
-
-          <div className="benefit-card-large highlight">
-            <div className="benefit-icon-large">🎯</div>
-            <h4>Decisiones Clínicas Más Informadas</h4>
-            <p>
-              Mejora del 25% en diagnósticos al tener el contexto completo del paciente desde 
-              el primer día. Conoce tratamientos previos, complicaciones pasadas y evolución 
-              de su salud dental.
-            </p>
-            <div className="benefit-highlight">
-              <strong>Resultado:</strong> Mayor satisfacción del paciente y mejor calidad asistencial
-            </div>
-          </div>
-
-          <div className="benefit-card-large highlight">
-            <div className="benefit-icon-large">🔬</div>
-            <h4>Red de 10.000+ Clínicas en Europa</h4>
-            <p>
-              Acceso a la mayor red de datos clínicos dentales de Europa. Compartir datos 
-              anónimos contribuye a la investigación y mejora de protocolos dentales europeos.
-            </p>
-            <div className="benefit-highlight">
-              <strong>Ventaja:</strong> Posicionamiento como clínica innovadora y conectada
-            </div>
-          </div>
+        <div style={{
+          background: 'linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%)',
+          border: '2px solid #0066cc',
+          borderRadius: '12px',
+          padding: '2rem',
+          marginTop: '3rem'
+        }}>
+          <h4 style={{fontSize: '1.1rem', fontWeight: '700', marginBottom: '1rem', color: '#1f2937'}}>📋 Ejemplo Práctico</h4>
+          <p style={{fontSize: '0.95rem', lineHeight: '1.8', color: '#374151'}}>
+            <strong>Escenario:</strong> Un turista alemán llega a tu clínica con dolor dental.<br/>
+            <strong style={{color: '#10b981'}}>✓ Con Global Data Care:</strong> Ves que hace 3 meses se hizo un tratamiento 
+            de conductos en Berlín. Tienes acceso a las radiografías y al informe del dentista alemán. 
+            Puedes tratar el problema informado desde el minuto 1.<br/>
+            <strong style={{color: '#dc2626'}}>✗ Sin Global Data Care:</strong> Tendrías que hacer nuevas radiografías, 
+            investigar desde cero y posiblemente repetir pruebas que ya se hicieron.
+          </p>
         </div>
       </div>
 
       <div className="demo-section">
-        <h2>🌍 Cómo Funciona Global Data Care</h2>
-        <div className="gdc-workflow">
-          <div className="workflow-step">
-            <div className="step-icon">1</div>
-            <h4>Paciente Nuevo</h4>
-            <p>Un paciente llega a tu clínica por primera vez</p>
-          </div>
-          <div className="workflow-arrow">→</div>
-          <div className="workflow-step">
-            <div className="step-icon">2</div>
-            <h4>Búsqueda en GDC</h4>
-            <p>Buscas su DNI/NIE en la plataforma Global Data Care</p>
-          </div>
-          <div className="workflow-arrow">→</div>
-          <div className="workflow-step">
-            <div className="step-icon">3</div>
-            <h4>Historial Disponible</h4>
-            <p>Si ha visitado otras clínicas, ves todo su historial</p>
-          </div>
-          <div className="workflow-arrow">→</div>
-          <div className="workflow-step">
-            <div className="step-icon">4</div>
-            <h4>Mejor Atención</h4>
-            <p>Tratas al paciente con información completa desde el día 1</p>
-          </div>
-        </div>
-
-        <div className="gdc-example">
-          <h4>Ejemplo Práctico:</h4>
-          <div className="example-card">
-            <p>
-              <strong>Escenario:</strong> Un turista alemán llega a tu clínica con dolor dental.<br/>
-              <strong>Con Global Data Care:</strong> Ves que hace 3 meses se hizo un tratamiento 
-              de conductos en Berlín. Tienes acceso a las radiografías y al informe del dentista alemán. 
-              Puedes tratar el problema informado desde el minuto 1.<br/>
-              <strong>Sin Global Data Care:</strong> Tendrías que hacer nuevas radiografías, 
-              investigar desde cero y posiblemente repetir pruebas que ya se hicieron.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div className="demo-section highlight-section">
-        <h2>🚀 Gestión Completa por NexGent</h2>
-        <p className="section-intro">
+        <h2 style={{textAlign: 'center', marginBottom: '1rem'}}>🚀 Gestión Completa por NexGent</h2>
+        <p style={{textAlign: 'center', color: '#6b7280', marginBottom: '3rem'}}>
           No te preocupes por la burocracia. Nosotros nos encargamos de TODO.
         </p>
         
-        <div className="gestion-grid">
-          <div className="gestion-item">
-            <CheckCircle size={20} color="#10b981" />
-            <span>Preparación de toda la documentación</span>
-          </div>
-          <div className="gestion-item">
-            <CheckCircle size={20} color="#10b981" />
-            <span>Presentación de la solicitud ante Red.es</span>
-          </div>
-          <div className="gestion-item">
-            <CheckCircle size={20} color="#10b981" />
-            <span>Seguimiento del proceso de aprobación</span>
-          </div>
-          <div className="gestion-item">
-            <CheckCircle size={20} color="#10b981" />
-            <span>Registro en plataforma Global Data Care</span>
-          </div>
-          <div className="gestion-item">
-            <CheckCircle size={20} color="#10b981" />
-            <span>Justificación de gastos para cobrar la subvención</span>
-          </div>
-          <div className="gestion-item">
-            <CheckCircle size={20} color="#10b981" />
-            <span>Implementación técnica completa</span>
-          </div>
+        <div style={{display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem', marginBottom: '3rem'}}>
+          {[
+            {icon: '📝', title: 'Documentación', desc: 'Preparación completa'},
+            {icon: '📤', title: 'Presentación', desc: 'Solicitud ante Red.es'},
+            {icon: '📊', title: 'Seguimiento', desc: 'Control del proceso'},
+            {icon: '🌍', title: 'Registro GDC', desc: 'Plataforma europea'},
+            {icon: '✅', title: 'Justificación', desc: 'Cobro de la subvención'},
+            {icon: '🔧', title: 'Implementación', desc: 'Setup técnico completo'}
+          ].map((item, idx) => (
+            <div key={idx} style={{
+              background: 'white',
+              border: '2px solid #e5e7eb',
+              borderRadius: '12px',
+              padding: '1.5rem',
+              display: 'flex',
+              gap: '1rem',
+              alignItems: 'center',
+              boxShadow: '0 2px 8px rgba(0,0,0,0.08)'
+            }}>
+              <div style={{fontSize: '2rem'}}>{item.icon}</div>
+              <div>
+                <h4 style={{fontSize: '1rem', fontWeight: '700', marginBottom: '0.25rem', color: '#1f2937'}}>{item.title}</h4>
+                <p style={{fontSize: '0.85rem', color: '#6b7280'}}>{item.desc}</p>
+              </div>
+            </div>
+          ))}
         </div>
 
-        <div className="timeline">
-          <h4>Plazo Estimado:</h4>
-          <div className="timeline-bar">
-            <div className="timeline-segment">
-              <div className="segment-label">Solicitud</div>
-              <div className="segment-duration">2 semanas</div>
-            </div>
-            <div className="timeline-segment">
-              <div className="segment-label">Evaluación</div>
-              <div className="segment-duration">1-2 meses</div>
-            </div>
-            <div className="timeline-segment">
-              <div className="segment-label">Aprobación</div>
-              <div className="segment-duration">1 semana</div>
-            </div>
-            <div className="timeline-segment">
-              <div className="segment-label">Implementación</div>
-              <div className="segment-duration">2-3 meses</div>
-            </div>
+        <div style={{
+          background: 'white',
+          border: '2px solid #e5e7eb',
+          borderRadius: '12px',
+          padding: '2.5rem',
+          boxShadow: '0 2px 8px rgba(0,0,0,0.08)'
+        }}>
+          <h3 style={{fontSize: '1.3rem', fontWeight: '700', marginBottom: '2rem', textAlign: 'center', color: '#1f2937'}}>⏱️ Plazo Estimado: 4-6 Meses</h3>
+          <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '1rem'}}>
+            {[
+              {label: 'Solicitud', duration: '2 sem', color: '#0066cc'},
+              {label: 'Evaluación', duration: '1-2 m', color: '#0066cc'},
+              {label: 'Aprobación', duration: '1 sem', color: '#0066cc'},
+              {label: 'Implementación', duration: '2-3 m', color: '#10b981'}
+            ].map((phase, idx) => (
+              <React.Fragment key={idx}>
+                <div style={{flex: 1, textAlign: 'center'}}>
+                  <div style={{
+                    background: phase.color,
+                    color: 'white',
+                    padding: '0.75rem',
+                    borderRadius: '8px',
+                    marginBottom: '0.5rem',
+                    fontWeight: '700'
+                  }}>{phase.label}</div>
+                  <span style={{fontSize: '0.85rem', color: '#6b7280'}}>{phase.duration}</span>
+                </div>
+                {idx < 3 && <div style={{color: '#d1d5db', fontSize: '1.5rem'}}>→</div>}
+              </React.Fragment>
+            ))}
           </div>
-          <div className="timeline-total">Plazo total: 4-6 meses</div>
         </div>
       </div>
     </div>
