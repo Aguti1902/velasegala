@@ -317,7 +317,23 @@ function App() {
         ]
       }
       // Servicios que incluyen demo y estadísticas en la misma página
-      if (service.id === 'subvencion' || service.id === 'colaboracion') {
+      if (service.id === 'subvencion') {
+        return [
+          { 
+            component: ServiceDetail, 
+            title: service.title,
+            level: 0,
+            props: { service }
+          },
+          {
+            component: ServiceDemo,
+            title: 'Información Detallada',
+            level: 1,
+            props: { service }
+          }
+        ]
+      }
+      if (service.id === 'colaboracion') {
         return [
           { 
             component: ServiceDetail, 
