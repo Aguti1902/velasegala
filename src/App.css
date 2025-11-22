@@ -1199,28 +1199,19 @@
 }
 
 .ia-channel-card {
-  background: var(--surface-color);
-  border: 2px solid var(--border-color);
+  background: var(--white);
+  border: 1px solid var(--black);
   border-radius: 16px;
   padding: 3rem 2rem;
   text-align: center;
   transition: all var(--transition-base);
   box-shadow: var(--shadow-md);
-}
-
-.ia-channel-card.whatsapp {
-  background: var(--black);
-  color: var(--white);
-  border-color: rgba(255, 255, 255, 0.1);
-}
-
-.ia-channel-card.phone {
-  background: var(--white);
-  color: var(--text-primary);
-  border-color: var(--border-color);
+  color: var(--black);
 }
 
 .ia-channel-card:hover {
+  background: var(--black);
+  color: var(--white);
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
 }
@@ -1229,11 +1220,10 @@
   font-size: 3.5rem;
   margin-bottom: 1.5rem;
   line-height: 1;
-  opacity: 1;
-  filter: brightness(1.1);
+  transition: all var(--transition-base);
 }
 
-.ia-channel-card.whatsapp .channel-icon {
+.ia-channel-card:hover .channel-icon {
   filter: brightness(2.5);
 }
 
@@ -1242,28 +1232,20 @@
   font-weight: 700;
   margin-bottom: 1rem;
   letter-spacing: 0.3px;
-}
-
-.ia-channel-card.whatsapp h3 {
-  color: var(--white);
+  transition: all var(--transition-base);
 }
 
 .ia-channel-card p {
   font-size: 0.95rem;
   line-height: 1.6;
-  opacity: 0.85;
   font-weight: 500;
-}
-
-.ia-channel-card.whatsapp p {
-  color: var(--white);
-  opacity: 0.9;
+  transition: all var(--transition-base);
 }
 
 /* Core Sections */
 .ia-core-section {
-  background: var(--white);
-  border: 2px solid var(--border-color);
+  background: var(--black);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   padding: 2rem;
   transition: all var(--transition-base);
@@ -1272,7 +1254,7 @@
 
 .ia-core-section:hover {
   box-shadow: var(--shadow-lg);
-  border-color: var(--gray-700);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .ia-section-title {
@@ -1281,8 +1263,8 @@
   margin-bottom: 1.5rem;
   letter-spacing: 0.3px;
   padding-bottom: 1rem;
-  border-bottom: 2px solid var(--border-color);
-  color: var(--text-primary);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+  color: var(--white);
 }
 
 .ia-features-grid {
