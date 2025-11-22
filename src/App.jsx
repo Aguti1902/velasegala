@@ -55,6 +55,14 @@ function App() {
 
   const handleProposalSelection = (proposal) => {
     setSelectedProposal(proposal)
+    
+    // Si es propuesta de tecnología avanzada, añadir automáticamente todos los servicios
+    if (proposal === 'tech') {
+      setSelectedServices(['ia-cliente', 'subvencion', 'colaboracion'])
+    } else {
+      setSelectedServices([]) // Resetear servicios para otras propuestas
+    }
+    
     // Avanzar 2 pasos: saltar bienvenida e ir directo a introducción
     setDirection('forward')
     setCurrentStep(2) // Índice 2 = Introducción (después de Bienvenida y Selector)
@@ -429,6 +437,7 @@ function App() {
           selectedServices={selectedServices}
           toggleService={toggleService}
           allServices={services}
+          selectedProposal={selectedProposal}
         />
       </div>
     </div>

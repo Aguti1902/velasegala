@@ -1702,6 +1702,62 @@
   font-variant-numeric: tabular-nums;
 }
 
+.tech-proposal-note {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border: 2px solid #0ea5e9;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-2xl);
+  display: flex;
+  gap: var(--spacing-lg);
+  align-items: flex-start;
+}
+
+.tech-proposal-note svg {
+  color: #0ea5e9;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.tech-proposal-note .note-content h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+  color: var(--black);
+}
+
+.tech-proposal-note .note-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.tech-proposal-note .note-details p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--gray-700);
+  margin: 0;
+}
+
+.tech-proposal-note .note-details strong {
+  color: var(--black);
+  font-weight: 600;
+}
+
+.tech-proposal-note .highlight {
+  color: #0ea5e9;
+  font-weight: 700;
+}
+
+.tech-proposal-note .note-summary {
+  margin-top: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: white;
+  border-radius: var(--radius-md);
+  border-left: 4px solid #0ea5e9;
+  font-size: 1rem !important;
+}
+
 .budget-projections {
   padding: var(--spacing-xl);
   background: var(--gray-100);

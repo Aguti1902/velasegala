@@ -1,6 +1,6 @@
-import { Calculator, TrendingUp, Percent } from 'lucide-react'
+import { Calculator, TrendingUp, Percent, Info } from 'lucide-react'
 
-function BudgetCalculator({ selectedServices, allServices }) {
+function BudgetCalculator({ selectedServices, allServices, selectedProposal }) {
   const calculateTotals = () => {
     let monthlyTotal = 0
     let initialTotal = 0
@@ -127,6 +127,33 @@ function BudgetCalculator({ selectedServices, allServices }) {
               )}
             </div>
           </div>
+
+          {selectedProposal === 'tech' && (
+            <div className="tech-proposal-note">
+              <Info size={24} />
+              <div className="note-content">
+                <h3>💡 Sobre la Propuesta de Tecnología Avanzada</h3>
+                <div className="note-details">
+                  <p>
+                    <strong>Agente IA WhatsApp + Telefónico:</strong> Inversión inicial de 13.000€ + 699€/mes
+                  </p>
+                  <p>
+                    <strong>✨ Subvención Global Data Care:</strong> Cubre TOTALMENTE el coste del Agente IA 
+                    (desarrollo + 2 meses de mantenimiento). <span className="highlight">Desarrollo GRATIS para Vela Segalà.</span>
+                  </p>
+                  <p>
+                    <strong>🤝 Propuesta Comercial BQDC:</strong> Sin coste inicial. Modelo basado en comisiones 
+                    (10% por subvención + 50€/mes por clínica con IA). Potencial de ingresos recurrentes.
+                  </p>
+                  <p className="note-summary">
+                    <strong>Resumen:</strong> Con la subvención, la implementación de IA sale <strong>GRATIS</strong>. 
+                    Solo pagarías 699€/mes a partir del 3er mes. La propuesta BQDC puede generar ingresos adicionales 
+                    sin inversión inicial.
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
 
           <div className="budget-projections">
             <h2 className="projection-title">Proyección de Inversión</h2>

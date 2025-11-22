@@ -473,31 +473,34 @@ function ServiceDetail({ service, selectedServices, toggleService }) {
           )}
         </div>
 
-        <div className="service-action">
-          <button 
-            className={`service-select-button ${isSelected ? 'selected' : ''}`}
-            onClick={() => toggleService(service.id)}
-          >
-            {isSelected ? (
-              <>
-                <X size={20} />
-                <span>Remover de la propuesta</span>
-              </>
-            ) : (
-              <>
-                <Plus size={20} />
-                <span>Añadir a la propuesta</span>
-              </>
+        {/* Ocultar botón para servicios de tecnología avanzada */}
+        {!['ia-cliente', 'subvencion', 'colaboracion'].includes(service.id) && (
+          <div className="service-action">
+            <button 
+              className={`service-select-button ${isSelected ? 'selected' : ''}`}
+              onClick={() => toggleService(service.id)}
+            >
+              {isSelected ? (
+                <>
+                  <X size={20} />
+                  <span>Remover de la propuesta</span>
+                </>
+              ) : (
+                <>
+                  <Plus size={20} />
+                  <span>Añadir a la propuesta</span>
+                </>
+              )}
+            </button>
+            
+            {isSelected && (
+              <div className="service-selected-badge">
+                <Check size={16} />
+                <span>Incluido en tu selección</span>
+              </div>
             )}
-          </button>
-          
-          {isSelected && (
-            <div className="service-selected-badge">
-              <Check size={16} />
-              <span>Incluido en tu selección</span>
-            </div>
-          )}
-        </div>
+          </div>
+        )}
 
         {service.id !== 'subvencion' && service.id !== 'colaboracion' && (
           <div className="service-implementation">
