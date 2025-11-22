@@ -951,7 +951,7 @@
 }
 
 .stat-card svg {
-  color: #0066cc;
+  color: var(--black);
   margin-bottom: 1rem;
   stroke-width: 2px;
 }
@@ -997,7 +997,7 @@
 }
 
 .model-header {
-  background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+  background: var(--black);
   color: var(--white);
   padding: 1.75rem;
   display: flex;
@@ -1022,25 +1022,25 @@
 .model-highlight {
   text-align: center;
   padding: 1.75rem;
-  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-  color: var(--black);
+  background: var(--black);
+  color: var(--white);
   border-radius: var(--radius-md);
   margin-bottom: 1.5rem;
-  border: 2px solid #0066cc;
+  border: 2px solid var(--black);
 }
 
 .model-highlight .percentage {
   display: block;
   font-size: 3rem;
   font-weight: 700;
-  color: #0066cc;
+  color: var(--white);
   line-height: 1;
   margin-bottom: 0.5rem;
 }
 
 .model-highlight .description {
   font-size: 1rem;
-  color: #374151;
+  color: var(--white);
   font-weight: 600;
 }
 
@@ -1078,7 +1078,7 @@
 
 .example-row .result {
   font-weight: 700;
-  color: #0066cc;
+  color: var(--black);
   font-size: 1.1rem;
 }
 
@@ -1115,14 +1115,14 @@
   padding: 1.75rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   border: 2px solid #e5e7eb;
-  border-top: 4px solid #0066cc;
+  border-top: 4px solid var(--black);
   transition: all var(--transition-base);
 }
 
 .strategy-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-  border-color: #0066cc;
+  border-color: var(--black);
 }
 
 .strategy-card h4 {
@@ -1210,7 +1210,7 @@
 }
 
 .step-number-large {
-  background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+  background: var(--black);
   color: var(--white);
   width: 50px;
   height: 50px;

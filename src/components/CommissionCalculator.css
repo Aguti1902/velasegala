@@ -1,100 +1,75 @@
 .commission-calculator {
   background: var(--black, #000);
-  border-radius: 0;
-  padding: 4rem;
+  border-radius: 1rem;
+  padding: 3rem;
   color: var(--white, #fff);
-  border: 6px solid var(--black, #000);
-  box-shadow: 24px 24px 0 rgba(0, 0, 0, 0.2);
-  margin: 4rem 0;
-  position: relative;
-}
-
-.commission-calculator::before {
-  content: '';
-  position: absolute;
-  top: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  height: 6px;
-  background: var(--white, #fff);
-}
-
-.commission-calculator::after {
-  content: '';
-  position: absolute;
-  bottom: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  height: 6px;
-  background: var(--white, #fff);
+  border: 2px solid #e5e7eb;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  margin: 0;
 }
 
 .calculator-header {
   text-align: center;
-  margin-bottom: 4rem;
-  padding-bottom: 2rem;
-  border-bottom: 4px solid var(--white, #fff);
+  margin-bottom: 3rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .calculator-header svg {
   color: var(--white, #fff);
-  margin-bottom: 1.5rem;
-  stroke-width: 2.5px;
+  margin-bottom: 1rem;
+  stroke-width: 2px;
 }
 
 .calculator-header h3 {
-  font-size: 2.5rem;
-  font-weight: 900;
-  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
   color: var(--white, #fff);
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  line-height: 1.3;
 }
 
 .calculator-header p {
-  font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.85);
-  font-weight: 600;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 400;
 }
 
 /* Controls */
 .calculator-controls {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 3rem;
-  margin-bottom: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
 }
 
 .calculator-control {
   background: var(--white, #fff);
-  border-radius: 0;
-  padding: 2.5rem;
-  border: 4px solid var(--white, #fff);
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid #e5e7eb;
   color: var(--black, #000);
 }
 
 .control-header {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 3px solid var(--black, #000);
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .control-header svg {
   color: var(--black, #000);
-  stroke-width: 2.5px;
+  stroke-width: 2px;
 }
 
 .control-header label {
-  font-size: 1.2rem;
-  font-weight: 900;
+  font-size: 1rem;
+  font-weight: 700;
   color: var(--black, #000);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  line-height: 1.3;
 }
 
 .control-input {
@@ -103,46 +78,46 @@
 
 .calculator-slider {
   width: 100%;
-  height: 12px;
-  border-radius: 0;
-  background: var(--black, #000);
+  height: 8px;
+  border-radius: 4px;
+  background: #e5e7eb;
   outline: none;
   -webkit-appearance: none;
   appearance: none;
   cursor: pointer;
-  border: 2px solid var(--black, #000);
+  border: none;
 }
 
 .calculator-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 30px;
-  height: 30px;
-  border-radius: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
   background: var(--black, #000);
   cursor: pointer;
-  border: 3px solid var(--white, #fff);
+  border: 2px solid var(--white, #fff);
   transition: all 0.2s ease;
 }
 
 .calculator-slider::-webkit-slider-thumb:hover {
-  transform: scale(1.15);
-  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .calculator-slider::-moz-range-thumb {
-  width: 30px;
-  height: 30px;
-  border-radius: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
   background: var(--black, #000);
   cursor: pointer;
-  border: 3px solid var(--white, #fff);
+  border: 2px solid var(--white, #fff);
   transition: all 0.2s ease;
 }
 
 .calculator-slider::-moz-range-thumb:hover {
-  transform: scale(1.15);
-  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .control-value {
@@ -181,31 +156,30 @@
 .result-card-primary {
   background: var(--white, #fff);
   color: var(--black, #000);
-  border-radius: 0;
-  padding: 3.5rem;
-  margin-bottom: 3rem;
-  border: 6px solid var(--white, #fff);
-  box-shadow: 16px 16px 0 rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  border: 2px solid #e5e7eb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .result-icon {
   background: var(--black, #000);
-  border-radius: 0;
-  width: 80px;
-  height: 80px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  border: 4px solid var(--black, #000);
 }
 
 .result-icon svg {
   color: var(--white, #fff);
-  stroke-width: 2.5px;
+  stroke-width: 2px;
 }
 
 .result-content {
@@ -213,19 +187,17 @@
 }
 
 .result-label {
-  font-size: 1.2rem;
-  font-weight: 900;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
 }
 
 .result-value {
-  font-size: 4rem;
-  font-weight: 900;
+  font-size: 2.5rem;
+  font-weight: 700;
   line-height: 1;
-  margin-bottom: 1rem;
-  letter-spacing: -2px;
+  margin-bottom: 0.5rem;
 }
 
 .result-breakdown {
@@ -241,44 +213,42 @@
 }
 
 .result-card-secondary {
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 0;
-  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.75rem;
   backdrop-filter: blur(10px);
-  border: 3px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   text-align: center;
   transition: all 0.3s ease;
 }
 
 .result-card-secondary:hover {
-  transform: translateY(-8px);
-  background: rgba(255, 255, 255, 0.25);
-  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .result-card-secondary .result-label {
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  line-height: 1.3;
 }
 
 .result-card-secondary .result-value {
-  font-size: 2.2rem;
-  font-weight: 900;
+  font-size: 1.75rem;
+  font-weight: 700;
   color: var(--white, #fff);
-  margin-bottom: 0.75rem;
-  letter-spacing: -1px;
+  margin-bottom: 0.5rem;
 }
 
 .result-note {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.7);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  font-weight: 400;
+  line-height: 1.4;
 }
 
 /* Scenarios */
@@ -287,35 +257,33 @@
 }
 
 .calculator-scenarios h4 {
-  font-size: 1.6rem;
-  font-weight: 900;
-  margin-bottom: 2.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
   text-align: center;
   color: var(--white, #fff);
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  line-height: 1.3;
 }
 
 .scenarios-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
 }
 
 .scenario-card {
-  background: rgba(255, 255, 255, 0.12);
-  border-radius: 0;
-  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.75rem;
   backdrop-filter: blur(10px);
-  border: 4px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   cursor: pointer;
   transition: all 0.3s ease;
   text-align: center;
-  position: relative;
 }
 
 .scenario-card:hover {
-  transform: translateY(-12px);
+  transform: translateY(-4px);
   border-color: var(--white, #fff);
   box-shadow: 0 12px 32px rgba(255, 255, 255, 0.2);
   background: rgba(255, 255, 255, 0.2);
