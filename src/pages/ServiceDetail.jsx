@@ -164,63 +164,86 @@ function ServiceDetail({ service, selectedServices, toggleService }) {
               </div>
 
               {/* Beneficios Clave */}
-              <div className="subvencion-benefits" style={{background: 'linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%)', padding: '3rem', borderRadius: '1rem', marginBottom: '3rem'}}>
-                <h3 style={{fontSize: '1.5rem', marginBottom: '1rem', textAlign: 'center'}}>✨ Beneficios Clave de Global Data Care</h3>
-                <p style={{textAlign: 'center', marginBottom: '2rem', fontSize: '1.05rem', color: '#666'}}>
+              <div className="subvencion-benefits" style={{background: 'linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%)', padding: '3rem 2rem', borderRadius: '1rem', marginBottom: '3rem'}}>
+                <h3 style={{fontSize: '1.5rem', marginBottom: '0.5rem', textAlign: 'center'}}>✨ Beneficios Clave de Global Data Care</h3>
+                <p style={{textAlign: 'center', marginBottom: '2.5rem', fontSize: '1rem', color: '#666'}}>
                   Más allá de la financiación, la verdadera ventaja es el acceso a la red europea 
                   de datos clínicos que transformará la atención a tus pacientes.
                 </p>
-                <div className="benefits-grid-large" style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem'}}>
-                  <div className="benefit-card-large highlight">
-                    <div className="benefit-icon-large">🗂️</div>
-                    <h4>Acceso a Historiales Clínicos Europeos</h4>
-                    <p>
+                <div style={{display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.5rem'}}>
+                  <div style={{
+                    background: 'white',
+                    border: '2px solid #e5e7eb',
+                    borderRadius: '12px',
+                    padding: '2rem 1.5rem',
+                    transition: 'all 0.3s ease',
+                    boxShadow: '0 2px 8px rgba(0,0,0,0.08)'
+                  }} className="benefit-card-compact">
+                    <div style={{fontSize: '2.5rem', marginBottom: '1rem', textAlign: 'center'}}>🗂️</div>
+                    <h4 style={{fontSize: '1.1rem', fontWeight: '700', marginBottom: '0.75rem', color: '#1f2937', lineHeight: '1.3'}}>
+                      Acceso a Historiales Clínicos Europeos
+                    </h4>
+                    <p style={{fontSize: '0.9rem', lineHeight: '1.6', color: '#6b7280', marginBottom: '1rem'}}>
                       Visualiza el historial completo de cualquier paciente que haya visitado clínicas 
                       de la red Global Data Care en toda Europa. Accede a radiografías, tratamientos 
                       previos, diagnósticos, alergias y medicación.
                     </p>
-                    <div className="benefit-highlight">
-                      <strong>Impacto:</strong> 15-20% de tus pacientes nuevos tendrán historial disponible 
-                      (especialmente turistas y expatriados)
-                    </div>
                   </div>
 
-                  <div className="benefit-card-large highlight">
-                    <div className="benefit-icon-large">⚡</div>
-                    <h4>Atención 40% Más Rápida</h4>
-                    <p>
+                  <div style={{
+                    background: 'white',
+                    border: '2px solid #e5e7eb',
+                    borderRadius: '12px',
+                    padding: '2rem 1.5rem',
+                    transition: 'all 0.3s ease',
+                    boxShadow: '0 2px 8px rgba(0,0,0,0.08)'
+                  }} className="benefit-card-compact">
+                    <div style={{fontSize: '2.5rem', marginBottom: '1rem', textAlign: 'center'}}>⚡</div>
+                    <h4 style={{fontSize: '1.1rem', fontWeight: '700', marginBottom: '0.75rem', color: '#1f2937', lineHeight: '1.3'}}>
+                      Atención 40% Más Rápida
+                    </h4>
+                    <p style={{fontSize: '0.9rem', lineHeight: '1.6', color: '#6b7280', marginBottom: '1rem'}}>
                       Reduce el tiempo de primera consulta de 45 minutos a 29 minutos al tener 
                       información previa del paciente. No necesitas repetir radiografías ni pruebas 
                       ya realizadas en otras clínicas europeas.
                     </p>
-                    <div className="benefit-highlight">
-                      <strong>Ahorro:</strong> ~2.400€/año en radiografías y pruebas no duplicadas
-                    </div>
                   </div>
 
-                  <div className="benefit-card-large highlight">
-                    <div className="benefit-icon-large">🎯</div>
-                    <h4>Decisiones Clínicas Más Informadas</h4>
-                    <p>
+                  <div style={{
+                    background: 'white',
+                    border: '2px solid #e5e7eb',
+                    borderRadius: '12px',
+                    padding: '2rem 1.5rem',
+                    transition: 'all 0.3s ease',
+                    boxShadow: '0 2px 8px rgba(0,0,0,0.08)'
+                  }} className="benefit-card-compact">
+                    <div style={{fontSize: '2.5rem', marginBottom: '1rem', textAlign: 'center'}}>🎯</div>
+                    <h4 style={{fontSize: '1.1rem', fontWeight: '700', marginBottom: '0.75rem', color: '#1f2937', lineHeight: '1.3'}}>
+                      Decisiones Clínicas Más Informadas
+                    </h4>
+                    <p style={{fontSize: '0.9rem', lineHeight: '1.6', color: '#6b7280', marginBottom: '1rem'}}>
                       Mejora del 25% en diagnósticos al tener el contexto completo del paciente desde 
                       el primer día. Conoce tratamientos previos, complicaciones pasadas y evolución 
                       de su salud dental.
                     </p>
-                    <div className="benefit-highlight">
-                      <strong>Resultado:</strong> Mayor satisfacción del paciente y mejor calidad asistencial
-                    </div>
                   </div>
 
-                  <div className="benefit-card-large highlight">
-                    <div className="benefit-icon-large">🔬</div>
-                    <h4>Red de 10.000+ Clínicas en Europa</h4>
-                    <p>
+                  <div style={{
+                    background: 'white',
+                    border: '2px solid #e5e7eb',
+                    borderRadius: '12px',
+                    padding: '2rem 1.5rem',
+                    transition: 'all 0.3s ease',
+                    boxShadow: '0 2px 8px rgba(0,0,0,0.08)'
+                  }} className="benefit-card-compact">
+                    <div style={{fontSize: '2.5rem', marginBottom: '1rem', textAlign: 'center'}}>🔬</div>
+                    <h4 style={{fontSize: '1.1rem', fontWeight: '700', marginBottom: '0.75rem', color: '#1f2937', lineHeight: '1.3'}}>
+                      Red de 10.000+ Clínicas en Europa
+                    </h4>
+                    <p style={{fontSize: '0.9rem', lineHeight: '1.6', color: '#6b7280', marginBottom: '1rem'}}>
                       Acceso a la mayor red de datos clínicos dentales de Europa. Compartir datos 
                       anónimos contribuye a la investigación y mejora de protocolos dentales europeos.
                     </p>
-                    <div className="benefit-highlight">
-                      <strong>Ventaja:</strong> Posicionamiento como clínica innovadora y conectada
-                    </div>
                   </div>
                 </div>
               </div>

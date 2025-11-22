@@ -4691,3 +4691,42 @@
     font-size: 1rem;
   }
 }
+
+/* ============================================
+   BENEFICIOS COMPACTOS SUBVENCIÓN
+   ============================================ */
+.benefit-card-compact:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12) !important;
+  border-color: #d1d5db !important;
+}
+
+@media (max-width: 1400px) {
+  .subvencion-benefits div[style*="repeat(4"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .subvencion-benefits {
+    padding: 2rem 1rem !important;
+  }
+  
+  .subvencion-benefits div[style*="repeat(4"] {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  
+  .benefit-card-compact {
+    padding: 1.5rem 1rem !important;
+  }
+  
+  .benefit-card-compact h4 {
+    font-size: 1rem !important;
+  }
+  
+  .benefit-card-compact p {
+    font-size: 0.85rem !important;
+  }
+}
