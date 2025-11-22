@@ -610,34 +610,47 @@ function SubvencionStats() {
       </div>
 
       <div className="stats-section">
-        <h2>Desglose de Costes Cubiertos</h2>
+        <h2>Desglose Real de la Subvención (30.000€)</h2>
         <div className="chart-container">
           <div className="bar-chart horizontal">
             <div className="bar-chart-item">
+              <div className="bar-label">Comisión Gestión (Accuro)</div>
+              <div className="bar-wrapper">
+                <div className="bar warning" style={{width: '50%'}}></div>
+                <span className="bar-value">15.000€</span>
+              </div>
+            </div>
+            <div className="bar-chart-item">
               <div className="bar-label">Desarrollo Agente IA</div>
               <div className="bar-wrapper">
-                <div className="bar" style={{width: '43%'}}></div>
+                <div className="bar success" style={{width: '43.3%'}}></div>
                 <span className="bar-value">13.000€</span>
               </div>
             </div>
             <div className="bar-chart-item">
-              <div className="bar-label">Mantenimiento 24 meses</div>
+              <div className="bar-label">Mantenimiento (2 meses)</div>
               <div className="bar-wrapper">
-                <div className="bar" style={{width: '56%'}}></div>
-                <span className="bar-value">16.776€</span>
+                <div className="bar success" style={{width: '4.66%'}}></div>
+                <span className="bar-value">1.398€</span>
               </div>
             </div>
             <div className="bar-chart-item">
-              <div className="bar-label">Reserva</div>
+              <div className="bar-label">Margen</div>
               <div className="bar-wrapper">
-                <div className="bar" style={{width: '1%'}}></div>
-                <span className="bar-value">224€</span>
+                <div className="bar" style={{width: '2%'}}></div>
+                <span className="bar-value">602€</span>
               </div>
             </div>
           </div>
           <div className="chart-insight">
             <Euro size={20} />
-            <span>Total cubierto: <strong>30.000€ - Todo el sistema IA gratis</strong></span>
+            <span>Para Vela Segalà: <strong>15.000€ cubren desarrollo + 2 meses de mantenimiento</strong></span>
+          </div>
+          <div className="chart-note">
+            <p>
+              ℹ️ A partir del 3er mes, Vela Segalà asumirá la mensualidad de 699€ del Agente IA. 
+              El ahorro en desarrollo (13.000€) es significativo y el sistema ya estará 100% operativo.
+            </p>
           </div>
         </div>
       </div>
@@ -699,28 +712,41 @@ function SubvencionStats() {
           </div>
           
           <div className="comparison-row">
-            <div className="comparison-cell label">Coste Año 1</div>
-            <div className="comparison-cell highlight success">0€</div>
+            <div className="comparison-cell label">Coste Primeros 2 Meses</div>
+            <div className="comparison-cell highlight success">0€ (cubierto)</div>
+            <div className="comparison-cell">1.398€</div>
+          </div>
+          
+          <div className="comparison-row">
+            <div className="comparison-cell label">Coste Meses 3-12 (10 meses)</div>
+            <div className="comparison-cell highlight">6.990€</div>
+            <div className="comparison-cell">6.990€</div>
+          </div>
+          
+          <div className="comparison-row">
+            <div className="comparison-cell label">Total Año 1</div>
+            <div className="comparison-cell highlight success">6.990€</div>
             <div className="comparison-cell">21.388€</div>
           </div>
           
           <div className="comparison-row">
-            <div className="comparison-cell label">Coste Año 2</div>
-            <div className="comparison-cell highlight success">0€</div>
-            <div className="comparison-cell">8.388€</div>
-          </div>
-          
-          <div className="comparison-row">
-            <div className="comparison-cell label">Ahorro Total (2 años)</div>
-            <div className="comparison-cell highlight success">30.000€</div>
+            <div className="comparison-cell label">Ahorro Primer Año</div>
+            <div className="comparison-cell highlight success">14.398€</div>
             <div className="comparison-cell">0€</div>
           </div>
           
           <div className="comparison-row totals">
-            <div className="comparison-cell label"><strong>Inversión Neta</strong></div>
-            <div className="comparison-cell highlight success"><strong>GRATIS ✓</strong></div>
-            <div className="comparison-cell"><strong>29.776€</strong></div>
+            <div className="comparison-cell label"><strong>Ahorro en Desarrollo + 2 Meses</strong></div>
+            <div className="comparison-cell highlight success"><strong>14.398€ ✓</strong></div>
+            <div className="comparison-cell"><strong>0€</strong></div>
           </div>
+        </div>
+        <div className="comparison-note">
+          <p>
+            💡 <strong>Ventaja clave:</strong> Con la subvención, evitas la inversión inicial de 13.000€ 
+            y obtienes 2 meses gratis. Aunque luego pagarás 699€/mes, el ahorro inicial es muy significativo 
+            y el sistema ya estará completamente implementado y operativo.
+          </p>
         </div>
       </div>
 

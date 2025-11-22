@@ -93,6 +93,10 @@
   background: #10B981;
 }
 
+.bar.warning {
+  background: #ffc107;
+}
+
 .bar-value {
   font-weight: 700;
   color: var(--gray-700);
@@ -108,6 +112,41 @@
   border-radius: var(--radius-md);
   margin-top: var(--spacing-md);
   font-size: 0.95rem;
+}
+
+.chart-note {
+  background: linear-gradient(135deg, #fff3cd 0%, #ffffff 100%);
+  border: 2px solid #ffc107;
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.chart-note p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--gray-700);
+  margin: 0;
+}
+
+.comparison-note {
+  background: linear-gradient(135deg, #e3f2fd 0%, #ffffff 100%);
+  border: 2px solid var(--primary);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 2rem;
+  margin-top: 2rem;
+}
+
+.comparison-note p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--gray-700);
+  margin: 0;
+}
+
+.comparison-note strong {
+  color: var(--black);
+  font-weight: 700;
 }
 
 /* Cost Comparison */

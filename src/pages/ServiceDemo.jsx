@@ -830,43 +830,91 @@ function SubvencionDemo() {
       </div>
 
       <div className="demo-section">
-        <h2>🎯 Beneficios de Participar</h2>
+        <h2>💰 Distribución de la Subvención (30.000€)</h2>
+        <div className="subvencion-breakdown">
+          <div className="breakdown-card primary">
+            <div className="breakdown-amount">15.000€</div>
+            <div className="breakdown-label">Comisión de Gestión</div>
+            <div className="breakdown-description">
+              Accuro (empresa gestora) se encarga de toda la tramitación, documentación 
+              y justificación de la subvención ante Red.es
+            </div>
+          </div>
+          
+          <div className="breakdown-card success">
+            <div className="breakdown-amount">15.000€</div>
+            <div className="breakdown-label">Para Vela Segalà</div>
+            <div className="breakdown-description">
+              <strong>Desarrollo completo del Agente IA:</strong> 13.000€<br/>
+              <strong>Mantenimiento (2 meses):</strong> 1.398€ (699€/mes)<br/>
+              <em>Total cubierto sin coste para la clínica</em>
+            </div>
+          </div>
+        </div>
+        <p className="breakdown-note">
+          ℹ️ <strong>Importante:</strong> A partir del 3er mes, Vela Segalà asumirá 
+          el coste mensual de 699€ del Agente IA. Sin embargo, el desarrollo (13.000€) 
+          ya estará completamente pagado por la subvención.
+        </p>
+      </div>
+
+      <div className="demo-section highlight-section">
+        <h2>✨ Beneficios Clave de Global Data Care</h2>
+        <p className="section-intro">
+          Más allá de la financiación, la verdadera ventaja es el acceso a la red europea 
+          de datos clínicos que transformará la atención a tus pacientes.
+        </p>
         <div className="benefits-grid-large">
-          <div className="benefit-card-large">
-            <div className="benefit-number">1</div>
-            <h4>💰 Financiación Completa</h4>
+          <div className="benefit-card-large highlight">
+            <div className="benefit-icon-large">🗂️</div>
+            <h4>Acceso a Historiales Clínicos Europeos</h4>
             <p>
-              Los 30.000€ de subvención cubren completamente el coste del Agente IA 
-              (13.000€ desarrollo + 699€/mes durante 2 años). <strong>Todo sale gratis.</strong>
+              Visualiza el historial completo de cualquier paciente que haya visitado clínicas 
+              de la red Global Data Care en toda Europa. Accede a radiografías, tratamientos 
+              previos, diagnósticos, alergias y medicación.
             </p>
+            <div className="benefit-highlight">
+              <strong>Impacto:</strong> 15-20% de tus pacientes nuevos tendrán historial disponible 
+              (especialmente turistas y expatriados)
+            </div>
           </div>
 
-          <div className="benefit-card-large">
-            <div className="benefit-number">2</div>
-            <h4>🗂️ Acceso a Historiales Europeos</h4>
+          <div className="benefit-card-large highlight">
+            <div className="benefit-icon-large">⚡</div>
+            <h4>Atención 40% Más Rápida</h4>
             <p>
-              Cuando un paciente nuevo llegue a tu clínica, podrás ver si ha visitado otras 
-              clínicas de la red Global Data Care y acceder a sus radiografías, tratamientos 
-              previos, alergias y enfermedades registradas.
+              Reduce el tiempo de primera consulta de 45 minutos a 29 minutos al tener 
+              información previa del paciente. No necesitas repetir radiografías ni pruebas 
+              ya realizadas en otras clínicas europeas.
             </p>
+            <div className="benefit-highlight">
+              <strong>Ahorro:</strong> ~2.400€/año en radiografías y pruebas no duplicadas
+            </div>
           </div>
 
-          <div className="benefit-card-large">
-            <div className="benefit-number">3</div>
-            <h4>⚡ Atención Más Rápida y Precisa</h4>
+          <div className="benefit-card-large highlight">
+            <div className="benefit-icon-large">🎯</div>
+            <h4>Decisiones Clínicas Más Informadas</h4>
             <p>
-              Reducción del 30-40% en el tiempo de primera consulta al tener acceso inmediato 
-              al historial clínico del paciente. Mejores decisiones clínicas desde el primer día.
+              Mejora del 25% en diagnósticos al tener el contexto completo del paciente desde 
+              el primer día. Conoce tratamientos previos, complicaciones pasadas y evolución 
+              de su salud dental.
             </p>
+            <div className="benefit-highlight">
+              <strong>Resultado:</strong> Mayor satisfacción del paciente y mejor calidad asistencial
+            </div>
           </div>
 
-          <div className="benefit-card-large">
-            <div className="benefit-number">4</div>
-            <h4>🔬 Contribución a la Investigación</h4>
+          <div className="benefit-card-large highlight">
+            <div className="benefit-icon-large">🔬</div>
+            <h4>Red de 10.000+ Clínicas en Europa</h4>
             <p>
-              Los datos compartidos (100% anónimos) ayudan a mejorar protocolos dentales 
-              europeos y avanzar en la odontología basada en evidencia.
+              Acceso a la mayor red de datos clínicos dentales de Europa. Compartir datos 
+              anónimos contribuye a la investigación y mejora de protocolos dentales europeos.
             </p>
+            <div className="benefit-highlight">
+              <strong>Ventaja:</strong> Posicionamiento como clínica innovadora y conectada
+            </div>
           </div>
         </div>
       </div>

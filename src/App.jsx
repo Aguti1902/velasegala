@@ -201,8 +201,10 @@ function App() {
       type: 'initial',
       features: [
         'Subvención de Red.es de hasta 30.000€',
-        'Gestión completa por NexGent (sin coste para Vela Segalà)',
-        'Toda la implementación de IA sale GRATIS con la subvención',
+        'Gestión completa por Accuro (empresa gestora)',
+        'NexGent coordina todo el proceso técnico',
+        '💰 De los 30.000€: Accuro cobra 15.000€ en comisión de gestión',
+        '💰 Los otros 15.000€ cubren: Desarrollo IA (13.000€) + 2 meses de mantenimiento',
         '💡 BENEFICIO CLAVE: Acceso a red europea de datos clínicos',
         'Registro en plataforma Global Data Care EU',
         'Intercambio bidireccional de datos con clínicas europeas',
@@ -215,8 +217,8 @@ function App() {
         'Cumplimiento automático con RGPD y normativa europea',
         'Compartir datos anónimos para investigación médica',
         'Contribuir al avance de la odontología europea',
-        'Sin costes ocultos ni compromisos adicionales',
-        'Gestión de toda la documentación por NexGent',
+        'Sin costes ocultos para Vela Segalà',
+        'Gestión de toda la documentación por Accuro y NexGent',
         'Plazo de resolución: 2-3 meses'
       ],
       pricing: { monthly: 0, initial: 0 }

@@ -424,6 +424,110 @@
 }
 
 /* ==========================================
+   SUBVENCIÓN - DISTRIBUCIÓN
+   ========================================== */
+.subvencion-breakdown {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  margin: 3rem 0;
+}
+
+.breakdown-card {
+  background: var(--white);
+  border: 2px solid var(--gray-300);
+  border-radius: var(--radius-lg);
+  padding: 3rem 2rem;
+  text-align: center;
+  transition: all var(--transition-base);
+}
+
+.breakdown-card.primary {
+  border-color: var(--secondary);
+  background: linear-gradient(135deg, #fff9e6 0%, #ffffff 100%);
+}
+
+.breakdown-card.success {
+  border-color: var(--primary);
+  background: linear-gradient(135deg, #e6f7ff 0%, #ffffff 100%);
+}
+
+.breakdown-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.breakdown-amount {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--black);
+  margin-bottom: 0.5rem;
+}
+
+.breakdown-card.primary .breakdown-amount {
+  color: var(--secondary);
+}
+
+.breakdown-card.success .breakdown-amount {
+  color: var(--primary);
+}
+
+.breakdown-label {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--gray-700);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.breakdown-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--gray-600);
+}
+
+.breakdown-description strong {
+  color: var(--black);
+  font-weight: 700;
+}
+
+.breakdown-description em {
+  display: block;
+  margin-top: 1rem;
+  font-style: italic;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.breakdown-note {
+  background: linear-gradient(135deg, #fff3cd 0%, #ffffff 100%);
+  border: 2px solid #ffc107;
+  border-radius: var(--radius-md);
+  padding: 1.5rem 2rem;
+  margin-top: 2rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--gray-700);
+}
+
+.breakdown-note strong {
+  color: var(--black);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .subvencion-breakdown {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .breakdown-amount {
+    font-size: 2.5rem;
+  }
+}
+
+/* ==========================================
    SUBVENCIÓN - EXPLICACIÓN
    ========================================== */
 
@@ -560,6 +664,40 @@
   color: var(--medium-gray);
   margin-bottom: 1.5rem;
   font-weight: 500;
+}
+
+.benefit-card-large.highlight {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border: 3px solid var(--primary);
+}
+
+.benefit-card-large.highlight:hover {
+  border-color: var(--black);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.benefit-icon-large {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.benefit-highlight {
+  background: linear-gradient(135deg, var(--primary) 0%, #0056b3 100%);
+  color: var(--white);
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  border-left: 4px solid var(--secondary);
+}
+
+.benefit-highlight strong {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .benefit-saving {
