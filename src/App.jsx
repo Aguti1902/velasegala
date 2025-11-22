@@ -236,8 +236,8 @@ function App() {
         'Posicionamiento como socio tecnológico oficial de BQDC',
         '',
         '💰 ESTRUCTURA DE COMISIONES - SUBVENCIONES',
-        '15% de cada subvención conseguida para clínicas BQDC',
-        'Ejemplo: Subvención de 30.000€ = 4.500€ para Xavier',
+        '10% de cada subvención conseguida para clínicas BQDC',
+        'Ejemplo: Subvención de 30.000€ = 3.000€ para Xavier',
         'Pago único al conseguir la subvención',
         'Sin límite de clínicas participantes',
         '',
@@ -249,7 +249,7 @@ function App() {
         '',
         '🎯 POTENCIAL DE INGRESOS',
         'Con solo 20 clínicas usando IA: 1.000€/mes recurrentes',
-        'Con 20 subvenciones conseguidas: 90.000€ en comisiones únicas',
+        'Con 20 subvenciones conseguidas: 60.000€ en comisiones únicas',
         'Ingresos pasivos mensuales escalables sin límite',
         '',
         '📊 CALCULADORA INTERACTIVA INCLUIDA',
@@ -339,12 +339,6 @@ function App() {
             component: ServiceDetail, 
             title: service.title,
             level: 0,
-            props: { service }
-          },
-          {
-            component: ServiceStats,
-            title: 'Impacto y Beneficios',
-            level: 1,
             props: { service }
           }
         ]

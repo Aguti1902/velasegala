@@ -828,8 +828,8 @@ function ColaboracionStats() {
             <div className="breakdown-section">
               <h4>💶 Comisiones por Subvenciones</h4>
               <div className="calc-row">
-                <span>24 clínicas × 30.000€ × 15%</span>
-                <strong className="calc-result">108.000€</strong>
+                <span>24 clínicas × 30.000€ × 10%</span>
+                <strong className="calc-result">72.000€</strong>
               </div>
               <div className="calc-note">Pago único en el primer año</div>
             </div>
@@ -847,7 +847,7 @@ function ColaboracionStats() {
           <div className="scenario-totals">
             <div className="total-row">
               <span>Total Año 1:</span>
-              <strong className="total-value">122.400€</strong>
+              <strong className="total-value">86.400€</strong>
             </div>
             <div className="total-row">
               <span>Total Año 2:</span>

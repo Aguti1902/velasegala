@@ -301,18 +301,18 @@ function ServiceDetail({ service, selectedServices, toggleService }) {
                     </div>
                     <div className="model-content">
                       <div className="model-highlight">
-                        <span className="percentage">15%</span>
+                        <span className="percentage">10%</span>
                         <span className="description">de cada subvención conseguida</span>
                       </div>
                       <div className="model-example">
                         <h4>Ejemplo:</h4>
                         <div className="example-row">
                           <span>Subvención de 30.000€</span>
-                          <span className="result">= 4.500€ para Xavier</span>
+                          <span className="result">= 3.000€ para Xavier</span>
                         </div>
                         <div className="example-row">
                           <span>10 clínicas × 30.000€</span>
-                          <span className="result">= 45.000€ en comisiones</span>
+                          <span className="result">= 30.000€ en comisiones</span>
                         </div>
                       </div>
                       <div className="model-features">

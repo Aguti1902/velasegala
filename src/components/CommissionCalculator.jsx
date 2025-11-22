@@ -7,7 +7,7 @@ function CommissionCalculator() {
   const [numCliniciasIA, setNumClinicasIA] = useState(10)
   
   const SUBVENCION_AMOUNT = 30000
-  const COMMISSION_SUBVENCION = 0.15 // 15%
+  const COMMISSION_SUBVENCION = 0.10 // 10%
   const COMMISSION_IA_MENSUAL = 50 // 50€/mes por clínica
   
   // Cálculos
