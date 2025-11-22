@@ -59,13 +59,14 @@
 }
 
 .integration-node.success {
-  background: var(--gray-900);
+  background: var(--black);
   color: var(--white);
-  border-color: var(--gray-900);
+  border-color: var(--black);
 }
 
 .integration-node.success:hover {
   box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
 }
 
 .integration-node svg {
@@ -79,6 +80,12 @@
   font-weight: 700;
   margin-bottom: 0.5rem;
   letter-spacing: 0.3px;
+  color: inherit;
+}
+
+.integration-node.primary h4,
+.integration-node.success h4 {
+  color: var(--white);
 }
 
 .integration-node p {
@@ -86,6 +93,13 @@
   opacity: 0.85;
   font-weight: 500;
   line-height: 1.4;
+  color: inherit;
+}
+
+.integration-node.primary p,
+.integration-node.success p {
+  color: var(--white);
+  opacity: 0.9;
 }
 
 .integration-arrow {
@@ -96,7 +110,7 @@
 
 .integration-benefits {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: var(--spacing-lg);
   margin-top: 3rem;
 }

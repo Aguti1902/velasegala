@@ -518,7 +518,7 @@ function ClientAIDemo() {
               <h4>WhatsApp</h4>
               <p>Paciente solicita cita</p>
             </div>
-            <div className="integration-arrow">↓</div>
+            <div className="integration-arrow">→</div>
             <div className="integration-node primary">
               <Bot size={32} />
               <h4>Agente IA</h4>
@@ -530,8 +530,8 @@ function ClientAIDemo() {
               <h4>Gesden G5 API</h4>
               <p>Consulta disponibilidad</p>
             </div>
-            <div className="integration-arrow">↓</div>
-            <div className="integration-node success">
+            <div className="integration-arrow">→</div>
+            <div className="integration-node primary">
               <TrendingUp size={32} />
               <h4>Cita Confirmada</h4>
               <p>Registro sincronizado</p>
@@ -554,6 +554,14 @@ function ClientAIDemo() {
             <div className="benefit-card">
               <h4>🔒 Seguridad Garantizada</h4>
               <p>Conexión cifrada y cumplimiento RGPD</p>
+            </div>
+            <div className="benefit-card">
+              <h4>🤖 Inteligencia Artificial</h4>
+              <p>Respuestas contextuales basadas en historial del paciente</p>
+            </div>
+            <div className="benefit-card">
+              <h4>🔄 Sincronización Bidireccional</h4>
+              <p>Actualización automática en ambos sentidos entre IA y Gesden</p>
             </div>
           </div>
         </div>
