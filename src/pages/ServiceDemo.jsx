@@ -858,13 +858,13 @@ function SubvencionDemo() {
         </p>
       </div>
 
-      <div className="demo-section highlight-section">
+      <div className="demo-section highlight-section" style={{background: 'linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%)', padding: '3rem', borderRadius: '1rem', marginTop: '3rem'}}>
         <h2>✨ Beneficios Clave de Global Data Care</h2>
-        <p className="section-intro">
+        <p className="section-intro" style={{fontSize: '1.1rem', marginBottom: '2rem'}}>
           Más allá de la financiación, la verdadera ventaja es el acceso a la red europea 
           de datos clínicos que transformará la atención a tus pacientes.
         </p>
-        <div className="benefits-grid-large">
+        <div className="benefits-grid-large" style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem'}}>
           <div className="benefit-card-large highlight">
             <div className="benefit-icon-large">🗂️</div>
             <h4>Acceso a Historiales Clínicos Europeos</h4>
