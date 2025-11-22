@@ -342,12 +342,6 @@ function App() {
             props: { service }
           },
           {
-            component: ServiceDemo,
-            title: 'Información Detallada',
-            level: 1,
-            props: { service }
-          },
-          {
             component: ServiceStats,
             title: 'Impacto y Beneficios',
             level: 1,

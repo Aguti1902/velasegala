@@ -1,4 +1,5 @@
-import { Check, Plus, X } from 'lucide-react'
+import { Check, Plus, X, Users, Globe, TrendingUp, Award, Bot, CheckCircle } from 'lucide-react'
+import CommissionCalculator from '../components/CommissionCalculator'
 
 function ServiceDetail({ service, selectedServices, toggleService }) {
   const isSelected = selectedServices.includes(service.id)
@@ -258,6 +259,204 @@ function ServiceDetail({ service, selectedServices, toggleService }) {
                     <span className="feature-text">{feature}</span>
                   </div>
                 ))}
+              </div>
+            </div>
+          ) : service.id === 'colaboracion' ? (
+            <div className="colaboracion-detail-content">
+              {/* Intro con stats BQDC */}
+              <div style={{background: 'linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%)', padding: '3rem 2rem', borderRadius: '1rem', marginBottom: '3rem'}}>
+                <h3 style={{fontSize: '1.5rem', marginBottom: '1rem', textAlign: 'center'}}>🤝 Propuesta de Colaboración Comercial</h3>
+                <p style={{textAlign: 'center', marginBottom: '2.5rem', fontSize: '1rem', color: '#666'}}>
+                  Como presidente de BQDC, Xavier Vela tiene acceso a más de 80 clínicas dentales 
+                  en España y Portugal. Proponemos un modelo de colaboración win-win para promover 
+                  nuestras soluciones de IA y subvenciones.
+                </p>
+                <div className="bqdc-stats">
+                  <div className="stat-card">
+                    <Users size={32} />
+                    <div className="stat-number">80+</div>
+                    <div className="stat-label">Clínicas en la Red</div>
+                  </div>
+                  <div className="stat-card">
+                    <Globe size={32} />
+                    <div className="stat-number">2</div>
+                    <div className="stat-label">Países (ES + PT)</div>
+                  </div>
+                  <div className="stat-card">
+                    <TrendingUp size={32} />
+                    <div className="stat-number">Alta</div>
+                    <div className="stat-label">Confianza y Prestigio</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Modelo de Comisiones */}
+              <div style={{marginBottom: '3rem'}}>
+                <h3 style={{fontSize: '1.5rem', marginBottom: '2rem', textAlign: 'center'}}>💰 Modelo de Comisiones</h3>
+                <div className="commission-models">
+                  <div className="model-card">
+                    <div className="model-header">
+                      <Award size={28} />
+                      <h3>Comisiones por Subvenciones</h3>
+                    </div>
+                    <div className="model-content">
+                      <div className="model-highlight">
+                        <span className="percentage">15%</span>
+                        <span className="description">de cada subvención conseguida</span>
+                      </div>
+                      <div className="model-example">
+                        <h4>Ejemplo:</h4>
+                        <div className="example-row">
+                          <span>Subvención de 30.000€</span>
+                          <span className="result">= 4.500€ para Xavier</span>
+                        </div>
+                        <div className="example-row">
+                          <span>10 clínicas × 30.000€</span>
+                          <span className="result">= 45.000€ en comisiones</span>
+                        </div>
+                      </div>
+                      <div className="model-features">
+                        <div className="feature-item">✓ Pago único al conseguir cada subvención</div>
+                        <div className="feature-item">✓ Sin límite de clínicas</div>
+                        <div className="feature-item">✓ NexGent gestiona todo el proceso</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="model-card">
+                    <div className="model-header">
+                      <Bot size={28} />
+                      <h3>Comisiones por Agentes IA</h3>
+                    </div>
+                    <div className="model-content">
+                      <div className="model-highlight">
+                        <span className="percentage">50€/mes</span>
+                        <span className="description">por cada clínica con Agente IA</span>
+                      </div>
+                      <div className="model-example">
+                        <h4>Ejemplo:</h4>
+                        <div className="example-row">
+                          <span>10 clínicas activas</span>
+                          <span className="result">= 500€/mes recurrentes</span>
+                        </div>
+                        <div className="example-row">
+                          <span>30 clínicas activas</span>
+                          <span className="result">= 1.500€/mes recurrentes</span>
+                        </div>
+                      </div>
+                      <div className="model-features">
+                        <div className="feature-item">✓ Ingresos recurrentes mensuales</div>
+                        <div className="feature-item">✓ Mientras la clínica mantenga el servicio</div>
+                        <div className="feature-item">✓ Escalable sin límite</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Calculadora */}
+              <div style={{marginBottom: '3rem'}}>
+                <CommissionCalculator />
+              </div>
+
+              {/* Estrategia de Promoción */}
+              <div style={{marginBottom: '3rem'}}>
+                <h3 style={{fontSize: '1.5rem', marginBottom: '2rem', textAlign: 'center'}}>🎯 Estrategia de Promoción</h3>
+                <div className="strategy-grid">
+                  <div className="strategy-card">
+                    <h4>1. Presentación en Eventos BQDC</h4>
+                    <p>Presentar las soluciones en reuniones y eventos de la asociación</p>
+                  </div>
+                  <div className="strategy-card">
+                    <h4>2. Newsletter BQDC</h4>
+                    <p>Campañas de email explicando los beneficios de la IA y la subvención</p>
+                  </div>
+                  <div className="strategy-card">
+                    <h4>3. Webinars Exclusivos</h4>
+                    <p>Sesiones online demostrando el Agente IA y la calculadora de ROI</p>
+                  </div>
+                  <div className="strategy-card">
+                    <h4>4. Soporte de NexGent</h4>
+                    <p>Nosotros proporcionamos todo el material de marketing y presentaciones</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Ventajas */}
+              <div style={{background: 'linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%)', padding: '3rem 2rem', borderRadius: '1rem', marginBottom: '3rem'}}>
+                <h3 style={{fontSize: '1.5rem', marginBottom: '2rem', textAlign: 'center'}}>✨ Ventajas para Xavier y BQDC</h3>
+                <div className="advantages-list">
+                  <div className="advantage-item">
+                    <CheckCircle size={24} color="#10b981" />
+                    <div>
+                      <h4>Ingresos Adicionales Significativos</h4>
+                      <p>Potencial de 100.000€+ en comisiones con adopción moderada de la red</p>
+                    </div>
+                  </div>
+                  <div className="advantage-item">
+                    <CheckCircle size={24} color="#10b981" />
+                    <div>
+                      <h4>Valor Añadido para los Socios</h4>
+                      <p>Ofrecer tecnología punta y acceso a subvenciones exclusivas</p>
+                    </div>
+                  </div>
+                  <div className="advantage-item">
+                    <CheckCircle size={24} color="#10b981" />
+                    <div>
+                      <h4>Sin Inversión ni Riesgo</h4>
+                      <p>Xavier solo recomienda, NexGent hace todo el trabajo técnico y gestión</p>
+                    </div>
+                  </div>
+                  <div className="advantage-item">
+                    <CheckCircle size={24} color="#10b981" />
+                    <div>
+                      <h4>Posicionamiento Tecnológico</h4>
+                      <p>BQDC se posiciona como asociación innovadora y tecnológicamente avanzada</p>
+                    </div>
+                  </div>
+                  <div className="advantage-item">
+                    <CheckCircle size={24} color="#10b981" />
+                    <div>
+                      <h4>Beneficio Real para las Clínicas</h4>
+                      <p>Las clínicas reciben IA gratis con la subvención y mejoran su eficiencia</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Próximos Pasos */}
+              <div>
+                <h3 style={{fontSize: '1.5rem', marginBottom: '2rem', textAlign: 'center'}}>📞 Próximos Pasos</h3>
+                <div className="next-steps">
+                  <div className="step-card">
+                    <div className="step-number-large">1</div>
+                    <div className="step-content">
+                      <h4>Revisión de la Propuesta</h4>
+                      <p>Xavier revisa los términos y condiciones de la colaboración</p>
+                    </div>
+                  </div>
+                  <div className="step-card">
+                    <div className="step-number-large">2</div>
+                    <div className="step-content">
+                      <h4>Acuerdo Marco</h4>
+                      <p>Firmamos un acuerdo de colaboración comercial</p>
+                    </div>
+                  </div>
+                  <div className="step-card">
+                    <div className="step-number-large">3</div>
+                    <div className="step-content">
+                      <h4>Material de Marketing</h4>
+                      <p>NexGent prepara presentaciones, demos y calculadoras</p>
+                    </div>
+                  </div>
+                  <div className="step-card">
+                    <div className="step-number-large">4</div>
+                    <div className="step-content">
+                      <h4>Lanzamiento</h4>
+                      <p>Comenzamos la promoción en la red BQDC</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           ) : (
