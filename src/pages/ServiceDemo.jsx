@@ -667,13 +667,43 @@ function ClientAIDemo() {
 
           <div className="phone-benefits">
             <h4>Ventajas del Asistente Telefónico:</h4>
-            <ul>
-              <li>✓ <strong>Disponibilidad 24/7:</strong> Atiende llamadas fuera del horario de oficina</li>
-              <li>✓ <strong>Sin Esperas:</strong> Los pacientes no esperan en la línea</li>
-              <li>✓ <strong>Voz Natural:</strong> Conversación fluida y profesional</li>
-              <li>✓ <strong>Reducción de Carga:</strong> Libera al personal de recepción</li>
-              <li>✓ <strong>Registro Automático:</strong> Todo queda documentado en Gesden</li>
-            </ul>
+            <div className="benefits-grid">
+              <div className="benefit-item">
+                <div className="benefit-icon">🕐</div>
+                <div className="benefit-content">
+                  <strong>Disponibilidad 24/7</strong>
+                  <p>Atiende llamadas fuera del horario de oficina</p>
+                </div>
+              </div>
+              <div className="benefit-item">
+                <div className="benefit-icon">⚡</div>
+                <div className="benefit-content">
+                  <strong>Sin Esperas</strong>
+                  <p>Los pacientes no esperan en la línea</p>
+                </div>
+              </div>
+              <div className="benefit-item">
+                <div className="benefit-icon">💬</div>
+                <div className="benefit-content">
+                  <strong>Voz Natural</strong>
+                  <p>Conversación fluida y profesional</p>
+                </div>
+              </div>
+              <div className="benefit-item">
+                <div className="benefit-icon">👥</div>
+                <div className="benefit-content">
+                  <strong>Reducción de Carga</strong>
+                  <p>Libera al personal de recepción</p>
+                </div>
+              </div>
+              <div className="benefit-item">
+                <div className="benefit-icon">📝</div>
+                <div className="benefit-content">
+                  <strong>Registro Automático</strong>
+                  <p>Todo queda documentado en Gesden</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
