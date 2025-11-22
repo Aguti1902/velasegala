@@ -300,39 +300,41 @@ function ServiceDetail({ service, selectedServices, toggleService }) {
           )}
         </div>
 
-        <div className="service-implementation">
-          <h2 className="features-title">Proceso de Implementación</h2>
-          <div className="implementation-steps">
-            <div className="impl-step">
-              <div className="impl-step-number">1</div>
-              <div className="impl-step-content">
-                <h4>Análisis y Planificación</h4>
-                <p>Reunión inicial, análisis de requisitos y planificación detallada del proyecto.</p>
+        {service.id !== 'subvencion' && service.id !== 'colaboracion' && (
+          <div className="service-implementation">
+            <h2 className="features-title">Proceso de Implementación</h2>
+            <div className="implementation-steps">
+              <div className="impl-step">
+                <div className="impl-step-number">1</div>
+                <div className="impl-step-content">
+                  <h4>Análisis y Planificación</h4>
+                  <p>Reunión inicial, análisis de requisitos y planificación detallada del proyecto.</p>
+                </div>
               </div>
-            </div>
-            <div className="impl-step">
-              <div className="impl-step-number">2</div>
-              <div className="impl-step-content">
-                <h4>Desarrollo e Integración</h4>
-                <p>Implementación técnica y configuración según especificaciones acordadas.</p>
+              <div className="impl-step">
+                <div className="impl-step-number">2</div>
+                <div className="impl-step-content">
+                  <h4>Desarrollo e Integración</h4>
+                  <p>Implementación técnica y configuración según especificaciones acordadas.</p>
+                </div>
               </div>
-            </div>
-            <div className="impl-step">
-              <div className="impl-step-number">3</div>
-              <div className="impl-step-content">
-                <h4>Pruebas y Ajustes</h4>
-                <p>Testing exhaustivo y optimización basada en feedback del equipo.</p>
+              <div className="impl-step">
+                <div className="impl-step-number">3</div>
+                <div className="impl-step-content">
+                  <h4>Pruebas y Ajustes</h4>
+                  <p>Testing exhaustivo y optimización basada en feedback del equipo.</p>
+                </div>
               </div>
-            </div>
-            <div className="impl-step">
-              <div className="impl-step-number">4</div>
-              <div className="impl-step-content">
-                <h4>Formación y Puesta en Marcha</h4>
-                <p>Capacitación del personal y lanzamiento oficial con soporte intensivo.</p>
+              <div className="impl-step">
+                <div className="impl-step-number">4</div>
+                <div className="impl-step-content">
+                  <h4>Formación y Puesta en Marcha</h4>
+                  <p>Capacitación del personal y lanzamiento oficial con soporte intensivo.</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        )}
 
         {service.id === 'crm' && (
           <div className="service-highlight">
