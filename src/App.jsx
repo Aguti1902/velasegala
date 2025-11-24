@@ -205,7 +205,7 @@ function App() {
       id: 'subvencion',
       title: 'Subvención Global Data Care',
       shortDescription: 'Financiación europea de hasta 30.000€ + acceso a red sanitaria UE',
-      price: 'GRATIS (100% subvencionado)',
+      price: '100% Subvencionado',
       type: 'initial',
       features: [
         'Subvención de Red.es de hasta 30.000€',
@@ -226,8 +226,7 @@ function App() {
         'Compartir datos anónimos para investigación médica',
         'Contribuir al avance de la odontología europea',
         'Sin costes ocultos para Vela Segalà',
-        'Gestión de toda la documentación por Accuro y NexGent',
-        'Plazo de resolución: 2-3 meses'
+        'Gestión de toda la documentación por Accuro y NexGent'
       ],
       pricing: { monthly: 0, initial: 0 }
     },

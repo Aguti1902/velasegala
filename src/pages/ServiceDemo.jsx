@@ -923,39 +923,6 @@ function SubvencionDemo() {
             </div>
           ))}
         </div>
-
-        <div style={{
-          background: 'white',
-          border: '2px solid #e5e7eb',
-          borderRadius: '12px',
-          padding: '2.5rem',
-          boxShadow: '0 2px 8px rgba(0,0,0,0.08)'
-        }}>
-          <h3 style={{fontSize: '1.3rem', fontWeight: '700', marginBottom: '2rem', textAlign: 'center', color: '#1f2937'}}>⏱️ Plazo Estimado: 4-6 Meses</h3>
-          <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '1rem'}}>
-            {[
-              {label: 'Solicitud', duration: '2 sem', color: '#0066cc'},
-              {label: 'Evaluación', duration: '1-2 m', color: '#0066cc'},
-              {label: 'Aprobación', duration: '1 sem', color: '#0066cc'},
-              {label: 'Implementación', duration: '2-3 m', color: '#10b981'}
-            ].map((phase, idx) => (
-              <React.Fragment key={idx}>
-                <div style={{flex: 1, textAlign: 'center'}}>
-                  <div style={{
-                    background: phase.color,
-                    color: 'white',
-                    padding: '0.75rem',
-                    borderRadius: '8px',
-                    marginBottom: '0.5rem',
-                    fontWeight: '700'
-                  }}>{phase.label}</div>
-                  <span style={{fontSize: '0.85rem', color: '#6b7280'}}>{phase.duration}</span>
-                </div>
-                {idx < 3 && <div style={{color: '#d1d5db', fontSize: '1.5rem'}}>→</div>}
-              </React.Fragment>
-            ))}
-          </div>
-        </div>
       </div>
     </div>
   )
@@ -1118,7 +1085,7 @@ function ColaboracionDemo() {
             <CheckCircle size={24} color="#10b981" />
             <div>
               <h4>Beneficio Real para las Clínicas</h4>
-              <p>Las clínicas reciben IA gratis con la subvención y mejoran su eficiencia</p>
+              <p>Las clínicas reciben IA 100% subvencionada y mejoran su eficiencia</p>
             </div>
           </div>
         </div>

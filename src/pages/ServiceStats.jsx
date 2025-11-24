@@ -599,12 +599,7 @@ function SubvencionStats() {
           <div className="metric-card success-card">
             <TrendingUp className="metric-icon" />
             <div className="metric-value">100%</div>
-            <div className="metric-label">IA Gratis</div>
-          </div>
-          <div className="metric-card">
-            <Clock className="metric-icon" />
-            <div className="metric-value">4-6</div>
-            <div className="metric-label">Meses Plazo</div>
+            <div className="metric-label">IA Subvencionada</div>
           </div>
         </div>
       </div>
@@ -744,7 +739,7 @@ function SubvencionStats() {
         <div className="comparison-note">
           <p>
             💡 <strong>Ventaja clave:</strong> Con la subvención, evitas la inversión inicial de 13.000€ 
-            y obtienes 2 meses gratis. Aunque luego pagarás 699€/mes, el ahorro inicial es muy significativo 
+            y obtienes 2 meses subvencionados. Aunque luego pagarás 699€/mes, el ahorro inicial es muy significativo 
             y el sistema ya estará completamente implementado y operativo.
           </p>
         </div>
@@ -921,9 +916,9 @@ function ColaboracionStats() {
         <div className="clinic-benefits">
           <div className="clinic-benefit-card">
             <div className="benefit-icon-large">💰</div>
-            <h4>IA Completamente Gratis</h4>
+            <h4>IA 100% Subvencionada</h4>
             <p>Con la subvención de 30.000€, las clínicas no pagan nada por implementar el agente IA</p>
-            <div className="benefit-saving">Ahorro: 30.000€ por clínica</div>
+            <div className="benefit-saving">Costo cubierto: 30.000€ por clínica</div>
           </div>
           
           <div className="clinic-benefit-card">

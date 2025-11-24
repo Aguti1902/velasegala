@@ -418,7 +418,7 @@ function ServiceDetail({ service, selectedServices, toggleService }) {
                     <CheckCircle size={24} color="#10b981" />
                     <div>
                       <h4>Beneficio Real para las Clínicas</h4>
-                      <p>Las clínicas reciben IA gratis con la subvención y mejoran su eficiencia</p>
+                      <p>Las clínicas reciben IA 100% subvencionada y mejoran su eficiencia</p>
                     </div>
                   </div>
                 </div>

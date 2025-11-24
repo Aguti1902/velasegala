@@ -140,14 +140,14 @@ function BudgetCalculator({ selectedServices, allServices, selectedProposal }) {
                   </p>
                   <p>
                     <strong>✨ Subvención Global Data Care:</strong> Cubre TOTALMENTE el coste del Agente IA 
-                    (desarrollo + 2 meses de mantenimiento). <span className="highlight">Desarrollo GRATIS para Vela Segalà.</span>
+                    (desarrollo + 2 meses de mantenimiento). <span className="highlight">Desarrollo 100% subvencionado.</span>
                   </p>
                   <p>
                     <strong>🤝 Propuesta Comercial BQDC:</strong> Sin coste inicial. Modelo basado en comisiones 
                     (10% por subvención + 50€/mes por clínica con IA). Potencial de ingresos recurrentes.
                   </p>
                   <p className="note-summary">
-                    <strong>Resumen:</strong> Con la subvención, la implementación de IA sale <strong>GRATIS</strong>. 
+                    <strong>Resumen:</strong> Con la subvención, la implementación de IA queda <strong>totalmente cubierta</strong>. 
                     Solo pagarías 699€/mes a partir del 3er mes. La propuesta BQDC puede generar ingresos adicionales 
                     sin inversión inicial.
                   </p>
