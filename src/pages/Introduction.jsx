@@ -1,44 +1,44 @@
-import { Target, Zap, Shield, TrendingUp, Users, Award } from 'lucide-react'
+import { Target, Zap, Globe, TrendingUp, Users, Award } from 'lucide-react'
 
 function Introduction({ onNext }) {
   const objectives = [
     {
-      icon: Target,
-      title: 'Unificar Presencia Digital',
-      description: 'Consolidar y mantener las 2 páginas web bajo un estándar de excelencia'
+      icon: Globe,
+      title: 'Crear 3 Nuevas Webs',
+      description: 'Desarrollar velasegalasantceloni.com, esteticasegala.com y esteticavela.com desde cero'
     },
     {
       icon: TrendingUp,
-      title: 'Aumentar Visibilidad',
-      description: 'Posicionamiento SEO para captar nuevos pacientes en Viladecans'
+      title: 'Presencia Digital Unificada',
+      description: 'Las 4 webs bajo un estándar moderno con panel de administración, chat IA y WhatsApp'
     },
     {
       icon: Zap,
-      title: 'Automatización Inteligente',
-      description: 'IA para contenidos y atención al cliente 24/7'
+      title: 'Blog con IA Duplicado',
+      description: 'El agente IA de Viladecans se replica para Sant Celoni sin coste extra de desarrollo'
     },
     {
-      icon: Shield,
-      title: 'Sistema Integrado',
-      description: 'CRM único y personalizado para las 2 clínicas'
+      icon: Target,
+      title: 'Publicidad y SEO Ampliados',
+      description: 'Nueva campaña Ads para esteticasegala.com y paquetes SEO escalables por web'
     }
   ]
 
   const benefits = [
     {
       icon: Users,
-      value: '+40%',
-      label: 'Incremento en captación de pacientes'
+      value: '+3 webs',
+      label: 'Nuevas presencias digitales profesionales'
     },
     {
       icon: Zap,
-      value: '70%',
-      label: 'Reducción en tareas administrativas'
+      value: '0€',
+      label: 'Coste de desarrollo del 2º agente IA Blog'
     },
     {
       icon: Award,
-      value: '24/7',
-      label: 'Disponibilidad sin interrupciones'
+      value: '4 webs',
+      label: 'Mantenidas por 250€/mes todo incluido'
     }
   ]
 
@@ -50,11 +50,14 @@ function Introduction({ onNext }) {
       </div>
 
       <div className="intro-section">
-        <h2 className="section-heading">La Oportunidad</h2>
+        <h2 className="section-heading">La Propuesta</h2>
         <p className="intro-text">
-          En un mercado cada vez más digitalizado, <strong>Vela Segalà</strong> tiene la oportunidad 
-          de posicionarse como líder en innovación dental mediante la implementación de tecnologías 
-          de vanguardia que optimizarán la experiencia del paciente y la eficiencia operativa.
+          Esta propuesta recoge todo lo acordado: la <strong>creación de 3 nuevas webs</strong> 
+          (velasegalasantceloni.com, esteticasegala.com y esteticavela.com), 
+          el mantenimiento de las <strong>4 webs</strong> del grupo Vela Segalà, 
+          la <strong>duplicación del agente IA Blog</strong> para Sant Celoni, 
+          la gestión de <strong>campañas SEM</strong> con una nueva para Estética Segala, 
+          y un <strong>servicio SEO escalable</strong> por web.
         </p>
       </div>
 
@@ -77,7 +80,7 @@ function Introduction({ onNext }) {
       </div>
 
       <div className="intro-section">
-        <h2 className="section-heading">Resultados Esperados</h2>
+        <h2 className="section-heading">Puntos Clave</h2>
         <div className="benefits-grid">
           {benefits.map((benefit, index) => {
             const Icon = benefit.icon
@@ -93,52 +96,59 @@ function Introduction({ onNext }) {
       </div>
 
       <div className="intro-section">
-        <h2 className="section-heading">Contexto del Mercado</h2>
+        <h2 className="section-heading">Las 3 Nuevas Webs</h2>
         <p className="intro-text">
-          El sector dental en España está experimentando una <strong>transformación digital acelerada</strong>. 
-          Los pacientes actuales esperan poder gestionar sus citas online, recibir recordatorios 
-          automáticos y acceder a información relevante 24/7. Las clínicas que adoptan tecnología 
-          avanzada no solo mejoran la experiencia del paciente, sino que también optimizan sus 
-          operaciones internas, reduciendo costes y aumentando la eficiencia.
+          Las webs de <strong>velasegalasantceloni.com</strong>, <strong>esteticasegala.com</strong> y 
+          <strong> esteticavela.com</strong> se crearán desde cero a <strong>1.500€ cada una</strong>. 
+          Cada web incluirá panel de administración, chat con IA, botón de WhatsApp flotante, 
+          diseño responsive moderno y todas las funcionalidades necesarias para convertir visitantes en pacientes o clientes.
         </p>
         <p className="intro-text">
-          Según estudios recientes del sector, las clínicas dentales que implementan sistemas 
-          de gestión digital experimentan un <strong>incremento del 35% en la retención de pacientes</strong> 
-          y una <strong>reducción del 60% en las cancelaciones</strong> de citas gracias a los recordatorios 
-          automatizados.
+          La web de <strong>velasegalaviladecans.com</strong> ya está desarrollada y se incluye en el 
+          paquete de mantenimiento junto a las nuevas.
         </p>
       </div>
 
       <div className="intro-section">
-        <h2 className="section-heading">Desafíos Actuales</h2>
+        <h2 className="section-heading">Agente IA Blog — Sin Coste Extra</h2>
+        <p className="intro-text">
+          El agente IA de generación de contenido ya está desarrollado y operativo para Viladecans. 
+          Se <strong>duplicará para Sant Celoni</strong> con textos diferentes y otro tipo de contenido, 
+          sin coste de desarrollo adicional. La optimización de tokens y gasto de IA permite 
+          mantener la <strong>mensualidad de 399€ para ambas webs</strong>.
+        </p>
+      </div>
+
+      <div className="intro-section">
+        <h2 className="section-heading">Mantenimiento y Servicios Recurrentes</h2>
         <div className="challenges-list">
           <div className="challenge-item">
             <div className="challenge-number">01</div>
             <div className="challenge-content">
-              <h3>Gestión Multi-Clínica</h3>
+              <h3>Mantenimiento — 250€/mes</h3>
               <p>
-                Coordinar operaciones entre Sant Celoni y Viladecans requiere 
-                sistemas integrados que permitan visibilidad completa y gestión centralizada.
+                Las 4 webs del grupo (incluyendo velasegalaviladecans.com) quedan cubiertas por 
+                250€/mes en lugar de los 199€ anteriores, dado el mayor volumen de webs a gestionar.
               </p>
             </div>
           </div>
           <div className="challenge-item">
             <div className="challenge-number">02</div>
             <div className="challenge-content">
-              <h3>Captación de Nuevos Pacientes</h3>
+              <h3>Campañas SEM — 300€/mes</h3>
               <p>
-                La competencia en el sector dental es intensa. Destacar en buscadores y 
-                mantener una presencia digital activa es fundamental para el crecimiento.
+                Las campañas de Google Ads se mantienen al mismo precio, añadiendo una campaña 
+                extra para esteticasegala.com sin coste adicional de gestión.
               </p>
             </div>
           </div>
           <div className="challenge-item">
             <div className="challenge-number">03</div>
             <div className="challenge-content">
-              <h3>Carga Administrativa</h3>
+              <h3>SEO — 450€/mes base + 150€ por web extra</h3>
               <p>
-                El personal dedica excesivo tiempo a tareas repetitivas como confirmación 
-                de citas, responder consultas básicas y gestión de documentación.
+                El SEO de velasegalaviladecans.com se mantiene en 450€/mes. Si se desea ampliar 
+                a las otras webs, el precio es de 150€/mes por cada web extra.
               </p>
             </div>
           </div>
@@ -147,35 +157,29 @@ function Introduction({ onNext }) {
 
       <div className="intro-section">
         <h2 className="section-heading">Nuestra Propuesta de Valor</h2>
-        <p className="intro-text">
-          Esta propuesta no es una solución genérica. Cada servicio ha sido diseñado específicamente 
-          para <strong>Vela Segalà</strong>, considerando su estructura de 2 clínicas, su posicionamiento 
-          de marca y sus objetivos de crecimiento.
-        </p>
         <div className="value-props">
           <div className="value-prop">
-            <h4>🎯 Personalización Total</h4>
-            <p>Cada solución se adapta 100% a sus procesos y necesidades específicas.</p>
+            <h4>🎯 Webs Modernas y Potentes</h4>
+            <p>Panel de administración, chat IA y WhatsApp en todas las webs.</p>
           </div>
           <div className="value-prop">
-            <h4>🚀 Tecnología de Vanguardia</h4>
-            <p>IA, automatización y sistemas cloud de última generación.</p>
+            <h4>🤖 IA Blog Optimizada</h4>
+            <p>El agente IA duplicado para Sant Celoni, sin coste de desarrollo.</p>
           </div>
           <div className="value-prop">
             <h4>📊 ROI Medible</h4>
-            <p>Métricas claras y reportes detallados de resultados.</p>
+            <p>Métricas claras y reportes detallados de resultados en cada web.</p>
           </div>
           <div className="value-prop">
             <h4>🤝 Soporte Continuo</h4>
-            <p>Acompañamiento constante y evolución según sus necesidades.</p>
+            <p>Acompañamiento constante y evolución según las necesidades del grupo.</p>
           </div>
         </div>
       </div>
 
       <div className="intro-cta">
         <p className="intro-cta-text">
-          A continuación se detallan las <strong>6 soluciones tecnológicas</strong> diseñadas 
-          específicamente para Vela Segalà
+          A continuación se detallan los <strong>7 servicios</strong> que componen esta propuesta
         </p>
       </div>
     </div>
@@ -183,4 +187,3 @@ function Introduction({ onNext }) {
 }
 
 export default Introduction
-

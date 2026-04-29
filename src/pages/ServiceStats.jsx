@@ -1,30 +1,24 @@
-import { TrendingUp, Clock, Euro, Users, Target, Zap } from 'lucide-react'
+import { TrendingUp, Clock, Users, Target } from 'lucide-react'
 import './ServiceExtras.css'
 
 function ServiceStats({ service }) {
   if (!service) return null
 
   const getServiceNumber = () => {
-    const services = ['mantenimiento', 'creacion', 'seo', 'google-ads', 'ia-blog', 'ia-cliente', 'subvencion', 'colaboracion']
-    return (services.indexOf(service.id) + 1).toString().padStart(2, '0')
+    const services = [
+      'creacion-santceloni', 'creacion-esteticasegala', 'creacion-esteticavela',
+      'mantenimiento', 'ia-blog', 'google-ads', 'seo'
+    ]
+    const idx = services.indexOf(service.id)
+    return (idx + 1).toString().padStart(2, '0')
   }
 
   const renderStats = () => {
     switch(service.id) {
-      case 'mantenimiento':
-        return <MaintenanceStats />
-      case 'creacion':
-        return <WebsiteStats />
       case 'seo':
         return <SEOStats />
       case 'ia-blog':
         return <BlogAIStats />
-      case 'ia-cliente':
-        return <ClientAIStats />
-      case 'subvencion':
-        return <SubvencionStats />
-      case 'colaboracion':
-        return <ColaboracionStats />
       default:
         return null
     }
@@ -45,8 +39,8 @@ function ServiceStats({ service }) {
   )
 }
 
-// Estadísticas de Mantenimiento
-function MaintenanceStats() {
+// Legacy functions below (no longer used in current proposal)
+function _UNUSED_MaintenanceStats() {
   return (
     <div className="stats-content">
       <div className="stats-section">
@@ -143,8 +137,7 @@ function MaintenanceStats() {
   )
 }
 
-// Estadísticas de Creación Web
-function WebsiteStats() {
+function _UNUSED_WebsiteStats() {
   return (
     <div className="stats-content">
       <div className="stats-section">
@@ -463,8 +456,7 @@ function BlogAIStats() {
   )
 }
 
-// Estadísticas de IA Cliente
-function ClientAIStats() {
+function _UNUSED_ClientAIStats() {
   return (
     <div className="stats-content">
       <div className="stats-section">
@@ -584,8 +576,7 @@ function ClientAIStats() {
   )
 }
 
-// Estadísticas de CRM
-function SubvencionStats() {
+function _UNUSED_SubvencionStats() {
   return (
     <div className="stats-content">
       <div className="stats-section">
@@ -788,7 +779,7 @@ function SubvencionStats() {
   )
 }
 
-function ColaboracionStats() {
+function _UNUSED_ColaboracionStats() {
   return (
     <div className="stats-content">
       <div className="stats-section">

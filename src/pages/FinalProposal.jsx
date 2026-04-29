@@ -1,6 +1,6 @@
-import { Mail, Phone, MapPin, Calendar, FileText, Award, Info } from 'lucide-react'
+import { Mail, Phone, Calendar, FileText, Award } from 'lucide-react'
 
-function FinalProposal({ selectedServices, allServices, selectedProposal }) {
+function FinalProposal({ selectedServices, allServices }) {
   const { monthlyTotal, initialTotal } = (() => {
     let monthly = 0
     let initial = 0
@@ -15,11 +15,6 @@ function FinalProposal({ selectedServices, allServices, selectedProposal }) {
   })()
 
   const hasSelection = selectedServices.length > 0
-  const allServicesSelected = selectedServices.length === allServices.length
-  // No aplicar descuento en propuesta tech (la subvención ya lo cubre todo)
-  const discount = (allServicesSelected && selectedProposal !== 'tech') ? 0.10 : 0
-  const finalMonthly = monthlyTotal * (1 - discount)
-  const finalInitial = initialTotal * (1 - discount)
 
   return (
     <div className="page final-page">
@@ -32,62 +27,27 @@ function FinalProposal({ selectedServices, allServices, selectedProposal }) {
         <div className="final-summary-box">
           <h2>Resumen de la Propuesta</h2>
           {hasSelection ? (
-            <>
-              <div className="summary-stats">
-                <div className="stat-item">
-                  <div className="stat-label">Servicios Seleccionados</div>
-                  <div className="stat-value">{selectedServices.length} de {allServices.length}</div>
-                </div>
-                <div className="stat-item">
-                  <div className="stat-label">Inversión Inicial</div>
-                  <div className="stat-value">{finalInitial.toLocaleString('es-ES')}€</div>
-                </div>
-                <div className="stat-item">
-                  <div className="stat-label">Cuota Mensual</div>
-                  <div className="stat-value">{finalMonthly.toLocaleString('es-ES')}€</div>
-                </div>
+            <div className="summary-stats">
+              <div className="stat-item">
+                <div className="stat-label">Servicios Seleccionados</div>
+                <div className="stat-value">{selectedServices.length} de {allServices.length}</div>
               </div>
-              {allServicesSelected && selectedProposal !== 'tech' && (
-                <div className="summary-discount">
-                  <Award size={24} />
-                  <span>Incluye 10% de descuento por paquete completo</span>
-                </div>
-              )}
-            </>
+              <div className="stat-item">
+                <div className="stat-label">Inversión Inicial</div>
+                <div className="stat-value">{initialTotal.toLocaleString('es-ES')}€</div>
+              </div>
+              <div className="stat-item">
+                <div className="stat-label">Cuota Mensual</div>
+                <div className="stat-value">{monthlyTotal.toLocaleString('es-ES')}€</div>
+              </div>
+            </div>
           ) : (
             <p className="summary-empty">
-              No se han seleccionado servicios aún. Esta propuesta incluye 6 soluciones 
-              tecnológicas disponibles para Vela Segala.
+              No se han seleccionado servicios aún. Esta propuesta incluye 7 soluciones
+              diseñadas específicamente para el grupo Vela Segalà.
             </p>
           )}
         </div>
-
-        {selectedProposal === 'tech' && (
-          <div className="tech-proposal-note">
-            <Info size={24} />
-            <div className="note-content">
-              <h3>💡 Sobre la Propuesta de Tecnología Avanzada</h3>
-              <div className="note-details">
-                <p>
-                  <strong>Agente IA WhatsApp + Telefónico:</strong> Inversión inicial de 13.000€ + 699€/mes
-                </p>
-                <p>
-                  <strong>✨ Subvención Global Data Care:</strong> Cubre TOTALMENTE el coste del Agente IA 
-                  (desarrollo + 2 meses de mantenimiento). <span className="highlight">Desarrollo 100% subvencionado.</span>
-                </p>
-                <p>
-                  <strong>🤝 Propuesta Comercial BQDC:</strong> Sin coste inicial. Modelo basado en comisiones 
-                  (10% por subvención + 50€/mes por clínica con IA). Potencial de ingresos recurrentes.
-                </p>
-                <p className="note-summary">
-                  <strong>Resumen:</strong> Con la subvención, la implementación de IA queda <strong>totalmente cubierta</strong>. 
-                  Solo pagarías 699€/mes a partir del 3er mes. La propuesta BQDC puede generar ingresos adicionales 
-                  sin inversión inicial.
-                </p>
-              </div>
-            </div>
-          </div>
-        )}
 
         <div className="timeline-section">
           <h2>Cronograma de Implementación</h2>
@@ -96,28 +56,35 @@ function FinalProposal({ selectedServices, allServices, selectedProposal }) {
               <div className="timeline-marker">1</div>
               <div className="timeline-content">
                 <h3>Semana 1-2: Kick-off y Planificación</h3>
-                <p>Reunión inicial, análisis de requisitos y planificación detallada</p>
+                <p>Reunión inicial, análisis de requisitos y definición de estructura y diseño de las 3 webs</p>
               </div>
             </div>
             <div className="timeline-item">
               <div className="timeline-marker">2</div>
               <div className="timeline-content">
-                <h3>Mes 1-2: Desarrollo e Implementación</h3>
-                <p>Desarrollo de servicios web, SEO, y configuración de IAs</p>
+                <h3>Mes 1-2: Desarrollo de las 3 Webs</h3>
+                <p>Diseño y programación de velasegalasantceloni.com, esteticasegala.com y esteticavela.com</p>
               </div>
             </div>
             <div className="timeline-item">
               <div className="timeline-marker">3</div>
               <div className="timeline-content">
-                <h3>Mes 3-6: CRM y Testing</h3>
-                <p>Desarrollo del CRM personalizado y pruebas integrales</p>
+                <h3>Mes 2: Activación del Agente IA Blog</h3>
+                <p>Duplicación y configuración del agente IA para Sant Celoni con contenido diferenciado</p>
               </div>
             </div>
             <div className="timeline-item">
               <div className="timeline-marker">4</div>
               <div className="timeline-content">
-                <h3>Mes 6+: Optimización y Soporte</h3>
-                <p>Ajustes finales, formación del equipo y soporte continuo</p>
+                <h3>Mes 2-3: Puesta en Marcha</h3>
+                <p>Lanzamiento de webs, nueva campaña Ads para esteticasegala.com y activación del SEO</p>
+              </div>
+            </div>
+            <div className="timeline-item">
+              <div className="timeline-marker">5</div>
+              <div className="timeline-content">
+                <h3>Mes 3+: Mantenimiento y Optimización</h3>
+                <p>Seguimiento continuo de las 4 webs, ajuste de campañas y reportes mensuales</p>
               </div>
             </div>
           </div>
@@ -134,7 +101,7 @@ function FinalProposal({ selectedServices, allServices, selectedProposal }) {
             <div className="guarantee-item">
               <Award size={32} />
               <h3>Calidad Garantizada</h3>
-              <p>Todos nuestros desarrollos cumplen los más altos estándares de calidad</p>
+              <p>Webs modernas con panel de administración, chat IA y WhatsApp incluidos</p>
             </div>
             <div className="guarantee-item">
               <Calendar size={32} />
@@ -170,8 +137,8 @@ function FinalProposal({ selectedServices, allServices, selectedProposal }) {
         <div className="final-cta">
           <h2>Próximo Paso</h2>
           <p>
-            Estamos listos para comenzar esta transformación digital. 
-            Contacte con nosotros para agendar una reunión y resolver cualquier duda.
+            Estamos listos para comenzar. Contacte con nosotros para agendar una 
+            reunión, resolver cualquier duda o ajustar los servicios a su medida.
           </p>
           <div className="cta-buttons">
             <a href="mailto:info@nexgent.io" className="cta-button primary">
@@ -200,4 +167,3 @@ function FinalProposal({ selectedServices, allServices, selectedProposal }) {
 }
 
 export default FinalProposal
-

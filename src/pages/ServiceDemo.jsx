@@ -1,32 +1,28 @@
 import React from 'react'
-import { Play, MessageCircle, Globe, Bot, Database, TrendingUp, Award, Users, Euro, CheckCircle, FileText } from 'lucide-react'
-import CommissionCalculator from '../components/CommissionCalculator'
+import { Bot } from 'lucide-react'
 import './ServiceExtras.css'
 
 function ServiceDemo({ service }) {
   if (!service) return null
 
   const getServiceNumber = () => {
-    const services = ['mantenimiento', 'creacion', 'seo', 'google-ads', 'ia-blog', 'ia-cliente', 'subvencion', 'colaboracion']
-    return (services.indexOf(service.id) + 1).toString().padStart(2, '0')
+    const services = [
+      'creacion-santceloni', 'creacion-esteticasegala', 'creacion-esteticavela',
+      'mantenimiento', 'ia-blog', 'google-ads', 'seo'
+    ]
+    const idx = services.indexOf(service.id)
+    return (idx + 1).toString().padStart(2, '0')
   }
 
   const renderDemo = () => {
+    if (service.id.startsWith('creacion-')) {
+      return <WebsiteDemo service={service} />
+    }
     switch(service.id) {
-      case 'mantenimiento':
-        return <MaintenanceDemo />
-      case 'creacion':
-        return <WebsiteDemo />
       case 'seo':
         return <SEODemo />
       case 'ia-blog':
         return <BlogAIDemo />
-      case 'ia-cliente':
-        return <ClientAIDemo />
-      case 'subvencion':
-        return <SubvencionDemo />
-      case 'colaboracion':
-        return <ColaboracionDemo />
       default:
         return null
     }
@@ -47,119 +43,42 @@ function ServiceDemo({ service }) {
   )
 }
 
-// Demostración de Mantenimiento Web
-function MaintenanceDemo() {
-  return (
-    <div className="demo-content">
-      <div className="demo-section">
-        <h2>Dashboard de Monitorización 24/7</h2>
-        <div className="dashboard-mockup">
-          <div className="dashboard-header">
-            <div className="dashboard-logo">Vela Segala Monitoring</div>
-            <div className="dashboard-time">Actualizado hace 2 minutos</div>
-          </div>
-          <div className="dashboard-sites">
-            <div className="site-card status-online">
-              <div className="site-header">
-                <Globe size={24} />
-                <div className="site-info">
-                  <h4>velasegalabcn.com</h4>
-                  <span className="site-status">Online</span>
-                </div>
-              </div>
-              <div className="site-metrics">
-                <div className="metric">
-                  <span className="metric-label">Tiempo de respuesta</span>
-                  <span className="metric-value green">127ms</span>
-                </div>
-                <div className="metric">
-                  <span className="metric-label">Uptime (30 días)</span>
-                  <span className="metric-value green">99.98%</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="site-card status-online">
-              <div className="site-header">
-                <Globe size={24} />
-                <div className="site-info">
-                  <h4>velasegalasantcugat.com</h4>
-                  <span className="site-status">Online</span>
-                </div>
-              </div>
-              <div className="site-metrics">
-                <div className="metric">
-                  <span className="metric-label">Tiempo de respuesta</span>
-                  <span className="metric-value green">142ms</span>
-                </div>
-                <div className="metric">
-                  <span className="metric-label">Uptime (30 días)</span>
-                  <span className="metric-value green">100%</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="site-card status-online">
-              <div className="site-header">
-                <Globe size={24} />
-                <div className="site-info">
-                  <h4>velasegalaviladecans.com</h4>
-                  <span className="site-status">Online</span>
-                </div>
-              </div>
-              <div className="site-metrics">
-                <div className="metric">
-                  <span className="metric-label">Tiempo de respuesta</span>
-                  <span className="metric-value green">135ms</span>
-                </div>
-                <div className="metric">
-                  <span className="metric-label">Uptime (30 días)</span>
-                  <span className="metric-value green">99.99%</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="demo-section">
-        <h2>Historial de Actualizaciones</h2>
-        <div className="updates-timeline">
-          <div className="update-item">
-            <div className="update-date">15 Nov 2025</div>
-            <div className="update-content">
-              <h4>Actualización de Seguridad</h4>
-              <p>WordPress actualizado a versión 6.4.2 en las 3 webs</p>
-            </div>
-          </div>
-          <div className="update-item">
-            <div className="update-date">08 Nov 2025</div>
-            <div className="update-content">
-              <h4>Optimización de Rendimiento</h4>
-              <p>Caché optimizada - Mejora del 23% en velocidad de carga</p>
-            </div>
-          </div>
-          <div className="update-item">
-            <div className="update-date">01 Nov 2025</div>
-            <div className="update-content">
-              <h4>Backup Automático Completado</h4>
-              <p>Backup completo de las 3 webs almacenado en ubicaciones redundantes</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
-
 // Demostración de Creación Web
-function WebsiteDemo() {
+function WebsiteDemo({ service }) {
+  const webInfo = {
+    'creacion-santceloni': {
+      url: 'velasegalasantceloni.com',
+      title: 'Clínica dental en Sant Celoni',
+      subtitle: 'Tu salud bucodental en las mejores manos',
+      desc: 'En Clínica Dental Vela Segalà Sant Celoni ofrecemos un enfoque odontológico altamente especializado, combinando <strong>tratamientos personalizados de máxima calidad</strong>, <strong>tecnología de vanguardia</strong> y un equipo médico con sólida trayectoria.',
+      location: 'Sant Celoni',
+      type: 'dental'
+    },
+    'creacion-esteticasegala': {
+      url: 'esteticasegala.com',
+      title: 'Centro de Estética Segala',
+      subtitle: 'Belleza y bienestar en manos expertas',
+      desc: 'En Estética Segala ofrecemos tratamientos de belleza y bienestar de la más alta calidad, con <strong>tecnología de última generación</strong> y un equipo especializado en cada tratamiento.',
+      location: 'Estética Segala',
+      type: 'estetica'
+    },
+    'creacion-esteticavela': {
+      url: 'esteticavela.com',
+      title: 'Centro de Estética Vela',
+      subtitle: 'Tratamientos de belleza exclusivos',
+      desc: 'En Estética Vela ofrecemos una experiencia única en tratamientos de belleza y estética avanzada, combinando <strong>técnicas innovadoras</strong> con los mejores productos del mercado.',
+      location: 'Estética Vela',
+      type: 'estetica'
+    }
+  }
+  const info = webInfo[service?.id] || webInfo['creacion-santceloni']
+
   return (
     <div className="demo-content">
       <div className="demo-section full-width">
-        <h2>Diseño Propuesto - velasegalaviladecans.com</h2>
-        <p className="demo-intro">Diseño profesional basado en el exitoso modelo de Sant Celoni, adaptado específicamente para Viladecans</p>
-        
+        <h2>Diseño Propuesto — {info.url}</h2>
+        <p className="demo-intro">Web moderna con panel de administración, chat IA y botón de WhatsApp integrados</p>
+
         <div className="website-mockup-pro">
           <div className="browser-bar">
             <div className="browser-dots">
@@ -169,7 +88,7 @@ function WebsiteDemo() {
             </div>
             <div className="browser-url">
               <span className="url-icon">🔒</span>
-              <span>https://velasegalaviladecans.com</span>
+              <span>https://{info.url}</span>
             </div>
             <div className="browser-actions">
               <span>⟳</span>
@@ -202,14 +121,10 @@ function WebsiteDemo() {
             {/* Hero Section */}
             <div className="web-hero">
               <div className="web-hero-content">
-                <h1 className="web-hero-title">Clínica dental en Viladecans</h1>
-                <h2 className="web-hero-subtitle">Tu salud bucodental en las mejores manos</h2>
-                <p className="web-hero-text">
-                  En Clínica Dental Vela Segalà Viladecans ofrecemos un enfoque odontológico 
-                  altamente especializado, combinando <strong>tratamientos personalizados de máxima 
-                  calidad</strong>, <strong>tecnología de vanguardia</strong> y un equipo médico con sólida trayectoria.
-                </p>
-                <button className="web-cta-button">Pedir Cita</button>
+                <h1 className="web-hero-title">{info.title}</h1>
+                <h2 className="web-hero-subtitle">{info.subtitle}</h2>
+                <p className="web-hero-text" dangerouslySetInnerHTML={{ __html: info.desc }} />
+                <button className="web-cta-button">{info.type === 'estetica' ? 'Reservar Cita' : 'Pedir Cita'}</button>
               </div>
               <div className="web-hero-image">
                 <img src="/images/portrait-of-senior-male-dentist-with-dental-instru-2025-01-16-22-34-30-utc.jpg" alt="Clínica Dental Vela Segalà" />
@@ -218,10 +133,14 @@ function WebsiteDemo() {
 
             {/* Tratamientos Section */}
             <div className="web-section">
-              <h2 className="web-section-title">Tratamientos odontológicos especializados</h2>
+              <h2 className="web-section-title">
+                {info.type === 'estetica' ? 'Tratamientos de belleza y estética' : 'Tratamientos odontológicos especializados'}
+              </h2>
               <p className="web-section-subtitle">
-                En Vela Segalà Viladecans ofrecemos un <strong>enfoque odontológico completo</strong>, 
-                basado en la evidencia científica y la personalización del tratamiento.
+                {info.type === 'estetica'
+                  ? <span>En <strong>{info.location}</strong> ofrecemos una amplia gama de tratamientos estéticos con tecnología avanzada y resultados garantizados.</span>
+                  : <span>En <strong>{info.location}</strong> ofrecemos un <strong>enfoque odontológico completo</strong>, basado en la evidencia científica y la personalización del tratamiento.</span>
+                }
               </p>
               
               <div className="web-treatments">
@@ -256,10 +175,17 @@ function WebsiteDemo() {
 
             {/* Equipo Section */}
             <div className="web-section dark">
-              <h2 className="web-section-title">Dentistas en Viladecans con trayectoria internacional</h2>
+              <h2 className="web-section-title">
+                {info.type === 'estetica'
+                  ? `Especialistas en ${info.location} con años de experiencia`
+                  : `Dentistas en ${info.location} con trayectoria internacional`
+                }
+              </h2>
               <p className="web-section-subtitle">
-                Nuestro equipo está liderado por el <strong>Dr. Xavier Vela</strong> y la <strong>Dra. Maribel Segalà</strong>, 
-                dentistas de referencia a nivel internacional.
+                {info.type === 'estetica'
+                  ? <span>Nuestro equipo de especialistas está comprometido con la excelencia y la atención personalizada a cada cliente.</span>
+                  : <span>Nuestro equipo está liderado por el <strong>Dr. Xavier Vela</strong> y la <strong>Dra. Maribel Segalà</strong>, dentistas de referencia a nivel internacional.</span>
+                }
               </p>
               <div className="web-stats">
                 <div className="web-stat">
@@ -318,9 +244,16 @@ function WebsiteDemo() {
 
             {/* CTA Final Section */}
             <div className="web-section cta-section">
-              <h2 className="web-section-title">Tu nueva clínica dental en Viladecans te espera</h2>
+              <h2 className="web-section-title">
+                {info.type === 'estetica'
+                  ? `Tu nuevo centro de estética en ${info.location} te espera`
+                  : `Tu nueva clínica dental en ${info.location} te espera`
+                }
+              </h2>
               <p className="web-section-subtitle">Solicita tu primera visita sin compromiso.</p>
-              <button className="web-cta-button large">Pedir Cita</button>
+              <button className="web-cta-button large">
+                {info.type === 'estetica' ? 'Reservar Cita' : 'Pedir Cita'}
+              </button>
             </div>
 
             {/* Footer */}
@@ -362,16 +295,16 @@ function WebsiteDemo() {
             <p>Google PageSpeed 95+, Core Web Vitals optimizados</p>
           </div>
           <div className="showcase-item">
-            <h4>🎨 Diseño Profesional</h4>
-            <p>Basado en el exitoso modelo de Sant Celoni</p>
+            <h4>🤖 Chat con IA Integrado</h4>
+            <p>Asistente inteligente para atender consultas 24/7</p>
           </div>
           <div className="showcase-item">
-            <h4>📍 SEO Local Avanzado</h4>
-            <p>Optimizado específicamente para "dentista Viladecans"</p>
+            <h4>💬 Botón WhatsApp</h4>
+            <p>Acceso directo a WhatsApp siempre visible en la web</p>
           </div>
           <div className="showcase-item">
-            <h4>📝 CMS Intuitivo</h4>
-            <p>Panel de administración fácil para actualizar contenidos</p>
+            <h4>📝 Panel de Administración</h4>
+            <p>Gestión intuitiva de contenidos sin conocimientos técnicos</p>
           </div>
           <div className="showcase-item">
             <h4>🔒 Seguridad Premium</h4>
@@ -500,8 +433,10 @@ function BlogAIDemo() {
   )
 }
 
-// Demostración de IA Cliente
-function ClientAIDemo() {
+export default ServiceDemo
+
+// UNUSED LEGACY CODE BELOW — kept as reference only
+function _UNUSED_ClientAIDemo() {
   return (
     <div className="demo-content">
       {/* Integración con Gesden G5 */}
@@ -1127,6 +1062,4 @@ function ColaboracionDemo() {
     </div>
   )
 }
-
-export default ServiceDemo
 
